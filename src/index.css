@@ -4,9 +4,11 @@
 * {
     font-family: "Montserrat", sans-serif;
 }
-body{
+
+body {
     overflow-x: hidden !important;
 }
+
 .carousel .control-dots {
     bottom: 0px !important;
     margin: 0px 0 !important;
