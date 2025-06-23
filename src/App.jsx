@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Marqee from './components/Marqee'
 import Hero from './components/Hero.jsx'
 import Services from './components/Services.jsx'
+import FeaturedCategories from './components/FeaturedCategories.jsx'
 
 
 function App() {
@@ -12,8 +13,8 @@ function App() {
       <Header />
       <Marqee />
       <Hero />
-      <Services/>
-
+      <Services />
+      <FeaturedCategories/>
     </>
   )
 }
