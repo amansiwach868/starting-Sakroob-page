@@ -7,3 +7,22 @@
 body{
     overflow-x: hidden !important;
 }
+.carousel .control-dots {
+    bottom: 0px !important;
+    margin: 0px 0 !important;
+}
+
+.carousel .control-dots .dot {
+    opacity: 100% !important;
+    box-shadow: none !important;
+    background: #E8E8E8 !important;
+    border-radius: 22px !important;
+    width: 21px !important;
+    height: 6px !important;
+    margin: 0px 2px !important;
+}
+
+.carousel .control-dots .dot.selected {
+    background: #112D49 !important;
+    width: 51px !important;
+}
