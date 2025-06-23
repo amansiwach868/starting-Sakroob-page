@@ -428,6 +428,13 @@ export const Line = () => (
 
 );
 
+export const Arrow = () => (
+    <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.4409 1.09326L16.3535 7.00008L10.4409 12.9069" stroke="#112D49" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M1.35381 7H15.8994" stroke="#112D49" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+);
+
 export const Ratingstar = () => (
     <svg
         width="129"

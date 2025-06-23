@@ -1,6 +1,6 @@
 import React from 'react'
 import ServicesCard from './common/ServicesCard'
-import { Express, Gift, Line, Premium, Return, Support } from '../utils/icons'
+import { Express, Gift, Premium, Return, Support } from '../utils/icons'
 
 const Services = () => {
     return (

@@ -4,6 +4,10 @@ import categorieImg3 from '../assets/img/png/categorieImg-3.png'
 import categorieImg4 from '../assets/img/png/categorieImg-4.png'
 import categorieImg5 from '../assets/img/png/categorieImg-5.png'
 import categorieImg6 from '../assets/img/png/categorieImg-6.png'
+import blogPageImg1 from '../assets/img/png/blog-page-img-1.png'
+import blogPageImg2 from '../assets/img/png/blog-page-img-2.png'
+import blogPageImg3 from '../assets/img/png/blog-page-img-3.png'
+import blogPageImg4 from '../assets/img/png/blog-page-img-4.png'
 export const FEATURED_CATEGORIES_PRODUCTS = [
     {
         categorieName: 'Sensors & Modules',
@@ -28,5 +32,26 @@ export const FEATURED_CATEGORIES_PRODUCTS = [
     {
         categorieName: 'Raspberry Pi Kits',
         categorieImg: categorieImg6
+    },
+]
+export const BLOG_PAGE_DATA = [
+    {
+        heading: 'How to Build a Mini NAS',
+        para: 'Learn to build your own network storage system with simple components.',
+        button:'Read Guide',
+        blogPgaeImg: blogPageImg1,
+    },
+    {
+        heading: '5 Tools Every Maker Should Own',
+        para: 'The essential toolkit for every DIY electronics enthusiast.',
+        button:'Read Guide',
+        blogPgaeImg: blogPageImg2,
+    },
+    {
+        heading: ' Inside a Raspberry Pi Retro Console',
+        para: 'Step-by-step log of building a retro game machine.',
+        button:'Read Guide',
+        blogPgaeImg: blogPageImg3,
+        blogPgaeImg_1: blogPageImg4,
     },
 ]

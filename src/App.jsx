@@ -4,6 +4,7 @@ import Marqee from './components/Marqee'
 import Hero from './components/Hero.jsx'
 import Services from './components/Services.jsx'
 import FeaturedCategories from './components/FeaturedCategories.jsx'
+import BlogPage from './components/BlogPage.jsx'
 
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
       <Marqee />
       <Hero />
       <Services />
-      <FeaturedCategories/>
+      <FeaturedCategories />
+      <BlogPage/>
     </>
   )
 }
