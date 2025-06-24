@@ -1,4 +1,4 @@
-import { Rating, HeartSvg, ShopSvg } from "./icons";
+import { SmallRating, HeartSvg, ShopSvg } from "./icons";
 import categorieImg1 from '../assets/img/png/categorieImg-1.png'
 import categorieImg2 from '../assets/img/png/categorieImg-2.png'
 import categorieImg3 from '../assets/img/png/categorieImg-3.png'
@@ -46,12 +46,14 @@ export const BLOG_PAGE_DATA = [
         para: 'Learn to build your own network storage system with simple components.',
         button: 'Read Guide',
         blogPgaeImg: blogPageImg1,
+        active: false
     },
     {
         heading: '5 Tools Every Maker Should Own',
         para: 'The essential toolkit for every DIY electronics enthusiast.',
         button: 'Read Guide',
         blogPgaeImg: blogPageImg2,
+        active: false
     },
     {
         heading: ' Inside a Raspberry Pi Retro Console',
@@ -59,6 +61,7 @@ export const BLOG_PAGE_DATA = [
         button: 'Read Guide',
         blogPgaeImg: blogPageImg3,
         blogPgaeImg_1: blogPageImg4,
+        active:true
     },
 ]
 export const TESTMONIAL_DATA = [
@@ -94,7 +97,7 @@ export const BESTSELLER_DATA = [
         title: "Vortex Gaming PC",
         description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
         price: "$249.99",
-        svg: Rating,
+        svg: SmallRating,
         Heart: HeartSvg,
         shop: ShopSvg,
     },
@@ -103,7 +106,7 @@ export const BESTSELLER_DATA = [
         title: "D-Link ADSL Wireless Router DSL2790U",
         description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
         price: "$249.99",
-        svg: Rating,
+        svg: SmallRating,
         Heart: HeartSvg,
         shop: ShopSvg,
     },
@@ -112,7 +115,7 @@ export const BESTSELLER_DATA = [
         title: "Gaming Chair",
         description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
         price: "$249.99",
-        svg: Rating,
+        svg: SmallRating,
         Heart: HeartSvg,
         shop: ShopSvg,
     },
@@ -121,7 +124,7 @@ export const BESTSELLER_DATA = [
         title: "Vortex Gaming PC",
         description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
         price: "$249.99",
-        svg: Rating,
+        svg: SmallRating,
         Heart: HeartSvg,
         shop: ShopSvg,
     },
@@ -130,7 +133,7 @@ export const BESTSELLER_DATA = [
         title: "D-Link ADSL Wireless Router DSL2790U",
         description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
         price: "$249.99",
-        svg: Rating,
+        svg: SmallRating,
         Heart: HeartSvg,
         shop: ShopSvg,
     },
@@ -139,7 +142,7 @@ export const BESTSELLER_DATA = [
         title: "Gaming Chair",
         description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
         price: "$249.99",
-        svg: Rating,
+        svg: SmallRating,
         Heart: HeartSvg,
         shop: ShopSvg,
     },

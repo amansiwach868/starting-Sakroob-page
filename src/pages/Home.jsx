@@ -14,11 +14,11 @@ const Home = () => {
             <Marqee />
             <Hero />
             <Services />
-            <BestSellers/>
             <FeaturedCategories />
+            <BestSellers/>
             <BlogPage />
-            <JoinCircleSection/>
             <Testimonials/>
+            <JoinCircleSection/>
         </div>
     )
 }

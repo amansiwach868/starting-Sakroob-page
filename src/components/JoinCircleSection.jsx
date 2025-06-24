@@ -2,9 +2,8 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import Heading from "./common/Heading";
-import Para from "./common/Para";
-import Buttons from "./common/Buttons";
+import CustomButton from "./common/CustomButton";
+import HeadingAndPara from "./common/HeadingAndPara";
 
 const JoinCircleSection = () => {
     const {
@@ -14,30 +13,19 @@ const JoinCircleSection = () => {
         reset,
     } = useForm();
 
-    const onSubmit = (data) => {
+    const onSubmit = () => {
         toast.success("✅ Successfully Joined the Sakroob Circle!");
-        reset(); // Reset input after submit
+        reset();
     };
-
     const onError = () => {
         toast.error("❌ Please enter a valid email address.");
     };
 
     return (
-        <div className="p-6">
-            <div className="-mb-[170px] bg-[url(../src/assets/images/png/SakroobCircle-bg.png)] bg-cover bg-no-repeat bg-center h-[386px] max-w-[1140px] mx-auto rounded-[24px] pt-[68px] max-sm:py-[68px]  relative overflow-hidden transform translate-y-[-60%]">
+        <div className="p-6 relative min-h-[386px]">
+            <div className="absolute -bottom-[141px] bg-[url(./assets/img/png/join-us-bg-img.png)] bg-cover bg-no-repeat bg-center min-h-[386px] max-w-[1140px] left-1/2 -translate-x-1/2 rounded-[8px] flex justify-center items-center flex-col w-full">
                 <div className="p-6 relative z-10">
-                    <div className="w-full h-full bg-[#73A4E0] opacity-75 absolute top-0 left-0 z-0 rounded-[24px]"></div>
-
-                    <Heading
-                        headClass="!text-white z-10 relative"
-                        headText="Join the Sakroob Circle"
-                    />
-                    <Para
-                        paraClass="text-white text-center pt-4 z-10 relative"
-                        paraText="Exclusive drops, early access, and maker tips in your inbox."
-                    />
-
+                    <HeadingAndPara heading={'Join the Sakroob Circle'} para={'Exclusive drops, early access, and maker tips in your inbox.'} headingClass={'md:text-[48px] sm:text-[36px] text-[28px] font-bold text-white leading-[120%] text-center mb-4'} paraClass={'sm:text-[16px] text-[14px] font-normal text-white text-center'} />
                     <form
                         onSubmit={handleSubmit(onSubmit, onError)}
                         className="mx-auto sm:flex justify-center mt-[46px] relative z-10 max-w-[486px]"
@@ -62,9 +50,9 @@ const JoinCircleSection = () => {
                             )}
                         </div>
 
-                        <Buttons
-                            btnText="Join Now"
-                            btnClass="!py-[16px] !px-[20px] min-[425px]:absolute right-[8.5px] top-[8.5px]"
+                        <CustomButton
+                            buttonText="Join Now"
+                            buttonClass="!py-[16px] !px-[20px] min-[425px] sm:absolute right-[8.5px] top-[8.5px] text-white max-sm:w-full max-sm:mt-4"
                             type="submit"
                         />
                     </form>

@@ -4,7 +4,6 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { BESTSELLER_DATA } from "../utils/helper";
-
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CustomButton from "./common/CustomButton";
@@ -31,11 +30,12 @@ const BestSellers = () => {
         });
     };
 
-    const topPositionimg = ["-top-[45px]", "-top-[80px]", "-top-[105px]", "-top-[45px]", "-top-[80px]", "-top-[105px]",];
+    const topPositionimg = ["bottom-[21px]", "bottom-3", "bottom-[5px]", "bottom-[21px]", "-top-[80px]", "bottom-[5px]",];
 
     return (
         <div className="relative">
             <div className="max-w-[1272px] mx-auto px-3">
+                <h2 className="md:text-[48px] sm:text-[36px] text-[28px] font-bold text-[#112D49] leading-[120%] text-center mb-4">Bestsellers</h2>
                 <div
                     ref={prevRef}
                     className="w-[38px] h-[38px] absolute top-[50%] left-[6%] border items-center flex justify-center rounded-full cursor-pointer group hover:bg-[#112D49] transition-all duration-300 z-10"
@@ -79,7 +79,7 @@ const BestSellers = () => {
                 >
                     {BESTSELLER_DATA.map((item, i) => (
                         <SwiperSlide className="pt-[100px]" key={i}>
-                            <div className="max-w-[364px] w-full border border-[#ECEEF0] h-[563px] p-4 rounded-[8px] flex flex-col justify-between">
+                            <div className="max-w-[364px] w-full border border-[#ECEEF0] min-h-[536px] p-4 rounded-[8px] flex flex-col justify-between">
                                 <div>
                                     <div className="w-full bg-[#E5E4E2] items-center h-[242px] flex justify-center rounded-[4px] relative overflow-visible">
                                         <img
@@ -104,12 +104,14 @@ const BestSellers = () => {
                                 <div>
                                     <div className="flex justify-between items-center">
                                         <p className="font-semibold text-2xl">{item.price}</p>
-                                        {item.svg && <item.svg />}
+                                        <div className="-mt-3">
+                                            {item.svg && <item.svg />}
+                                        </div>
                                     </div>
-                                    <div className="pt-[25px] flex justify-between items-center">
+                                    <div className="mt-[25px] flex justify-between items-center">
                                         <CustomButton
                                             buttonText="Shop Now"
-                                            buttonClass="bg-white !text-[#112D49] border border-[#112D49] px-[87.5px] !py-[17px] hover:!bg-[#112D49] hover:!text-white"
+                                            buttonClass="bg-white !text-[#112D49] border border-[#112D49] max-w-[260px] w-full hover:!bg-[#112D49] hover:!text-white"
                                         />
                                         {item.shop && <item.shop />}
                                     </div>

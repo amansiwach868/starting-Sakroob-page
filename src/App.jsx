@@ -13,6 +13,7 @@ function App() {
         {isLoggedIn && (
         <>
           <Header />
+          
           <Home />
           <Footer/>
         </>
