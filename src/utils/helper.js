@@ -1,3 +1,4 @@
+import { Rating, HeartSvg, ShopSvg } from "./icons";
 import categorieImg1 from '../assets/img/png/categorieImg-1.png'
 import categorieImg2 from '../assets/img/png/categorieImg-2.png'
 import categorieImg3 from '../assets/img/png/categorieImg-3.png'
@@ -10,6 +11,9 @@ import blogPageImg3 from '../assets/img/png/blog-page-img-3.png'
 import blogPageImg4 from '../assets/img/png/blog-page-img-4.png'
 import userImg1 from '../assets/img/png/testimonial-swiper-img-1.png'
 import userImg2 from '../assets/img/png/testimonial-swiper-img-2.png'
+import gamingCheirImg from '../assets/img/png/gaming-chair-img.png'
+import pcImg from '../assets/img/png/pc-img.png'
+import routerImg from '../assets/img/png/router-img.png'
 export const FEATURED_CATEGORIES_PRODUCTS = [
     {
         categorieName: 'Sensors & Modules',
@@ -59,22 +63,22 @@ export const BLOG_PAGE_DATA = [
 ]
 export const TESTMONIAL_DATA = [
     {
-        image:userImg1,
+        image: userImg1,
         heading: "William gate",
         work: "CEO"
     },
     {
-        image:userImg2,
+        image: userImg2,
         heading: "Darrell Steward",
         work: "Manager"
     },
     {
-        image:userImg1,
+        image: userImg1,
         heading: "William gate",
         work: "CEO"
     },
     {
-        image:userImg2,
+        image: userImg2,
         heading: "Darrell Steward",
         work: "Manager"
     },
@@ -84,3 +88,59 @@ export const TESTMONIAL_DATA = [
         work: "CEO"
     }
 ]
+export const BESTSELLER_DATA = [
+    {
+        img: pcImg,
+        title: "Vortex Gaming PC",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: "$249.99",
+        svg: Rating,
+        Heart: HeartSvg,
+        shop: ShopSvg,
+    },
+    {
+        img: routerImg,
+        title: "D-Link ADSL Wireless Router DSL2790U",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: "$249.99",
+        svg: Rating,
+        Heart: HeartSvg,
+        shop: ShopSvg,
+    },
+    {
+        img: gamingCheirImg,
+        title: "Gaming Chair",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: "$249.99",
+        svg: Rating,
+        Heart: HeartSvg,
+        shop: ShopSvg,
+    },
+    {
+        img: pcImg,
+        title: "Vortex Gaming PC",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: "$249.99",
+        svg: Rating,
+        Heart: HeartSvg,
+        shop: ShopSvg,
+    },
+    {
+        img: routerImg,
+        title: "D-Link ADSL Wireless Router DSL2790U",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: "$249.99",
+        svg: Rating,
+        Heart: HeartSvg,
+        shop: ShopSvg,
+    },
+    {
+        img: gamingCheirImg,
+        title: "Gaming Chair",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: "$249.99",
+        svg: Rating,
+        Heart: HeartSvg,
+        shop: ShopSvg,
+    },
+];

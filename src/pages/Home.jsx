@@ -5,6 +5,8 @@ import Services from '../components/Services'
 import FeaturedCategories from '../components/FeaturedCategories'
 import BlogPage from '../components/BlogPage'
 import Testimonials from '../components/Testimonials'
+import BestSellers from '../components/BestSellers'
+import JoinCircleSection from '../components/JoinCircleSection'
 
 const Home = () => {
     return (
@@ -12,8 +14,10 @@ const Home = () => {
             <Marqee />
             <Hero />
             <Services />
+            <BestSellers/>
             <FeaturedCategories />
             <BlogPage />
+            <JoinCircleSection/>
             <Testimonials/>
         </div>
     )
