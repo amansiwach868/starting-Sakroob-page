@@ -1,7 +1,8 @@
 import React from 'react';
-import { BLOG_PAGE_DATA } from '../utils/hepler';
+import { BLOG_PAGE_DATA } from '../utils/helper';
 import HeadingAndPara from './common/HeadingAndPara';
 import { Arrow } from '../utils/icons';
+import CustomButton from './common/CustomButton';
 
 const BlogPage = () => {
     const styles = [
@@ -41,34 +42,37 @@ const BlogPage = () => {
     ];
 
     return (
-        <div className="grid sm:grid-cols-2 sm:grid-rows-2 grid-cols-1 gap-x-5 gap-y-5 max-w-[1384px] w-full mx-auto px-6 my-[100px]">
-            {BLOG_PAGE_DATA.map((item, i) => (
-                <div
-                    key={i}
-                    className={`relative overflow-hidden rounded-[8px] cursor-pointer active:scale-95 duration-200 justify-end sm:min-h-[500px] min-h-[364px] lg:block flex flex-col items-center gap-4 ${styles[i]}`}
-                >
-                    <div className={`absolute ${imgStyles[i]}`}>
-                        <img
-                            className="object-cover mt-auto w-full md:rounded-[30px] sm:rounded-[20px] rounded-[10px]"
-                            src={item.blogPgaeImg}
-                            alt={item.heading || 'Blog image'}
-                        />
-                    </div>
-                    <div className={`flex flex-col gap-7 max-w-[410px] w-full sm:ml-8 sm:mt-8 p-3.5 ${wrapperStyles[i]}`}>
-                        <HeadingAndPara
-                            heading={item.heading}
-                            para={item.para}
-                            headingClass={`md:text-[32px] sm:text-[28px] text-[24px] font-bold text-[#112D49] leading-[120%] mb-3 ${headingStyles[i]}`}
-                            paraClass={`sm:text-[16px] text-[14px] font-normal text-[#112D49] ${paraStyles[i]}`}
-                        />
-                        <div className={`w-full flex ${buttonContainerStyles[i]}`}>
-                            <button className="flex gap-2 items-center">
-                                {item.button} <Arrow />
-                            </button>
+        <div className=' max-w-[1384px] w-full mx-auto px-6 my-[100px] flex flex-col justify-center items-center gap-14'>
+            <div className="grid sm:grid-cols-2 sm:grid-rows-2 grid-cols-1 gap-x-5 gap-y-5 w-full">
+                {BLOG_PAGE_DATA.map((item, i) => (
+                    <div
+                        key={i}
+                        className={`relative overflow-hidden rounded-[8px] cursor-pointer active:scale-95 duration-200 justify-end sm:min-h-[500px] min-h-[364px] lg:block flex flex-col items-center gap-4 ${styles[i]}`}
+                    >
+                        <div className={`absolute ${imgStyles[i]}`}>
+                            <img
+                                className="object-cover mt-auto w-full md:rounded-[30px] sm:rounded-[20px] rounded-[10px]"
+                                src={item.blogPgaeImg}
+                                alt={item.heading || 'Blog image'}
+                            />
+                        </div>
+                        <div className={`flex flex-col gap-7 max-w-[410px] w-full sm:ml-8 sm:mt-8 p-3.5 ${wrapperStyles[i]}`}>
+                            <HeadingAndPara
+                                heading={item.heading}
+                                para={item.para}
+                                headingClass={`md:text-[32px] sm:text-[28px] text-[24px] font-bold text-[#112D49] leading-[120%] mb-3 ${headingStyles[i]}`}
+                                paraClass={`sm:text-[16px] text-[14px] font-normal text-[#112D49] ${paraStyles[i]}`}
+                            />
+                            <div className={`w-full flex ${buttonContainerStyles[i]}`}>
+                                <button className="flex gap-2 items-center">
+                                    {item.button} <Arrow />
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            ))}
+                ))}
+            </div>
+            <CustomButton buttonText={'View All Blog Posts'} buttonClass={'text-white'} />
         </div>
     );
 };

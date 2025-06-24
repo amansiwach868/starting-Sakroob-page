@@ -8,10 +8,12 @@ import blogPageImg1 from '../assets/img/png/blog-page-img-1.png'
 import blogPageImg2 from '../assets/img/png/blog-page-img-2.png'
 import blogPageImg3 from '../assets/img/png/blog-page-img-3.png'
 import blogPageImg4 from '../assets/img/png/blog-page-img-4.png'
+import userImg1 from '../assets/img/png/testimonial-swiper-img-1.png'
+import userImg2 from '../assets/img/png/testimonial-swiper-img-2.png'
 export const FEATURED_CATEGORIES_PRODUCTS = [
     {
         categorieName: 'Sensors & Modules',
-        categorieImg: categorieImg1,
+        categorieImage: categorieImg1,
     },
     {
         categorieName: 'Custom PC Parts',
@@ -38,20 +40,47 @@ export const BLOG_PAGE_DATA = [
     {
         heading: 'How to Build a Mini NAS',
         para: 'Learn to build your own network storage system with simple components.',
-        button:'Read Guide',
+        button: 'Read Guide',
         blogPgaeImg: blogPageImg1,
     },
     {
         heading: '5 Tools Every Maker Should Own',
         para: 'The essential toolkit for every DIY electronics enthusiast.',
-        button:'Read Guide',
+        button: 'Read Guide',
         blogPgaeImg: blogPageImg2,
     },
     {
         heading: ' Inside a Raspberry Pi Retro Console',
         para: 'Step-by-step log of building a retro game machine.',
-        button:'Read Guide',
+        button: 'Read Guide',
         blogPgaeImg: blogPageImg3,
         blogPgaeImg_1: blogPageImg4,
     },
+]
+export const TESTMONIAL_DATA = [
+    {
+        image:userImg1,
+        heading: "William gate",
+        work: "CEO"
+    },
+    {
+        image:userImg2,
+        heading: "Darrell Steward",
+        work: "Manager"
+    },
+    {
+        image:userImg1,
+        heading: "William gate",
+        work: "CEO"
+    },
+    {
+        image:userImg2,
+        heading: "Darrell Steward",
+        work: "Manager"
+    },
+    {
+        image: userImg1,
+        heading: "William gate",
+        work: "CEO"
+    }
 ]

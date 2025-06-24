@@ -1,5 +1,5 @@
 import React from 'react';
-import { FEATURED_CATEGORIES_PRODUCTS } from '../utils/hepler';
+import { FEATURED_CATEGORIES_PRODUCTS } from '../utils/helper';
 import HeadingAndPara from './common/HeadingAndPara';
 
 const FeaturedCategories = () => {
