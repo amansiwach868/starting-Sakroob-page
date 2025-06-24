@@ -18,16 +18,26 @@ const SignUpPage = () => {
         setTogglePassword(!togglePassword)
     }
 
-    const onSubmit = (formData) => {
-        localStorage.setItem("sakroobUser", JSON.stringify(formData));
+    localStorage.setItem("sakroobUsers", JSON.stringify([user1, user2, user3]));
 
+    const onSubmit = (formData) => {
+        const existingUser = JSON.parse(localStorage.getItem("sakroobUser"));
+
+        if (existingUser && existingUser.email === formData.email) {
+            toast.error("Email already exists", { position: "top-right" });
+            return;
+        }
+
+        localStorage.setItem("sakroobUser", JSON.stringify(formData));
         toast.success("Sign up successful!", { position: "top-right" });
+
         reset();
 
         setTimeout(() => {
-            navigate("/loginpage");
+            navigate("/login");
         }, 1500);
-    }
+    };
+
 
     const onError = () => {
         toast.error("Please fix the form errors", { position: "top-right" });

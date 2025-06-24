@@ -3,13 +3,14 @@ import { useForm } from 'react-hook-form';
 import HeadingAndPara from './common/HeadingAndPara';
 import CustomInput from './common/CustomInput';
 import { Eye } from '../utils/icons';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import CustomButton from './common/CustomButton';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const LoginPage = () => {
     const [togglePassword, setTogglePassword] = useState(false);
+    const navigate = useNavigate();
 
     const {
         register,
@@ -23,20 +24,23 @@ const LoginPage = () => {
     };
 
     const onSubmit = (data) => {
-        const storedUser = JSON.parse(localStorage.getItem("sakroobUser"));
+        const storedUser = JSON.parse(localStorage.getItem('sakroobUser'));
 
         if (
             storedUser &&
             storedUser.email === data.email &&
             storedUser.password === data.password
         ) {
-            toast.success("Login successful!", { position: "top-right" });
+            toast.success('Login successful!', { position: 'top-right' });
             reset();
+
+            setTimeout(() => {
+                navigate('/home');
+            }, 1500);
         } else {
-            toast.error("Invalid email or password", { position: "top-right" });
+            toast.error('Invalid email or password', { position: 'top-right' });
         }
     };
-
 
     const onError = () => {
         toast.error('Please fix the form errors', {
@@ -72,12 +76,9 @@ const LoginPage = () => {
                                 message: 'Enter a valid email address',
                             },
                         })}
+                        error={errors.email}
                     />
-                    {errors.email && (
-                        <p className='text-red-500 text-sm mt-1'>{errors.email.message}</p>
-                    )}
 
-                    {/* Password Field */}
                     <CustomInput
                         placeholder='Password'
                         type={togglePassword ? 'text' : 'password'}
@@ -87,17 +88,15 @@ const LoginPage = () => {
                             pattern: {
                                 value: /^(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{6,}$/,
                                 message:
-                                    'Minimum 6 characters, 1 uppercase letter, and 1 special character required',
+                                    'Min 6 chars, 1 uppercase, 1 special character required',
                             },
                         })}
+                        error={errors.password}
                     >
                         <div onClick={showPassword}>
                             <Eye />
                         </div>
                     </CustomInput>
-                    {errors.password && (
-                        <p className='text-red-500 text-sm mt-1'>{errors.password.message}</p>
-                    )}
 
                     <div className='w-full flex justify-end items-center'>
                         <NavLink

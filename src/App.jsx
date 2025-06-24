@@ -9,14 +9,8 @@ function App() {
 
   return (
     <>
-      {isLoggedIn ? (
-        <>
-          <Header />
-          <HomePage />
-        </>
-      ) : (
-        <Login setIsLoggedIn={setIsLoggedIn} />
-      )}
+      <Login />
+      
     </>
   )
 }

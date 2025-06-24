@@ -13,7 +13,6 @@ const Home = () => {
             <Services />
             <FeaturedCategories />
             <BlogPage/>
-            
         </div>
     )
 }
