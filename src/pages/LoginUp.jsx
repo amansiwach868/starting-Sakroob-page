@@ -8,7 +8,7 @@ const Login = () => {
     return (
         <div>
             <Routes>
-                <Route index path='/loginpage' element={<LoginPage />} />
+                <Route index path='/' element={<LoginPage />} />
                 <Route path='/signup' element={<SignUpPage />} />
                 <Route path='/forgetpassword' element={<ForgetPassword />} />
             </Routes>
