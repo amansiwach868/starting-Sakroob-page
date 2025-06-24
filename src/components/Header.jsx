@@ -58,9 +58,9 @@ const Header = () => {
                             <Cart />
                         </div>
                         <div onClick={() => {
-                            localStorage.removeItem("isLoggedIn"); // remove login flag
-                            window.location.reload(); // reload to reflect logout
-                            Navigate("/loginpage");
+                            localStorage.removeItem("isLoggedIn");
+                            window.location.reload();
+                            Navigate("/");
                         }} className="min-w-10 h-10 rounded-full flex cursor-pointer items-end justify-center overflow-hidden bg-white max-sm:hidden">
                             <Profile />
                         </div>
