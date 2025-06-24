@@ -31,7 +31,7 @@ const FeaturedCategories = () => {
     ];
 
     return (
-        <section className="max-w-[1384px] px-6 mx-auto my-[132px]">
+        <div className="max-w-[1384px] px-6 mx-auto my-[132px]">
             <HeadingAndPara
                 heading="Featured Categories"
                 para="Shop Our Most Popular Products"
@@ -60,7 +60,7 @@ const FeaturedCategories = () => {
                     </div>
                 ))}
             </div>
-        </section>
+        </div>
     );
 };
 

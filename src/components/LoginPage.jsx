@@ -31,12 +31,13 @@ const LoginPage = () => {
             storedUser.email === data.email &&
             storedUser.password === data.password
         ) {
-            toast.success('Login successful!', { position: 'top-right' });
-            reset();
+            toast.success("Login successful!", { position: "top-right" });
 
+            localStorage.setItem("isLoggedIn", "true");
+            reset();
             setTimeout(() => {
-                navigate('/home');
-            }, 1500);
+                window.location.reload();
+            }, 1000);
         } else {
             toast.error('Invalid email or password', { position: 'top-right' });
         }
