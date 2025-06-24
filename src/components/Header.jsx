@@ -3,7 +3,7 @@ import NavLinks from './common/NavLinks'
 import { Cart, DropDownSvg, Profile, Search, User, WishList } from '../utils/icons'
 import headerLogo from '../assets/img/svg/logo.svg'
 import headerLogo2 from '../assets/img/svg/logo2.svg'
-import { NavLink } from 'react-router-dom'
+import { Navigate, NavLink } from 'react-router-dom'
 
 const Header = () => {
     const [header, setHeader] = useState(false)
@@ -57,7 +57,11 @@ const Header = () => {
                             <div className="h-10 border border-[#D9D9D9] w-0 max-sm:hidden"></div>
                             <Cart />
                         </div>
-                        <div className="min-w-10 h-10 rounded-full flex cursor-pointer items-end justify-center overflow-hidden bg-white max-sm:hidden">
+                        <div onClick={() => {
+                            localStorage.removeItem("isLoggedIn"); // remove login flag
+                            window.location.reload(); // reload to reflect logout
+                            Navigate("/loginpage");
+                        }} className="min-w-10 h-10 rounded-full flex cursor-pointer items-end justify-center overflow-hidden bg-white max-sm:hidden">
                             <Profile />
                         </div>
                         <div onClick={toggleHeader} className="relative z-50 md:max-w-10 sm:max-w-7 max-w-[18px] w-full h-full flex flex-col gap-1 items-center group lg:hidden">

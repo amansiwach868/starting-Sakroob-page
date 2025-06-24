@@ -18,8 +18,6 @@ const SignUpPage = () => {
         setTogglePassword(!togglePassword)
     }
 
-    localStorage.setItem("sakroobUsers", JSON.stringify([user1, user2, user3]));
-
     const onSubmit = (formData) => {
         const existingUser = JSON.parse(localStorage.getItem("sakroobUser"));
 
@@ -34,7 +32,7 @@ const SignUpPage = () => {
         reset();
 
         setTimeout(() => {
-            navigate("/login");
+            navigate("/loginpage");
         }, 1500);
     };
 
