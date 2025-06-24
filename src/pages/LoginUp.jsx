@@ -1,10 +1,10 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import LoginPage from '../components/'
+import LoginPage from '../components/LoginPage'
 import SignUpPage from '../components/SignUpPage'
 import ForgetPassword from '../components/ForgetPassword'
 
-const Login = () => {
+const LoginUp = () => {
     return (
         <div>
             <Routes>
@@ -16,4 +16,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default LoginUp

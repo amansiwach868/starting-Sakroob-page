@@ -60,7 +60,7 @@ const Header = () => {
                         <div onClick={() => {
                             localStorage.removeItem("isLoggedIn");
                             window.location.reload();
-                            Navigate("/");
+                            Navigate("/login");
                         }} className="min-w-10 h-10 rounded-full flex cursor-pointer items-end justify-center overflow-hidden bg-white max-sm:hidden">
                             <Profile />
                         </div>
