@@ -7,6 +7,7 @@ import ForgetPassword from './components/ForgetPassword';
 import Home from './pages/Home';
 import CartPage from './components/CartPage';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import CheckOut from './components/CheckOut';
 
 function App() {
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
@@ -38,6 +39,10 @@ function App() {
         <Route
           path="/cart"
           element={isLoggedIn ? <CartPage /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/checkout"
+          element={isLoggedIn ? <CheckOut /> : <Navigate to="/login" />}
         />
         <Route path="*" element={<Navigate to={isLoggedIn ? "/home" : "/login"} />} />
       </Routes>

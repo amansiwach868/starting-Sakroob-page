@@ -1,11 +1,9 @@
-import React from "react";
+import React from 'react'
 
-const Heading = ({ headText, headClass }) => {
+const Heading = ({headingText, headingClass }) => {
   return (
-    <div>
-      <h1 className={`font-bold leading-[120%] text-[#112D49] text-5xl text-center mx-auto ${headClass}`}>{headText}</h1>
-    </div>
-  );
-};
+      <p className={`font-bold text-2xl text-[#112D49] ${headingClass} `}>{headingText }</p>
+  )
+}
 
-export default Heading;
+export default Heading

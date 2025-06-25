@@ -43,6 +43,7 @@ const BestSellers = () => {
             position: "bottom-center",
             autoClose: 2000,
             theme: "colored",
+            closeOnClick:true
         });
     };
 

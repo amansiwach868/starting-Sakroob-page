@@ -5,6 +5,7 @@ import CustomButton from '../components/common/CustomButton';
 import { useCart } from '../context/CartContext';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { NavLink } from 'react-router-dom';
 
 const CartPage = () => {
     const { cartItems, increment, decrement, removeFromCart } = useCart();
@@ -106,10 +107,12 @@ const CartPage = () => {
                                 <p className="text-[16px] text-[#112D49] opacity-80 mb-6">
                                     Taxes, discounts and shipping calculated at checkout.
                                 </p>
-                                <CustomButton
-                                    buttonClass="w-full bg-[#112D49] leading-[125%] text-white hover:bg-opacity-80"
-                                    buttonText="Check out"
-                                />
+                                <NavLink to={'/checkout'}>
+                                    <CustomButton
+                                        buttonClass="w-full bg-[#112D49] leading-[125%] text-white hover:bg-opacity-80"
+                                        buttonText="Check out"
+                                    />
+                                </NavLink>
                             </div>
                         </div>
                     </div>
