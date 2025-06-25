@@ -1,5 +1,5 @@
 // src/components/BestSellers.jsx
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
@@ -9,26 +9,30 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CustomButton from "./common/CustomButton";
 import { useCart } from "../context/CartContext";
+import { useWishlist } from "../context/WishlistContext";  // <-- import wishlist hook
 import { FilledHeartSvg, HeartSvg, LeftArrow, RightArrow } from "../utils/icons";
+import { useNavigate } from "react-router-dom";
 
 const BestSellers = () => {
-    const prevRef = useRef(null);
-    const nextRef = useRef(null);
     const { addToCart } = useCart();
-    const [favoriteItems, setFavoriteItems] = useState([]);
+    const { wishlistItems, addToWishlist, removeFromWishlist } = useWishlist();  // <-- get wishlist API
+    const navigate = useNavigate();
 
-    const handleFavoriteClick = (i) => {
-        setFavoriteItems((prev) => {
-            const updated = prev.includes(i)
-                ? prev.filter((item) => item !== i)
-                : [...prev, i];
+    const handleFavoriteClick = (item) => {
+        const isFavorited = wishlistItems.some(w => w.id === item.id);
 
-            toast[prev.includes(i) ? "error" : "success"](
-                prev.includes(i) ? "Removed from Favorite 💔" : "Added to Favorite ❤️"
-            );
-
-            return updated;
-        });
+        if (isFavorited) {
+            removeFromWishlist(item.id);
+            toast.error("Removed from Wishlist 💔");
+        } else {
+            addToWishlist({
+                id: item.id,
+                name: item.title,
+                image: item.img,
+                price: Number(item.price) || 0,
+            });
+            toast.success("Added to Wishlist ❤️");
+        }
     };
 
     const handleShopNow = (item) => {
@@ -43,8 +47,19 @@ const BestSellers = () => {
             position: "bottom-center",
             autoClose: 2000,
             theme: "colored",
-            closeOnClick:true
+            closeOnClick: true,
         });
+    };
+
+    const handleViewDetails = (item) => {
+        const cleanItem = {
+            id: item.id,
+            title: item.title,
+            description: item.description,
+            price: item.price,
+            img: item.img,
+        };
+        navigate("/productdetails", { state: cleanItem });
     };
 
     const topPositionimg = [
@@ -63,7 +78,6 @@ const BestSellers = () => {
                     <div className="swiper-arrow prev-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
                         <LeftArrow />
                     </div>
-
                     <div className="swiper-arrow next-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
                         <RightArrow />
                     </div>
@@ -75,17 +89,9 @@ const BestSellers = () => {
                     spaceBetween={15}
                     loop
                     centeredSlides={true}
-                    slidesOffsetBefore={24}
-                    slidesOffsetAfter={24}
                     navigation={{
                         nextEl: '.next-buttonBestSellers',
                         prevEl: '.prev-buttonBestSellers',
-                    }}
-                    onInit={(swiper) => {
-                        swiper.params.navigation.prevEl = prevRef.current;
-                        swiper.params.navigation.nextEl = nextRef.current;
-                        swiper.navigation.init();
-                        swiper.navigation.update();
                     }}
                     breakpoints={{
                         320: { slidesPerView: 1.1, spaceBetween: 10 },
@@ -96,7 +102,10 @@ const BestSellers = () => {
                 >
                     {BESTSELLER_DATA.map((item, i) => (
                         <SwiperSlide className="pt-[100px]" key={item.id}>
-                            <div className="max-w-[364px] hover:shadow-[0px_0px_11.4px_0px_#73A4E033] border border-[#112D4914] hover:border-transparent duration-300 rounded-[8px] p-4 flex flex-col justify-between min-h-[536px]">
+                            <div
+                                onClick={() => handleViewDetails(item)}
+                                className="cursor-pointer max-w-[364px] hover:shadow-[0px_0px_11.4px_0px_#73A4E033] border border-[#112D4914] hover:border-transparent duration-300 rounded-[8px] p-4 flex flex-col justify-between min-h-[536px]"
+                            >
                                 <div>
                                     <div className="w-full h-[242px] bg-[#E5E4E2] flex items-center justify-center relative">
                                         <img
@@ -106,9 +115,12 @@ const BestSellers = () => {
                                         />
                                         <div
                                             className="absolute top-[10px] right-[10px] cursor-pointer text-xl w-8 h-8 flex justify-center items-center rounded-full bg-[#73A4E01F]"
-                                            onClick={() => handleFavoriteClick(i)}
+                                            onClick={(e) => {
+                                                e.stopPropagation(); // prevent card click
+                                                handleFavoriteClick(item);
+                                            }}
                                         >
-                                            {favoriteItems.includes(i) ? <FilledHeartSvg /> : <HeartSvg />}
+                                            {wishlistItems.some(w => w.id === item.id) ? <FilledHeartSvg /> : <HeartSvg />}
                                         </div>
                                     </div>
                                     <p className="font-bold text-2xl text-[#112D49] pt-4">{item.title}</p>
@@ -125,7 +137,10 @@ const BestSellers = () => {
                                         <CustomButton
                                             buttonText="Shop Now"
                                             buttonClass="bg-white !text-[#112D49] border border-[#112D49] hover:!bg-[#112D49] hover:!text-white w-full"
-                                            onClick={() => handleShopNow(item)}
+                                            onClick={(e) => {
+                                                e.stopPropagation(); // stop parent click
+                                                handleShopNow(item);
+                                            }}
                                         />
                                         {item.shop && <item.shop />}
                                     </div>
@@ -134,11 +149,11 @@ const BestSellers = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
+
                 <div className="xl:hidden flex justify-center gap-3 items-center px-4 z-10">
                     <div className="swiper-arrow prev-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
                         <LeftArrow />
                     </div>
-
                     <div className="swiper-arrow next-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
                         <RightArrow />
                     </div>

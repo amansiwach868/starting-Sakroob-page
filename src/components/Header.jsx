@@ -164,7 +164,9 @@ const Header = () => {
                         <div className="flex gap-3.5 items-center max-sm:hidden">
                             <User />
                             <div className="h-10 border border-[#D9D9D9] w-0"></div>
-                            <WishList />
+                            <NavLink to="/wishlist" className="relative inline-block">
+                                <WishList />
+                            </NavLink>
                             <div className="h-10 border border-[#D9D9D9] w-0"></div>
                             <NavLink to="/cart" className="relative inline-block">
                                 <Cart />
