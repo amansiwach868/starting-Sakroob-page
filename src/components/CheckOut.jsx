@@ -46,7 +46,13 @@ const CheckOut = () => {
                             <Input
                                 htmlFor={'email'}
                                 labelText={'Email or mobile phone number'}
-                                register={register('email', { required: 'Email is required' })}
+                                register={register('email', {
+                                    required: 'Email is required',
+                                    pattern: {
+                                        value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
+                                        message: 'Enter a valid email address',
+                                    },
+                                })}
                                 error={errors.email}
                             />
                         </div>
@@ -58,20 +64,40 @@ const CheckOut = () => {
                             <Input
                                 htmlFor={'country'}
                                 labelText={'Country/ Region'}
-                                register={register('country', { required: 'Country is required' })}
+                                register={register('country', {
+                                    required: 'Country is required',
+                                    minLength: { value: 2, message: 'At least 2 characters' },
+                                    maxLength: { value: 56, message: 'Too long' },
+                                })}
                                 error={errors.country}
                             />
                         </div>
 
                         <div className="flex max-md:flex-col max-md:gap-[26px] justify-between gap-3 mb-[26px]">
                             <div className="w-full">
-                                <Input htmlFor={'first-name'} labelText={'First name (Optional)'} register={register('firstName')} />
+                                <Input
+                                    htmlFor={'first-name'}
+                                    labelText={'First name (Optional)'}
+                                    register={register('firstName', {
+                                        pattern: {
+                                            value: /^[A-Za-z\s]*$/,
+                                            message: 'Letters only',
+                                        },
+                                    })}
+                                    error={errors.firstName}
+                                />
                             </div>
                             <div className="w-full">
                                 <Input
                                     htmlFor={'last-name'}
                                     labelText={'Last name'}
-                                    register={register('lastName', { required: 'Last name is required' })}
+                                    register={register('lastName', {
+                                        required: 'Last name is required',
+                                        pattern: {
+                                            value: /^[A-Za-z\s]*$/,
+                                            message: 'Letters only',
+                                        },
+                                    })}
                                     error={errors.lastName}
                                 />
                             </div>
@@ -81,7 +107,10 @@ const CheckOut = () => {
                             <Input
                                 htmlFor={'address'}
                                 labelText={'Address'}
-                                register={register('address', { required: 'Address is required' })}
+                                register={register('address', {
+                                    required: 'Address is required',
+                                    minLength: { value: 5, message: 'Too short' },
+                                })}
                                 error={errors.address}
                             />
                         </div>
@@ -92,7 +121,11 @@ const CheckOut = () => {
                         </div>
 
                         <div className="mb-[26px]">
-                            <Input htmlFor={'apartment'} labelText={'Apartment, Suit, etc. (optional)'} register={register('apartment')} />
+                            <Input
+                                htmlFor={'apartment'}
+                                labelText={'Apartment, Suit, etc. (optional)'}
+                                register={register('apartment')}
+                            />
                         </div>
 
                         <div className="flex max-md:flex-col max-md:gap-[26px] gap-3 justify-between mb-[26px]">
@@ -100,7 +133,13 @@ const CheckOut = () => {
                                 <Input
                                     htmlFor={'city'}
                                     labelText={'City'}
-                                    register={register('city', { required: 'City is required' })}
+                                    register={register('city', {
+                                        required: 'City is required',
+                                        pattern: {
+                                            value: /^[A-Za-z\s]*$/,
+                                            message: 'Letters only',
+                                        },
+                                    })}
                                     error={errors.city}
                                 />
                             </div>
@@ -108,7 +147,13 @@ const CheckOut = () => {
                                 <Input
                                     htmlFor={'emirate'}
                                     labelText={'Emirate'}
-                                    register={register('emirate', { required: 'Emirate is required' })}
+                                    register={register('emirate', {
+                                        required: 'Emirate is required',
+                                        pattern: {
+                                            value: /^[A-Za-z\s]*$/,
+                                            message: 'Letters only',
+                                        },
+                                    })}
                                     error={errors.emirate}
                                 />
                             </div>
@@ -167,8 +212,11 @@ const CheckOut = () => {
                                 </label>
                             </div>
 
+                            {/* Card Fields */}
                             <div
-                                className={`transition-all duration-200 overflow-hidden ${selected === 'card' ? 'opacity-100 max-h-[1000px]' : 'opacity-0 max-h-0 pointer-events-none'
+                                className={`transition-all duration-200 overflow-hidden ${selected === 'card'
+                                    ? 'opacity-100 max-h-[1000px]'
+                                    : 'opacity-0 max-h-0 pointer-events-none'
                                     }`}
                             >
                                 <div className="bg-[#FBFBFB] pt-[26px] pb-7">
@@ -182,7 +230,7 @@ const CheckOut = () => {
                                                         required: selected === 'card' && 'Card Number is required',
                                                         pattern: {
                                                             value: /^\d{16}$/,
-                                                            message: 'Card Number must be 16 digits',
+                                                            message: 'Must be 16 digits',
                                                         },
                                                     })}
                                                     className="py-[14px] px-4 rounded-[12px] bg-[#F4F8F7] w-full"
@@ -196,6 +244,10 @@ const CheckOut = () => {
                                                     type="text"
                                                     {...register('cardName', {
                                                         required: selected === 'card' && 'Card name is required',
+                                                        pattern: {
+                                                            value: /^[A-Za-z\s]+$/,
+                                                            message: 'Letters only',
+                                                        },
                                                     })}
                                                     className="py-[14px] px-4 rounded-[12px] bg-[#F4F8F7] w-full"
                                                 />
@@ -210,6 +262,15 @@ const CheckOut = () => {
                                                     type="month"
                                                     {...register('expiryDate', {
                                                         required: selected === 'card' && 'Expiry date is required',
+                                                        validate: (value) => {
+                                                            if (!value) return 'Expiry date is required';
+                                                            const [year, month] = value.split('-').map(Number);
+                                                            const now = new Date();
+                                                            if (year < now.getFullYear() || (year === now.getFullYear() && month < now.getMonth() + 1)) {
+                                                                return 'Must be in the future';
+                                                            }
+                                                            return true;
+                                                        },
                                                     })}
                                                     className="py-[14px] px-4 rounded-[12px] bg-[#F4F8F7] w-full"
                                                 />
@@ -224,7 +285,7 @@ const CheckOut = () => {
                                                         required: selected === 'card' && 'CVC is required',
                                                         pattern: {
                                                             value: /^[0-9]{3,4}$/,
-                                                            message: 'Invalid CVC',
+                                                            message: 'Must be 3 or 4 digits',
                                                         },
                                                     })}
                                                     className="py-[14px] pl-4 rounded-[12px] bg-[#F4F8F7] w-full pr-[75px]"
@@ -262,8 +323,7 @@ const CheckOut = () => {
                                 buttonText="Buy Now"
                                 type="submit"
                                 disabled={!isValid}
-                                buttonClass={`w-full text-white ${isValid ? 'bg-[#112D49] hover:bg-opacity-80' : 'bg-gray-400 cursor-not-allowed'
-                                    }`}
+                                buttonClass={`w-full text-white ${isValid ? 'bg-[#112D49] hover:bg-opacity-80' : 'bg-gray-400 cursor-not-allowed'}`}
                             />
                         </div>
                     </form>
