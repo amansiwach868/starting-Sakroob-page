@@ -27,3 +27,8 @@
 .slider-wrapper{
     padding-bottom: 21px !important;
 }
+.swiper-slide{
+    display: flex !important; 
+    justify-content: center !important;
+    align-items: center !important;
+}

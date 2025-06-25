@@ -9,7 +9,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CustomButton from "./common/CustomButton";
 import { useCart } from "../context/CartContext";
-import { FilledHeartSvg, HeartSvg } from "../utils/icons";
+import { FilledHeartSvg, HeartSvg, LeftArrow, RightArrow } from "../utils/icons";
 
 const BestSellers = () => {
     const prevRef = useRef(null);
@@ -52,21 +52,20 @@ const BestSellers = () => {
     ];
 
     return (
-        <div className="relative">
-            <div className="max-w-[1272px] mx-auto px-3">
+        <div className="">
+            <div className="max-w-[1272px] mx-auto px-3 relative">
                 <h2 className="md:text-[48px] sm:text-[36px] text-[28px] font-bold text-[#112D49] text-center mb-4">
                     Bestsellers
                 </h2>
 
-                <div ref={prevRef} className="absolute left-[6%] top-1/2 z-10 w-[38px] h-[38px] border rounded-full flex items-center justify-center cursor-pointer group hover:bg-[#112D49]">
-                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 13L1 7L6.79609 1" className="stroke-[#112D49] group-hover:stroke-white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                </div>
-                <div ref={nextRef} className="absolute right-[6%] top-1/2 z-10 w-[38px] h-[38px] border rounded-full flex items-center justify-center cursor-pointer group hover:bg-[#112D49]">
-                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 13L7 7L1.20391 1" className="stroke-[#112D49] group-hover:stroke-white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
+                <div className="max-xl:hidden flex xl:absolute top-1/2 xl:-left-11 xl:-right-11 transform -translate-y-1/2 justify-between items-center px-4 z-10">
+                    <div className="swiper-arrow prev-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
+                        <LeftArrow />
+                    </div>
+
+                    <div className="swiper-arrow next-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
+                        <RightArrow />
+                    </div>
                 </div>
 
                 <Swiper
@@ -74,12 +73,12 @@ const BestSellers = () => {
                     slidesPerView={3}
                     spaceBetween={15}
                     loop
-                    centeredSlides
+                    centeredSlides={true}
                     slidesOffsetBefore={24}
                     slidesOffsetAfter={24}
                     navigation={{
-                        prevEl: prevRef.current,
-                        nextEl: nextRef.current,
+                        nextEl: '.next-buttonBestSellers',
+                        prevEl: '.prev-buttonBestSellers',
                     }}
                     onInit={(swiper) => {
                         swiper.params.navigation.prevEl = prevRef.current;
@@ -134,6 +133,15 @@ const BestSellers = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
+                <div className="xl:hidden flex justify-center gap-3 items-center px-4 z-10">
+                    <div className="swiper-arrow prev-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
+                        <LeftArrow />
+                    </div>
+
+                    <div className="swiper-arrow next-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
+                        <RightArrow />
+                    </div>
+                </div>
             </div>
             <ToastContainer />
         </div>

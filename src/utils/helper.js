@@ -17,7 +17,7 @@ import routerImg from '../assets/img/png/router-img.png'
 export const FEATURED_CATEGORIES_PRODUCTS = [
     {
         categorieName: 'Sensors & Modules',
-        categorieImage: categorieImg1,
+        categorieImg: categorieImg1,
     },
     {
         categorieName: 'Custom PC Parts',
