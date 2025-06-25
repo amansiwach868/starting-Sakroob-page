@@ -44,13 +44,13 @@ const CartPage = () => {
                             <div key={item.id} className="flex flex-col md:flex-row justify-between items-center gap-6 my-[47px]">
                                 {/* Product */}
                                 <div className="flex gap-4 items-center w-full md:w-[40%]">
-                                    <div className="relative w-[85px] h-[85px] border rounded flex items-center justify-center">
+                                    <div className="relative min-w-[85px] h-[85px] border border-[#00000033] rounded flex items-center justify-center bg-[#E9E9E9]">
                                         <img
                                             src={item.image}
                                             alt={item.name}
                                             className="rounded object-contain max-w-full max-h-full"
                                         />
-                                        <span className="absolute -top-4 left-[68px] size-[34px] bg-[#C7C7C7] rounded-full text-[#112D49] flex items-center justify-center text-sm">
+                                        <span className="absolute -top-4 left-[68px] size-[34px] bg-[#C7C7C7] rounded-full text-[#112D49] flex items-center justify-center text-[24px]">
                                             {item.quantity}
                                         </span>
                                     </div>

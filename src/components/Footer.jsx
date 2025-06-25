@@ -14,7 +14,7 @@ const Footer = () => {
   const isHomePage = location.pathname === "/" || location.pathname === "/home";
   return (
     <>
-      <div className={`bg-[#112D49] ${isHomePage ? "pt-[210px]" : "pt-10"}`}>
+      <div className={`bg-[#112D49] ${isHomePage ? "pt-[210px]" : "pt-[70px]"}`}>
         <div className="max-w-[1440px] mx-auto px-3">
           <div className="">
             <img className="mx-auto flex" src={footerLogo} alt="footer-logo" />
@@ -81,10 +81,10 @@ const Footer = () => {
             </div>
             <div className="max-w-[1140px] w-full mx-auto mt-[82px] relative z-0 pt-[1px] rounded-[12px] after:content-[''] after:absolute after:inset-0 after:rounded-[12px] after:bg-[linear-gradient(90deg,_#ffffff00_3.37%,_#ffffffcc_51.44%,_#ffffff00_100%)] after:-z-10">
               <div className="flex relative bg-[#112D49] rounded-[10px] flex-wrap justify-between items-center max-w-[1440px] mx-auto py-[30px] gap-4 sm:gap-0 sm:flex-nowrap sm:justify-between px-4">
-                <p className="text-sm text-white text-center sm:text-left w-full sm:w-auto">
+                <p className="text-sm text-white text-center sm:text-left w-full sm:w-auto leading-[100%]">
                   term of service | Privacy Policy
                 </p>
-                <p className="text-sm text-white text-center sm:text-right w-full sm:w-auto">
+                <p className="text-sm text-white text-center sm:text-right w-full sm:w-auto leading-[120%]">
                   © {new Date().getFullYear()} Skaroob. All Rights Reserved.
                 </p>
               </div>
