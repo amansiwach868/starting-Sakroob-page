@@ -9,6 +9,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CustomButton from "./common/CustomButton";
 import { useCart } from "../context/CartContext";
+import { FilledHeartSvg, HeartSvg } from "../utils/icons";
 
 const BestSellers = () => {
     const prevRef = useRef(null);
@@ -95,7 +96,7 @@ const BestSellers = () => {
                 >
                     {BESTSELLER_DATA.map((item, i) => (
                         <SwiperSlide className="pt-[100px]" key={item.id}>
-                            <div className="max-w-[364px] border rounded-[8px] p-4 flex flex-col justify-between min-h-[536px]">
+                            <div className="max-w-[364px] hover:shadow-[0px_0px_11.4px_0px_#73A4E033] border border-[#112D4914] hover:border-transparent duration-300 rounded-[8px] p-4 flex flex-col justify-between min-h-[536px]">
                                 <div>
                                     <div className="w-full h-[242px] bg-[#E5E4E2] flex items-center justify-center relative">
                                         <img
@@ -104,10 +105,10 @@ const BestSellers = () => {
                                             className={`absolute ${topPositionimg[i]} left-1/2 -translate-x-1/2`}
                                         />
                                         <div
-                                            className="absolute top-[10px] right-[10px] cursor-pointer text-xl"
+                                            className="absolute top-[10px] right-[10px] cursor-pointer text-xl w-8 h-8 flex justify-center items-center rounded-full bg-[#73A4E01F]"
                                             onClick={() => handleFavoriteClick(i)}
                                         >
-                                            {favoriteItems.includes(i) ? "💖" : "🤍"}
+                                            {favoriteItems.includes(i) ? <FilledHeartSvg /> : <HeartSvg />}
                                         </div>
                                     </div>
                                     <p className="font-bold text-2xl text-[#112D49] pt-4">{item.title}</p>
@@ -120,7 +121,7 @@ const BestSellers = () => {
                                         </p>
                                         <div className="-mt-3">{item.svg && <item.svg />}</div>
                                     </div>
-                                    <div className="mt-5 flex justify-between items-center">
+                                    <div className="mt-5 flex justify-between items-center gap-6">
                                         <CustomButton
                                             buttonText="Shop Now"
                                             buttonClass="bg-white !text-[#112D49] border border-[#112D49] hover:!bg-[#112D49] hover:!text-white w-full"

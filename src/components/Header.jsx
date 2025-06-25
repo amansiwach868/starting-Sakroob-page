@@ -169,7 +169,7 @@ const Header = () => {
                             <NavLink to="/cart" className="relative inline-block">
                                 <Cart />
                                 {cartItems.length > 0 && (
-                                    <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-red-500 rounded-full"></span>
+                                    <span className="absolute -top-[9px] -right-0 w-[7px] h-[7px] bg-[#73A4E0] rounded-full"></span>
                                 )}
                             </NavLink>
 

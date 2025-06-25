@@ -100,6 +100,7 @@ export const BESTSELLER_DATA = [
         svg: SmallRating,
         Heart: HeartSvg,
         shop: ShopSvg,
+        id:1
     },
     {
         img: routerImg,
@@ -109,6 +110,7 @@ export const BESTSELLER_DATA = [
         svg: SmallRating,
         Heart: HeartSvg,
         shop: ShopSvg,
+        id:2
     },
     {
         img: gamingCheirImg,
@@ -118,6 +120,7 @@ export const BESTSELLER_DATA = [
         svg: SmallRating,
         Heart: HeartSvg,
         shop: ShopSvg,
+        id:3
     },
     {
         img: pcImg,
@@ -127,6 +130,7 @@ export const BESTSELLER_DATA = [
         svg: SmallRating,
         Heart: HeartSvg,
         shop: ShopSvg,
+        id:4
     },
     {
         img: routerImg,
@@ -136,6 +140,7 @@ export const BESTSELLER_DATA = [
         svg: SmallRating,
         Heart: HeartSvg,
         shop: ShopSvg,
+        id:5
     },
     {
         img: gamingCheirImg,
@@ -145,5 +150,6 @@ export const BESTSELLER_DATA = [
         svg: SmallRating,
         Heart: HeartSvg,
         shop: ShopSvg,
+        id:6
     },
 ];
