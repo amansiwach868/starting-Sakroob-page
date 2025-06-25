@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const LoginPage = () => {
     const [togglePassword, setTogglePassword] = useState(false);
+    const navigate = useNavigate();
 
     const {
         register,
@@ -34,6 +35,7 @@ const LoginPage = () => {
 
             localStorage.setItem("isLoggedIn", "true");
             reset();    
+            navigate('/home')
             setTimeout(() => {
                 window.location.reload();
             }, 1000);

@@ -32,7 +32,7 @@ const SignUpPage = () => {
         reset();
 
         setTimeout(() => {
-            navigate("/");
+            navigate("/login");
         }, 1500);
     };
 
@@ -117,7 +117,7 @@ const SignUpPage = () => {
 
                     <div className="w-full flex sm:flex-row flex-col justify-center gap-1 mt-5 items-center">
                         <p className='text-nowrap sm:text-[16px] text-[14px]'>Already a member?</p>
-                        <NavLink to={'/'} className='sm:text-[16px] text-[14px] font-semibold underline text-[#112D49] underline-offset-2 text-nowrap'>Log in</NavLink>
+                        <NavLink to={'/login'} className='sm:text-[16px] text-[14px] font-semibold underline text-[#112D49] underline-offset-2 text-nowrap'>Log in</NavLink>
                     </div>
                 </form>
             </div>
