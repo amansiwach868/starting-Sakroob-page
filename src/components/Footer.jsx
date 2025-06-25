@@ -7,11 +7,14 @@ import {
   TwiterSvg,
   YoutubeSvg,
 } from "../utils/icons";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/" || location.pathname === "/home";
   return (
     <>
-      <div className="bg-[#112D49] pt-[210px]">
+      <div className={`bg-[#112D49] ${isHomePage ? "pt-[210px]" : "pt-10"}`}>
         <div className="max-w-[1440px] mx-auto px-3">
           <div className="">
             <img className="mx-auto flex" src={footerLogo} alt="footer-logo" />
