@@ -44,7 +44,7 @@ const BlogPage = () => {
     return (
         <div className=' max-w-[1384px] w-full mx-auto px-6 my-[132px] flex flex-col justify-center items-center gap-[64px]'>
             <h3 className='text-[48px] font-bold text-[#112D49] leading-[120%] max-w-[618px] mx-auto text-center'>Blog, Guides, Build Logs & More</h3>
-            <div className="grid sm:grid-cols-2 sm:grid-rows-2 grid-cols-1 gap-x-[26px] gap-y-6 w-full md:!grid-rows-[335px_388px] !md:grid-rows-[364px_527px]">
+            <div className="grid sm:grid-cols-2 grid-cols-1 gap-x-[26px] gap-y-6 w-full md:!grid-rows-[335px_388px] grid-rows-[364px_364px_527px]">
                 {BLOG_PAGE_DATA.map((item, i) => (
                     <div
                         key={i}

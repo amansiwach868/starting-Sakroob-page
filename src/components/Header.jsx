@@ -4,8 +4,10 @@ import { Cart, DropDownSvg, Profile, Search, User, WishList } from '../utils/ico
 import headerLogo from '../assets/img/svg/logo.svg';
 import headerLogo2 from '../assets/img/svg/logo2.svg';
 import { NavLink, useNavigate } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
 
 const Header = () => {
+    const { cartItems } = useCart();
     const [header, setHeader] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
     const navigate = useNavigate();
@@ -23,7 +25,6 @@ const Header = () => {
 
     return (
         <div className="w-full relative">
-            {/* Desktop Logo */}
             <NavLink to="/" className="lg:flex hidden">
                 <img
                     src={headerLogo}
@@ -32,15 +33,11 @@ const Header = () => {
                 />
             </NavLink>
 
-            {/* Navigation Bar */}
             <div className="w-full bg-[#112D49] md:py-5 sm:py-4 py-3">
                 <div className="xl:max-w-[976px] max-w-[920px] ml-auto xl:mr-[88px] mr-[12px] w-full px-3 flex justify-between xl:gap-10 items-center">
-                    {/* Mobile Logo */}
                     <NavLink to="/" className="lg:hidden">
                         <img src={headerLogo2} alt="Logo" className="cursor-pointer max-w-[90px]" />
                     </NavLink>
-
-                    {/* Main Nav */}
                     <ul
                         className={`fixed top-0 right-0 w-full h-full z-40 bg-[#112D49] flex flex-col items-center justify-center gap-8 transform duration-300 ${header ? 'translate-x-0' : 'translate-x-full'
                             } lg:static lg:translate-x-0 lg:flex-row lg:bg-transparent lg:w-auto lg:h-auto`}
@@ -48,8 +45,6 @@ const Header = () => {
                         <li>
                             <NavLinks to="/categories" onClick={closeAll}>Categories</NavLinks>
                         </li>
-
-                        {/* PC Products Dropdown */}
                         <li className="relative">
                             <button
                                 onClick={() => setActiveDropdown(activeDropdown === 'pc' ? null : 'pc')}
@@ -82,8 +77,6 @@ const Header = () => {
                             )}
 
                         </li>
-
-                        {/* Services Dropdown */}
                         <li className="relative">
                             <button
                                 onClick={() => setActiveDropdown(activeDropdown === 'services' ? null : 'services')}
@@ -106,7 +99,6 @@ const Header = () => {
                             )}
                         </li>
 
-                        {/* Support Dropdown */}
                         <li className="relative">
                             <button
                                 onClick={() => setActiveDropdown(activeDropdown === 'support' ? null : 'support')}
@@ -153,7 +145,6 @@ const Header = () => {
                         <li><NavLinks to="/blog" onClick={closeAll}>Blog</NavLinks></li>
                         <li><NavLinks to="/contact" onClick={closeAll}>Contact</NavLinks></li>
 
-                        {/* Mobile Icons */}
                         <li className="sm:hidden">
                             <div className="flex items-center gap-9 w-full max-w-[285px]">
                                 <div className="flex gap-3.5 items-center">
@@ -169,15 +160,19 @@ const Header = () => {
                             </div>
                         </li>
                     </ul>
-
-                    {/* Right Section */}
                     <div className="flex items-center justify-end gap-9 w-full max-w-[285px]">
                         <div className="flex gap-3.5 items-center max-sm:hidden">
                             <User />
                             <div className="h-10 border border-[#D9D9D9] w-0"></div>
                             <WishList />
                             <div className="h-10 border border-[#D9D9D9] w-0"></div>
-                            <Cart />
+                            <NavLink to="/cart" className="relative inline-block">
+                                <Cart />
+                                {cartItems.length > 0 && (
+                                    <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-red-500 rounded-full"></span>
+                                )}
+                            </NavLink>
+
                         </div>
                         <div
                             onClick={() => {
@@ -197,7 +192,6 @@ const Header = () => {
                 </div>
             </div>
 
-            {/* Search Bar */}
             <div className="py-[11px] px-4 w-full bg-[#F1F6FC]">
                 <div className="flex py-2 px-3 sm:py-3.5 sm:px-[25px] w-full max-w-[689px] mx-auto bg-white rounded-[50px] shadow-[0px_2px_20px_0px_#112D491A] border border-[#112D491A]">
                     <input type="text" placeholder="Search..." className="w-full text-[16px] font-normal text-[#8392A0] outline-none" />
@@ -205,7 +199,6 @@ const Header = () => {
                 </div>
             </div>
 
-            {/* Mobile backdrop */}
             {header && (
                 <div className="fixed inset-0 bg-black/50 z-30 lg:hidden" onClick={toggleHeader}></div>
             )}
