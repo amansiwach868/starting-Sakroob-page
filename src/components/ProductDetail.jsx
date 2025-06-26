@@ -8,6 +8,7 @@ import PopularProduct from "./PopularProduct";
 import { useCart } from "../context/CartContext";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ProductDetailTabs from "./ProductDetailTabs";
 
 const ProductDetail = () => {
     const { state } = useLocation();
@@ -172,7 +173,7 @@ const ProductDetail = () => {
                             {/* BUTTONS */}
                             <div className="pt-[78px] w-full">
                                 <CustomButton
-                                    buttonClass="!w-full !py-[17px]"
+                                    buttonClass="!w-full !py-[17px] text-white"
                                     buttonText="Buy Now"
                                     onClick={handleBuyNow}
                                 />
@@ -185,6 +186,7 @@ const ProductDetail = () => {
                         </div>
                     </div>
                 </div>
+                <ProductDetailTabs />
 
                 {/* Related products */}
                 <PopularProduct />

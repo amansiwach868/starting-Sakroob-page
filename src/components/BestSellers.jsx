@@ -12,6 +12,7 @@ import { useCart } from "../context/CartContext";
 import { useWishlist } from "../context/WishlistContext";  // <-- import wishlist hook
 import { FilledHeartSvg, HeartSvg, LeftArrow, RightArrow } from "../utils/icons";
 import { useNavigate } from "react-router-dom";
+import slugify from "slugify";
 
 const BestSellers = () => {
     const { addToCart } = useCart();
@@ -51,6 +52,8 @@ const BestSellers = () => {
         });
     };
 
+    
+
     const handleViewDetails = (item) => {
         const cleanItem = {
             id: item.id,
@@ -59,8 +62,10 @@ const BestSellers = () => {
             price: item.price,
             img: item.img,
         };
-        navigate("/productdetails", { state: cleanItem });
+        const slug = slugify(item.title, { lower: true });
+        navigate(`/productdetails/${slug}`, { state: cleanItem });
     };
+
 
     const topPositionimg = [
         "bottom-[21px]", "bottom-3", "bottom-[5px]",
@@ -103,7 +108,7 @@ const BestSellers = () => {
                     {BESTSELLER_DATA.map((item, i) => (
                         <SwiperSlide className="pt-[100px]" key={item.id}>
                             <div
-                                onClick={() => handleViewDetails(item)}
+                                
                                 className="cursor-pointer max-w-[364px] hover:shadow-[0px_0px_11.4px_0px_#73A4E033] border border-[#112D4914] hover:border-transparent duration-300 rounded-[8px] p-4 flex flex-col justify-between min-h-[536px]"
                             >
                                 <div>
@@ -116,7 +121,7 @@ const BestSellers = () => {
                                         <div
                                             className="absolute top-[10px] right-[10px] cursor-pointer text-xl w-8 h-8 flex justify-center items-center rounded-full bg-[#73A4E01F]"
                                             onClick={(e) => {
-                                                e.stopPropagation(); // prevent card click
+                                                e.stopPropagation();
                                                 handleFavoriteClick(item);
                                             }}
                                         >
@@ -137,12 +142,14 @@ const BestSellers = () => {
                                         <CustomButton
                                             buttonText="Shop Now"
                                             buttonClass="bg-white !text-[#112D49] border border-[#112D49] hover:!bg-[#112D49] hover:!text-white w-full"
-                                            onClick={(e) => {
-                                                e.stopPropagation(); // stop parent click
-                                                handleShopNow(item);
-                                            }}
+                                            onClick={() => handleViewDetails(item)}
                                         />
-                                        {item.shop && <item.shop />}
+                                        <div onClick={(e) => {
+                                            e.stopPropagation();
+                                            handleShopNow(item);
+                                        }}>
+                                            {item.shop && <item.shop />}
+                                        </div>
                                     </div>
                                 </div>
                             </div>

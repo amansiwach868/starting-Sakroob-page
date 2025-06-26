@@ -10,6 +10,15 @@ import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import CheckOut from './components/CheckOut';
 import ProductDetail from './components/ProductDetail';
 import WishList from './components/WishList';
+import BackToTop from './components/common/BackToTop'
+
+import Lenis from 'lenis'
+const lenis = new Lenis({
+  autoRaf: true,
+});
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
 
 function App() {
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
@@ -43,7 +52,7 @@ function App() {
           element={isLoggedIn ? <CartPage /> : <Navigate to="/login" />}
         />
         <Route
-          path="/productdetails"
+          path="/productdetails/:slug"
           element={isLoggedIn ? <ProductDetail /> : <Navigate to="/login" />}
         />
         <Route
@@ -57,6 +66,7 @@ function App() {
         <Route path="*" element={<Navigate to={isLoggedIn ? "/home" : "/login"} />} />
       </Routes>
       {!hideHeaderFooterRoutes.includes(location.pathname) && <Footer />}
+      <BackToTop />
     </>
   );
 }
