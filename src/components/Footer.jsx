@@ -24,27 +24,27 @@ const Footer = () => {
             />
             <ul className="flex flex-wrap gap-2.5 justify-between max-w-[384px] mx-auto mt-[27px]">
               <li>
-                <a className="text-white text-[16px] font-medium" href="#">
+                <a className="text-white sm:text-[16px] text-[14px] font-medium" href="#">
                   Shipping
                 </a>
               </li>
               <li>
-                <a className="text-white text-[16px] font-medium" href="#">
+                <a className="text-white sm:text-[16px] text-[14px] font-medium" href="#">
                   Warranty
                 </a>
               </li>
               <li>
-                <a className="text-white text-[16px] font-medium" href="#">
+                <a className="text-white sm:text-[16px] text-[14px] font-medium" href="#">
                   FAQs
                 </a>
               </li>
               <li>
-                <a className="text-white text-[16px] font-medium" href="#">
+                <a className="text-white sm:text-[16px] text-[14px] font-medium" href="#">
                   Blog
                 </a>
               </li>
               <li>
-                <a className="text-white text-[16px] font-medium" href="#">
+                <a className="text-white sm:text-[16px] text-[14px] font-medium" href="#">
                   Contact
                 </a>
               </li>

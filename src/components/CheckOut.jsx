@@ -1,4 +1,4 @@
-// src/components/CheckOut.jsx
+
 import React, { useState, useMemo, useEffect } from "react";
 import { useLocation, NavLink } from "react-router-dom";
 import { useCart } from "../context/CartContext";
@@ -35,7 +35,6 @@ const CheckOut = () => {
         formState: { errors, isValid },
     } = useForm({ mode: "onChange" });
 
-    // Reset on new items
     useEffect(() => {
         reset();
         setSelected("");
@@ -45,16 +44,14 @@ const CheckOut = () => {
         toast.success("Order placed successfully 🎉");
         reset();
         setSelected("");
-        if (directItems) clearCart(); // Optionally clear cart on buy now
+        if (directItems) clearCart();
     };
 
     return (
         <div className="max-w-[1140px] mx-auto lg:mt-[120px] lg:mb-[108px] md:my-[100px] sm:my-[75px] my-[52px] px-3">
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="flex lg:flex-row flex-col gap-6">
-                    {/* LEFT FORM SECTION */}
                     <div className="lg:max-w-[740px] w-full">
-                        {/* CONTACT & Back Button */}
                         <div className="flex justify-between mb-5">
                             <Heading headingText="Contact" />
                             <NavLink to={directItems ? "/" : "/cart"}>
@@ -65,7 +62,6 @@ const CheckOut = () => {
                             </NavLink>
                         </div>
 
-                        {/* Email */}
                         <div className="mb-[35px]">
                             <Input
                                 htmlFor="email"
@@ -81,7 +77,6 @@ const CheckOut = () => {
                             />
                         </div>
 
-                        {/* Delivery Section */}
                         <Heading headingText="Delivery" />
                         <div className="mt-5 mb-[26px]">
                             <Input
@@ -96,7 +91,6 @@ const CheckOut = () => {
                             />
                         </div>
 
-                        {/* Name */}
                         <div className="flex max-md:flex-col max-md:gap-[26px] justify-between gap-3 mb-[26px]">
                             <Input
                                 htmlFor="first-name"
@@ -118,7 +112,6 @@ const CheckOut = () => {
                             />
                         </div>
 
-                        {/* Address */}
                         <div className="mb-4">
                             <Input
                                 htmlFor="address"
@@ -131,20 +124,17 @@ const CheckOut = () => {
                             />
                         </div>
 
-                        {/* House number info */}
                         <div className="mb-[45px] flex gap-2 items-center">
                             <INFO />
                             <Subheading text="Add a house number if you have one" />
                         </div>
 
-                        {/* Apt/Suite */}
                         <Input
                             htmlFor="apartment"
                             labelText="Apartment, Suit, etc. (optional)"
                             register={register("apartment")}
                         />
 
-                        {/* City & Emirate */}
                         <div className="mb-4 mt-[26px] flex max-md:flex-col max-md:gap-[26px] gap-3 justify-between">
                             <Input
                                 htmlFor="city"
@@ -166,7 +156,6 @@ const CheckOut = () => {
                             />
                         </div>
 
-                        {/* Save info */}
                         <div className="mb-[42px] flex gap-2 items-center">
                             <input type="checkbox" id="checkbox" className="size-5 cursor-pointer" />
                             <label htmlFor="checkbox" className="cursor-pointer">
@@ -174,7 +163,6 @@ const CheckOut = () => {
                             </label>
                         </div>
 
-                        {/* Shipping method */}
                         <div className="mb-[42px]">
                             <p className="font-medium text-[18px] text-[#112D49] leading-[150%] mb-5">
                                 Shipping method
@@ -187,12 +175,10 @@ const CheckOut = () => {
                             />
                         </div>
 
-                        {/* Payment Section */}
                         <Heading headingText="Payment" headingClass="mb-1" />
                         <Subheading text="All transactions are secure and encrypted." subheadingClass="mb-[17px]" />
 
                         <div className="border border-[#E8EBED] rounded-[12px] pt-[17px] pb-[14px] w-full">
-                            {/* PayPal Option */}
                             <div className="flex justify-between items-center mb-4 px-[26px]">
                                 <label className="flex items-center gap-2 cursor-pointer">
                                     <input
@@ -212,7 +198,6 @@ const CheckOut = () => {
                                 </div>
                             </div>
 
-                            {/* Card Option */}
                             <div className={`px-[26px] ${selected === "card" ? "bg-[#FBFBFB] pt-[19px]" : "mb-[9px]"}`}>
                                 <label className="flex items-center gap-2 cursor-pointer">
                                     <input
@@ -227,7 +212,6 @@ const CheckOut = () => {
                                 </label>
                             </div>
 
-                            {/* Card Input Fields */}
                             {selected === "card" && (
                                 <div className="bg-[#FBFBFB] pt-[26px] pb-7 transition-all duration-200 px-[26px]">
                                     <div className="flex max-md:flex-col max-md:gap-7 justify-between mb-7">
@@ -292,8 +276,6 @@ const CheckOut = () => {
                                     </div>
                                 </div>
                             )}
-
-                            {/* Bank Transfer */}
                             <div className="px-[26px] pt-5">
                                 <label className="flex items-center gap-2 cursor-pointer">
                                     <input
@@ -311,7 +293,6 @@ const CheckOut = () => {
                         </div>
                     </div>
 
-                    {/* RIGHT CART SUMMARY SECTION */}
                     <div className="lg:max-w-[352px] w-full py-[14.5px] px-[14px] shadow-1 rounded-lg bg-white shadow-[0px_0px_11.4px_0px_#73A4E033]">
                         {items.map((item) => (
                             <div key={item.id} className="flex items-center justify-between mb-[26px]">

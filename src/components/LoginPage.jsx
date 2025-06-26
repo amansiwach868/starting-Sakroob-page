@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import HeadingAndPara from './common/HeadingAndPara';
 import CustomInput from './common/CustomInput';
 import { Eye } from '../utils/icons';
-import { Navigate, NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import CustomButton from './common/CustomButton';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

@@ -1,4 +1,6 @@
 import React, { useState, useRef, useLayoutEffect } from 'react';
+import { FiveStarRating, FiveStarRatingBig } from '../utils/icons';
+import reviewerImg from '../assets/img/png/reviewer-img.png'
 
 const TABS = [
     { key: 'reviews', label: 'Reviews', align: 'text-left' },
@@ -36,7 +38,7 @@ const ProductDetailTabs = () => {
                             <div className="flex flex-col lg:min-w-[220px]">
                                 <div className="text-[20px] sm:text-[22px] font-semibold text-[#112D49] mb-1">Customer Reviews</div>
                                 <div className="mb-2">
-                                    <span className="text-[#FFD600] text-xl font-bold">★★★★★</span>
+                                    <FiveStarRating/>
                                     <p className="font-medium text-dark-blue mt-1">Based on 1 review</p>
                                 </div>
                                 <a href="#" className="text-[#112D49] mt-10 text-sm font-medium hover:underline flex items-center gap-1">
@@ -77,13 +79,13 @@ const ProductDetailTabs = () => {
 
                         <div className="flex items-start gap-4 flex-col sm:flex-row">
                             <img
-                                src="https://randomuser.me/api/portraits/women/68.jpg"
+                                src={reviewerImg}
                                 alt="Kathryn Murphy"
-                                className="w-14 h-14 rounded-full object-cover border-2 border-[#E5EAF1]"
+                                className="w-[66px] h-[66px] rounded-full object-cover border-2 border-[#E5EAF1]"
                             />
                             <div>
                                 <div className="flex items-center gap-2 flex-wrap">
-                                    <span className="text-[#FFD600] text-base">★★★★★</span>
+                                    <FiveStarRatingBig/>
                                     <span className="text-gray-400 text-xs">23/05/2025</span>
                                 </div>
                                 <div className="font-semibold text-[#112D49] text-base">Kathryn Murphy</div>

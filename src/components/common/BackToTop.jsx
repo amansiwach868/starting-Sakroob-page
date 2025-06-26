@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { BackToTopSvg } from "../../utils/icons";
 const BackToTop = () => {
     const [isVisible, setIsVisible] = useState(false);
-
-    // Show button when page is scrolled down
     useEffect(() => {
         const toggleVisibility = () => {
             if (window.scrollY > 300) setIsVisible(true);

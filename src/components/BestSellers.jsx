@@ -1,4 +1,3 @@
-// src/components/BestSellers.jsx
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -9,14 +8,14 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CustomButton from "./common/CustomButton";
 import { useCart } from "../context/CartContext";
-import { useWishlist } from "../context/WishlistContext";  // <-- import wishlist hook
+import { useWishlist } from "../context/WishlistContext"; 
 import { FilledHeartSvg, HeartSvg, LeftArrow, RightArrow } from "../utils/icons";
 import { useNavigate } from "react-router-dom";
 import slugify from "slugify";
 
 const BestSellers = () => {
     const { addToCart } = useCart();
-    const { wishlistItems, addToWishlist, removeFromWishlist } = useWishlist();  // <-- get wishlist API
+    const { wishlistItems, addToWishlist, removeFromWishlist } = useWishlist(); 
     const navigate = useNavigate();
 
     const handleFavoriteClick = (item) => {
@@ -73,7 +72,7 @@ const BestSellers = () => {
     ];
 
     return (
-        <div className="">
+        <div>
             <div className="max-w-[1272px] mx-auto px-3 relative">
                 <h2 className="md:text-[48px] sm:text-[36px] text-[28px] font-bold text-[#112D49] text-center mb-4">
                     Bestsellers

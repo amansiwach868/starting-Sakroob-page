@@ -1,5 +1,4 @@
 import React from 'react';
-import Heading from './common/Heading';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Navigation } from 'swiper/modules';
@@ -13,7 +12,7 @@ const Testimonials = () => {
                 <p className="text-center italic text-lg md:text-xl text-[#112D49] mb-2">
                     Testimonials
                 </p>
-                <h2 className='leading-[120%] text-center text-[48px] font-bold text-[#112D49]'>What our client’s says </h2>
+                <h2 className='leading-[120%] text-center md:text-[48px] sm:text-[38px] text-[28px] font-bold text-[#112D49]'>What our client’s says </h2>
                 <div className="mt-10 relative">
                     <div className="max-xl:hidden flex xl:absolute top-[178px] xl:-left-14 xl:-right-14 2xl:-left-20 2xl:-right-20 justify-between items-center px-4 z-10">
                         <div className="swiper-arrow prev-button cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
@@ -51,15 +50,15 @@ const Testimonials = () => {
                                         alt="client-img"
                                     />
                                     <div className="pt-4 leading-[150%] relative text-[#112D49] opacity-80">
-                                            <div className="absolute top-0 left-0">
-                                                <LeftQuotationIcon />
-                                            </div>
+                                        <div className="absolute top-0 left-0">
+                                            <LeftQuotationIcon />
+                                        </div>
                                         <p className="flex-1 ">
                                             But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth,
                                         </p>
-                                            <div className="absolute bottom-0 right-0">
-                                                <RightQuotationIcon />
-                                            </div>
+                                        <div className="absolute bottom-0 right-0">
+                                            <RightQuotationIcon />
+                                        </div>
                                     </div>
                                     <Rating />
                                     <p className="font-semibold text-xl md:text-2xl text-[#112D49] mt-2 md:mt-3">

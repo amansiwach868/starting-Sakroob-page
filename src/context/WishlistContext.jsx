@@ -1,4 +1,3 @@
-// src/context/WishlistContext.js
 import React, { createContext, useContext, useEffect, useState } from "react";
 
 const WishlistContext = createContext();
@@ -16,7 +15,7 @@ export const WishlistProvider = ({ children }) => {
     const addToWishlist = (item) => {
         setWishlistItems((prev) => {
             const exists = prev.find((i) => i.id === item.id);
-            if (exists) return prev; // prevent duplicates
+            if (exists) return prev;
             return [...prev, item];
         });
     };

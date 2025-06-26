@@ -71,7 +71,6 @@ const ProductDetail = () => {
         <div className="pt-[91px]">
             <div className="max-w-[1140px] mx-auto px-3">
                 <div className="flex flex-wrap flex-row -mx-3">
-                    {/* LEFT SECTION */}
                     <div className="w-full lg:w-6/12 px-3 mb-8 lg:mb-0">
                         <div
                             className="py-[44px] px-[42px] max-w-[517px] rounded-[8px] mx-auto"
@@ -99,7 +98,6 @@ const ProductDetail = () => {
                         </div>
                     </div>
 
-                    {/* RIGHT SECTION */}
                     <div className="w-full lg:w-6/12 px-3">
                         <Heading
                             headingClass="!text-[34px] text-left !leading-[100%] max-w-[568px] mx-auto lg:mx-0"
@@ -117,7 +115,6 @@ const ProductDetail = () => {
                             <Rating />
                         </div>
 
-                        {/* COLOR SELECTION */}
                         <div className="flex flex-col items-start gap-4 max-w-[568px] mx-auto lg:mx-0">
                             <Para paraText="Select Color" paraClass="!font-semibold pt-[24px]" />
                             <div className="flex items-center gap-[6.52px] flex-wrap">
@@ -149,7 +146,6 @@ const ProductDetail = () => {
                             </div>
                         </div>
 
-                        {/* QUANTITY SELECTION */}
                         <div className="flex flex-col items-start gap-4 max-w-[568px] mx-auto lg:mx-0">
                             <Para paraText="Select Quantity" paraClass="!font-semibold pt-[35px]" />
                             <div className="flex items-center">
@@ -170,7 +166,6 @@ const ProductDetail = () => {
                                 </button>
                             </div>
 
-                            {/* BUTTONS */}
                             <div className="pt-[78px] w-full">
                                 <CustomButton
                                     buttonClass="!w-full !py-[17px] text-white"
@@ -188,11 +183,9 @@ const ProductDetail = () => {
                 </div>
                 <ProductDetailTabs />
 
-                {/* Related products */}
                 <PopularProduct />
             </div>
 
-            {/* Toast container to show toasts */}
             <ToastContainer />
         </div>
     );

@@ -27,10 +27,8 @@ const WishList = () => {
 
                 {wishlistItems.length > 0 ? (
                     <div className="mt-14 w-full rounded-[12px] bg-[#F4F8F7] p-5 space-y-5">
-                        {/* Wishlist Items */}
                         {wishlistItems.map((item) => (
                             <div key={item.id} className="flex flex-col md:flex-row justify-between items-center gap-6 ">
-                                {/* Product */}
                                 <div className="flex gap-4 items-center w-full md:w-[60%]">
                                     <div className="relative min-w-[85px] h-[85px] border border-[#00000033] rounded flex items-center justify-center bg-[#E9E9E9]">
                                         <img
@@ -45,7 +43,6 @@ const WishList = () => {
                                     </div>
                                 </div>
 
-                                {/* Remove Button */}
                                 <div className="w-full md:w-[40%] flex justify-end">
                                     <button
                                         onClick={() => handleDelete(item.id)}

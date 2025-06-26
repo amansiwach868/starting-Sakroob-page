@@ -31,7 +31,7 @@ export const Profile = () => (<svg width="25" height="34" viewBox="0 0 25 34" fi
 </svg>
 );
 
-export const Search = () => (<svg className="cursor-pointer" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+export const Search = () => (<svg className="cursor-pointer sm:w-5 sm:h-5 w-[18px] h-[18px] " width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g opacity="0.7">
         <path d="M8.31318 15.6264C12.3521 15.6264 15.6264 12.3521 15.6264 8.31318C15.6264 4.27422 12.3521 1 8.31318 1C4.27422 1 1 4.27422 1 8.31318C1 12.3521 4.27422 15.6264 8.31318 15.6264Z" stroke="#112D49" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         <path d="M13.4756 13.4754L18.5002 18.5" stroke="#112D49" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" />
@@ -40,7 +40,7 @@ export const Search = () => (<svg className="cursor-pointer" width="20" height="
 );
 
 export const Game = () => (
-    <svg
+    <svg 
         width="59"
         height="59"
         viewBox="0 0 59 59"
@@ -746,4 +746,78 @@ export const BackToTopSvg = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" />
     </svg>
+)
+export const FiveStarRating = () => (
+    <svg width="88" height="16" viewBox="0 0 88 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_897_11785)">
+            <path d="M8.00049 12.2217L3.45146 15L4.68816 9.81482L0.640625 6.34771L5.9535 5.92206L8.00049 1L10.0475 5.92206L15.3611 6.34771L11.3128 9.81482L12.5495 15L8.00049 12.2217Z" fill="#FFD900" />
+        </g>
+        <g clip-path="url(#clip1_897_11785)">
+            <path d="M26.0005 12.2217L21.4515 15L22.6882 9.81482L18.6406 6.34771L23.9535 5.92206L26.0005 1L28.0475 5.92206L33.3611 6.34771L29.3128 9.81482L30.5495 15L26.0005 12.2217Z" fill="#FFD900" />
+        </g>
+        <g clip-path="url(#clip2_897_11785)">
+            <path d="M44.0005 12.2217L39.4515 15L40.6882 9.81482L36.6406 6.34771L41.9535 5.92206L44.0005 1L46.0475 5.92206L51.3611 6.34771L47.3128 9.81482L48.5495 15L44.0005 12.2217Z" fill="#FFD900" />
+        </g>
+        <g clip-path="url(#clip3_897_11785)">
+            <path d="M62.0005 12.2217L57.4515 15L58.6882 9.81482L54.6406 6.34771L59.9535 5.92206L62.0005 1L64.0475 5.92206L69.3611 6.34771L65.3128 9.81482L66.5495 15L62.0005 12.2217Z" fill="#FFD900" />
+        </g>
+        <g clip-path="url(#clip4_897_11785)">
+            <path d="M80.0005 12.2217L75.4515 15L76.6882 9.81482L72.6406 6.34771L77.9535 5.92206L80.0005 1L82.0475 5.92206L87.3611 6.34771L83.3128 9.81482L84.5495 15L80.0005 12.2217Z" fill="#FFD900" />
+        </g>
+        <defs>
+            <clipPath id="clip0_897_11785">
+                <rect width="16" height="16" fill="white" />
+            </clipPath>
+            <clipPath id="clip1_897_11785">
+                <rect width="16" height="16" fill="white" transform="translate(18)" />
+            </clipPath>
+            <clipPath id="clip2_897_11785">
+                <rect width="16" height="16" fill="white" transform="translate(36)" />
+            </clipPath>
+            <clipPath id="clip3_897_11785">
+                <rect width="16" height="16" fill="white" transform="translate(54)" />
+            </clipPath>
+            <clipPath id="clip4_897_11785">
+                <rect width="16" height="16" fill="white" transform="translate(72)" />
+            </clipPath>
+        </defs>
+    </svg>
+
+)
+export const FiveStarRatingBig = () => (
+    <svg width="88" height="16" viewBox="0 0 88 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_897_11785)">
+            <path d="M8.00049 12.2217L3.45146 15L4.68816 9.81482L0.640625 6.34771L5.9535 5.92206L8.00049 1L10.0475 5.92206L15.3611 6.34771L11.3128 9.81482L12.5495 15L8.00049 12.2217Z" fill="#FFD900" />
+        </g>
+        <g clip-path="url(#clip1_897_11785)">
+            <path d="M26.0005 12.2217L21.4515 15L22.6882 9.81482L18.6406 6.34771L23.9535 5.92206L26.0005 1L28.0475 5.92206L33.3611 6.34771L29.3128 9.81482L30.5495 15L26.0005 12.2217Z" fill="#FFD900" />
+        </g>
+        <g clip-path="url(#clip2_897_11785)">
+            <path d="M44.0005 12.2217L39.4515 15L40.6882 9.81482L36.6406 6.34771L41.9535 5.92206L44.0005 1L46.0475 5.92206L51.3611 6.34771L47.3128 9.81482L48.5495 15L44.0005 12.2217Z" fill="#FFD900" />
+        </g>
+        <g clip-path="url(#clip3_897_11785)">
+            <path d="M62.0005 12.2217L57.4515 15L58.6882 9.81482L54.6406 6.34771L59.9535 5.92206L62.0005 1L64.0475 5.92206L69.3611 6.34771L65.3128 9.81482L66.5495 15L62.0005 12.2217Z" fill="#FFD900" />
+        </g>
+        <g clip-path="url(#clip4_897_11785)">
+            <path d="M80.0005 12.2217L75.4515 15L76.6882 9.81482L72.6406 6.34771L77.9535 5.92206L80.0005 1L82.0475 5.92206L87.3611 6.34771L83.3128 9.81482L84.5495 15L80.0005 12.2217Z" fill="#FFD900" />
+        </g>
+        <defs>
+            <clipPath id="clip0_897_11785">
+                <rect width="16" height="16" fill="white" />
+            </clipPath>
+            <clipPath id="clip1_897_11785">
+                <rect width="16" height="16" fill="white" transform="translate(18)" />
+            </clipPath>
+            <clipPath id="clip2_897_11785">
+                <rect width="16" height="16" fill="white" transform="translate(36)" />
+            </clipPath>
+            <clipPath id="clip3_897_11785">
+                <rect width="16" height="16" fill="white" transform="translate(54)" />
+            </clipPath>
+            <clipPath id="clip4_897_11785">
+                <rect width="16" height="16" fill="white" transform="translate(72)" />
+            </clipPath>
+        </defs>
+    </svg>
+    
 )

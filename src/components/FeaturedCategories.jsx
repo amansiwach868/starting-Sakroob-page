@@ -31,12 +31,12 @@ const FeaturedCategories = () => {
     ];
 
     return (
-        <div className="max-w-[1384px] px-6 mx-auto my-[132px]">
+        <div className="max-w-[1384px] px-6 mx-auto md:my-[132px] sm:my-[120px] my-[112px]">
             <HeadingAndPara
                 heading="Featured Categories"
                 para="Shop Our Most Popular Products"
-                headingClass="text-[20px] font-normal leading-[120%] italic text-[#112D49] text-center w-full mb-2 leading-[120%]"
-                paraClass="sm:text-[48px] text-[14px] leading-[120%] max-sm:max-w-[264px] font-bold text-[#112D49] text-center max-w-[602px] mx-auto w-full mb-[57px]"
+                headingClass="sm:text-[20px] text-[18px] font-normal leading-[120%] italic text-[#112D49] text-center w-full mb-2 leading-[120%]"
+                paraClass="md:text-[48px] sm:text-[38px] text-[28px] leading-[120%] max-sm:max-w-[264px] font-bold text-[#112D49] text-center max-w-[602px] mx-auto w-full mb-[57px]"
             />
 
             <div className="grid lg:grid-cols-4 lg:grid-rows-2 sm:grid-cols-2 sm:grid-rows-4 grid-cols-1 gap-6">

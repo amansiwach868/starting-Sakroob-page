@@ -6,8 +6,6 @@ import { FilledHeartSvg, HeartSvg } from "../utils/icons";
 
 const PopularProduct = () => {
     const [favoriteItems, setFavoriteItems] = useState([]);
-    const [popupMessage, setPopupMessage] = useState("");
-    const [showPopup, setShowPopup] = useState(false);
 
     const handleFavoriteClick = (index) => {
         if (favoriteItems.includes(index)) {
@@ -50,7 +48,7 @@ const PopularProduct = () => {
                                 </div>
                                 <div>
                                     <div className="flex justify-between items-center mt-4">
-                                        <p className="font-semibold text-2xl text-[#112D49]">
+                                        <p className="font-semibold text-2xl text-[#112D49] text-nowrap">
                                             ₹ {Number(item.price).toFixed(2)}
                                         </p>
                                         <div className="-mt-3">{item.svg && <item.svg />}</div>

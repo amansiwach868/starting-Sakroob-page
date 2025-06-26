@@ -33,7 +33,7 @@ const Header = () => {
                 />
             </NavLink>
 
-            <div className="w-full bg-[#112D49] md:py-5 sm:py-4 py-3">
+            <div className="w-full bg-[#112D49] md:py-5 sm:py-4 py-[13px]">
                 <div className="max-w-[976px] ml-auto xl:mr-[88px] mr-[12px] w-full px-3 flex justify-between xl:gap-10 gap-3 items-center">
                     <NavLink to="/" className="lg:hidden">
                         <img src={headerLogo2} alt="Logo" className="cursor-pointer max-w-[90px]" />
@@ -48,7 +48,7 @@ const Header = () => {
                         <li className="relative">
                             <button
                                 onClick={() => setActiveDropdown(activeDropdown === 'pc' ? null : 'pc')}
-                                className="flex gap-2 items-center text-white text-[16px] text-nowrap"
+                                className="flex gap-2 items-center text-white sm:text-[16px] text-[14px] text-nowrap"
                             >
                                 PC Products <DropDownSvg />
                             </button>
@@ -58,7 +58,7 @@ const Header = () => {
                                         <NavLinks
                                             to="/pc/laptops"
                                             onClick={closeAll}
-                                            className="text-[16px] font-normal !text-[#112D49] text-nowrap"
+                                            className="sm:text-[16px] text-[14px] font-normal !text-[#112D49] text-nowrap"
                                         >
                                             Standard PC Components
                                         </NavLinks>
@@ -68,7 +68,7 @@ const Header = () => {
                                         <NavLinks
                                             to="/pc/desktops"
                                             onClick={closeAll}
-                                            className="text-[16px] font-normal !text-[#112D49] text-nowrap"
+                                            className="sm:text-[16px] text-[14px] font-normal !text-[#112D49] text-nowrap"
                                         >
                                             Reference Earlier Examples
                                         </NavLinks>
@@ -80,7 +80,7 @@ const Header = () => {
                         <li className="relative">
                             <button
                                 onClick={() => setActiveDropdown(activeDropdown === 'services' ? null : 'services')}
-                                className="flex gap-2 items-center text-white text-[16px]"
+                                className="flex gap-2 items-center text-white sm:text-[16px] text-[14px]"
                             >
                                 Services <DropDownSvg />
                             </button>
@@ -90,7 +90,7 @@ const Header = () => {
                                         <NavLinks
                                             to="/pc/laptops"
                                             onClick={closeAll}
-                                            className="text-[16px] font-normal !text-[#112D49] text-nowrap"
+                                            className="sm:text-[16px] text-[14px] font-normal !text-[#112D49] text-nowrap"
                                         >
                                             Diy services
                                         </NavLinks>
@@ -102,7 +102,7 @@ const Header = () => {
                         <li className="relative">
                             <button
                                 onClick={() => setActiveDropdown(activeDropdown === 'support' ? null : 'support')}
-                                className="flex gap-2 items-center text-white text-[16px]"
+                                className="flex gap-2 items-center text-white sm:text-[16px] text-[14px]"
                             >
                                 Support <DropDownSvg />
                             </button>
@@ -112,7 +112,7 @@ const Header = () => {
                                         <NavLinks
                                             to="/pc/laptops"
                                             onClick={closeAll}
-                                            className="text-[16px] font-normal !text-[#112D49] text-nowrap w-full"
+                                            className="sm:text-[16px] text-[14px] font-normal !text-[#112D49] text-nowrap w-full"
                                         >
                                             FAQ’s
                                         </NavLinks>
@@ -122,7 +122,7 @@ const Header = () => {
                                         <NavLinks
                                             to="/pc/desktops"
                                             onClick={closeAll}
-                                            className="text-[16px] font-normal !text-[#112D49] text-nowrap w-full"
+                                            className="sm:text-[16px] text-[14px] font-normal !text-[#112D49] text-nowrap w-full"
                                         >
                                             Returns
                                         </NavLinks>
@@ -132,7 +132,7 @@ const Header = () => {
                                         <NavLinks
                                             to="/pc/desktops"
                                             onClick={closeAll}
-                                            className="text-[16px] font-normal !text-[#112D49] text-nowrap w-full"
+                                            className="sm:text-[16px] text-[14px] font-normal !text-[#112D49] text-nowrap w-full"
                                         >
                                             Contact
                                         </NavLinks>
@@ -145,18 +145,30 @@ const Header = () => {
                         <li><NavLinks to="/blog" onClick={closeAll}>Blog</NavLinks></li>
                         <li><NavLinks to="/contact" onClick={closeAll}>Contact</NavLinks></li>
 
-                        <li className="sm:hidden">
-                            <div className="flex items-center gap-9 w-full max-w-[285px]">
-                                <div className="flex gap-3.5 items-center">
-                                    <User />
-                                    <div className="h-10 border border-[#D9D9D9] w-0"></div>
+                        <li className="sm:hidden flex gap-4">
+                            <div className="flex gap-3.5 items-center sm:hidden">
+                                <div onClick={closeAll}><User /></div>
+                                <div className="h-10 border border-[#D9D9D9] w-0"></div>
+                                <NavLink onClick={closeAll} to="/wishlist" className="relative inline-block">
                                     <WishList />
-                                    <div className="h-10 border border-[#D9D9D9] w-0"></div>
+                                </NavLink>
+                                <div className="h-10 border border-[#D9D9D9] w-0"></div>
+                                <NavLink onClick={closeAll} to="/cart" className="relative inline-block">
                                     <Cart />
-                                </div>
-                                <div className="min-w-10 h-10 rounded-full flex cursor-pointer items-end justify-center overflow-hidden bg-white">
-                                    <Profile />
-                                </div>
+                                    {cartItems.length > 0 && (
+                                        <span className="absolute -top-[9px] -right-0 w-[7px] h-[7px] bg-[#73A4E0] rounded-full"></span>
+                                    )}
+                                </NavLink>
+
+                            </div>
+                            <div
+                                onClick={() => {
+                                    localStorage.removeItem('isLoggedIn');
+                                    navigate('/login');
+                                }}
+                                className="min-w-10 h-10 rounded-full flex cursor-pointer items-end justify-center overflow-hidden bg-white sm:hidden"
+                            >
+                                <Profile />
                             </div>
                         </li>
                     </ul>
@@ -185,7 +197,7 @@ const Header = () => {
                         >
                             <Profile />
                         </div>
-                        <div onClick={toggleHeader} className="z-50 w-10 h-10 flex flex-col justify-center items-center gap-1 lg:hidden">
+                        <div  className="z-50 md:w-10 md:h-10 sm:w-9 sm:h-9 h-[30px] w-[30px] flex flex-col justify-center items-center gap-1 lg:hidden">
                             <span className={`w-6 h-[2px] bg-white rounded-full transition-transform ${header ? 'rotate-45 translate-y-1.5' : ''}`}></span>
                             <span className={`w-6 h-[2px] bg-white rounded-full transition-opacity ${header ? 'opacity-0' : ''}`}></span>
                             <span className={`w-6 h-[2px] bg-white rounded-full transition-transform ${header ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
@@ -195,8 +207,8 @@ const Header = () => {
             </div>
 
             <div className="py-[11px] px-4 w-full bg-[#F1F6FC]">
-                <div className="flex py-2 px-3 sm:py-3.5 sm:px-[25px] w-full max-w-[689px] mx-auto bg-white rounded-[50px] shadow-[0px_2px_20px_0px_#112D491A] border border-[#112D491A]">
-                    <input type="text" placeholder="Search..." className="w-full text-[16px] font-normal text-[#8392A0] outline-none" />
+                <div className="flex py-[6px] px-3 sm:py-3.5 sm:px-[25px] w-full max-w-[689px] mx-auto bg-white rounded-[50px] shadow-[0px_2px_20px_0px_#112D491A] border border-[#112D491A]">
+                    <input type="text" placeholder="Search..." className="w-full sm:text-[16px] text-[14px] leading-[120%] font-normal text-[#8392A0] outline-none" />
                     <Search />
                 </div>
             </div>

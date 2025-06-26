@@ -32,17 +32,14 @@ const CartPage = () => {
 
                 {cartItems.length > 0 ? (
                     <div className="mt-14 w-full rounded-[12px] bg-[#F4F8F7] px-5 pb-5">
-                        {/* Flex header */}
                         <div className="hidden md:flex justify-between rounded-t-[12px] font-medium text-[#112D49] text-lg py-[18px] bg-[#F5F5F5] -mx-5 px-5 border-b border-[#112D491A]">
                             <p className="w-[40%]">Product</p>
                             <p className="w-[30%]">Quantity</p>
                             <p className="w-[30%]">Total</p>
                         </div>
 
-                        {/* Cart items */}
                         {cartItems.map((item) => (
                             <div key={item.id} className="flex flex-col md:flex-row justify-between items-center gap-6 my-[47px]">
-                                {/* Product */}
                                 <div className="flex gap-4 items-center w-full md:w-[40%]">
                                     <div className="relative min-w-[85px] h-[85px] border border-[#00000033] rounded flex items-center justify-center bg-[#E9E9E9]">
                                         <img
@@ -61,7 +58,6 @@ const CartPage = () => {
                                     </div>
                                 </div>
 
-                                {/* Quantity Controls */}
                                 <div className="flex items-center gap-4 w-full md:w-[30%] md:justify-start justify-between">
                                     <div className="flex">
                                         <button
@@ -88,8 +84,7 @@ const CartPage = () => {
                                     </button>
                                 </div>
 
-                                {/* Total Price */}
-                                <div className="w-full md:w-[30%] text-[16px] font-normal opacity-80 text-[#112D49]">
+                                <div className="w-full md:w-[30%] sm:text-[16px] text-[14px] font-normal opacity-80 text-[#112D49]">
                                     ₹ {(item.price * item.quantity).toFixed(2)}
                                 </div>
                             </div>
@@ -104,7 +99,7 @@ const CartPage = () => {
                                         ₹ {totalAmount.toFixed(2)}
                                     </p>
                                 </div>
-                                <p className="text-[16px] text-[#112D49] opacity-80 mb-6">
+                                <p className="sm:text-[16px] text-[14px] text-[#112D49] opacity-80 mb-6">
                                     Taxes, discounts and shipping calculated at checkout.
                                 </p>
                                 <NavLink to={'/checkout'}>

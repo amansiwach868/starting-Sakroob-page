@@ -1,4 +1,3 @@
-// src/context/CartContext.js
 import React, { createContext, useContext, useEffect, useState } from "react";
 
 const CartContext = createContext();
@@ -9,7 +8,6 @@ export const CartProvider = ({ children }) => {
         return storedItems ? JSON.parse(storedItems) : [];
     });
 
-    // Sync with localStorage
     useEffect(() => {
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
     }, [cartItems]);

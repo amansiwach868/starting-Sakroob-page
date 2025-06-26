@@ -24,11 +24,13 @@
     background: #112D49 !important;
     width: 51px !important;
 }
-.slider-wrapper{
+
+.slider-wrapper {
     padding-bottom: 21px !important;
 }
-.swiper-slide{
-    display: flex !important; 
+
+.swiper-slide {
+    display: flex !important;
     justify-content: center !important;
     align-items: center !important;
 }
