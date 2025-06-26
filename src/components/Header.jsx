@@ -197,7 +197,7 @@ const Header = () => {
                         >
                             <Profile />
                         </div>
-                        <div  className="z-50 md:w-10 md:h-10 sm:w-9 sm:h-9 h-[30px] w-[30px] flex flex-col justify-center items-center gap-1 lg:hidden">
+                        <div onClick={toggleHeader} className="z-50 md:w-10 md:h-10 sm:w-9 sm:h-9 h-[30px] w-[30px] flex flex-col justify-center items-center gap-1 lg:hidden">
                             <span className={`w-6 h-[2px] bg-white rounded-full transition-transform ${header ? 'rotate-45 translate-y-1.5' : ''}`}></span>
                             <span className={`w-6 h-[2px] bg-white rounded-full transition-opacity ${header ? 'opacity-0' : ''}`}></span>
                             <span className={`w-6 h-[2px] bg-white rounded-full transition-transform ${header ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
