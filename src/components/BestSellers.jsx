@@ -69,7 +69,7 @@ const BestSellers = () => {
 
     const topPositionimg = [
         "bottom-[21px]", "bottom-3", "bottom-[5px]",
-        "bottom-[21px]", "-top-[80px]", "bottom-[5px]",
+        "bottom-[21px]", "bottom-3", "bottom-[5px]",
     ];
 
     return (
@@ -79,7 +79,7 @@ const BestSellers = () => {
                     Bestsellers
                 </h2>
 
-                <div className="max-xl:hidden flex xl:absolute top-1/2 xl:-left-11 xl:-right-11 transform -translate-y-1/2 justify-between items-center px-4 z-10">
+                <div className="max-[1400px]:hidden flex min-[1400px]:absolute min-[1400px]:bottom-[250px] min-[1400px]:-left-11 min-[1400px]:-right-11 justify-between items-center px-4 z-10">
                     <div className="swiper-arrow prev-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
                         <LeftArrow />
                     </div>
@@ -106,7 +106,7 @@ const BestSellers = () => {
                     }}
                 >
                     {BESTSELLER_DATA.map((item, i) => (
-                        <SwiperSlide className="pt-[100px]" key={item.id}>
+                        <SwiperSlide className="pt-[86px]" key={item.id}>
                             <div
                                 
                                 className="cursor-pointer max-w-[364px] hover:shadow-[0px_0px_11.4px_0px_#73A4E033] border border-[#112D4914] hover:border-transparent duration-300 rounded-[8px] p-4 flex flex-col justify-between min-h-[536px]"
@@ -156,8 +156,7 @@ const BestSellers = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-
-                <div className="xl:hidden flex justify-center gap-3 items-center px-4 z-10">
+                <div className="min-[1400px]:hidden flex justify-center gap-3 items-center px-4 z-10">
                     <div className="swiper-arrow prev-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
                         <LeftArrow />
                     </div>

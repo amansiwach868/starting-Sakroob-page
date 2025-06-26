@@ -14,7 +14,7 @@ const Footer = () => {
   const isHomePage = location.pathname === "/" || location.pathname === "/home";
   return (
     <>
-      <div className={`bg-[#112D49] ${isHomePage ? "pt-[210px]" : "pt-[70px]"}`}>
+      <div className={`bg-[#112D49] ${isHomePage ? "pt-[215px]" : "pt-[70px]"}`}>
         <div className="max-w-[1440px] mx-auto px-3">
           <div className="">
             <img className="mx-auto flex" src={footerLogo} alt="footer-logo" />

@@ -64,7 +64,7 @@ export const BLOG_PAGE_DATA = [
         button: 'Read Guide',
         blogPgaeImg: blogPageImg3,
         blogPgaeImg_1: blogPageImg4,
-        active:true
+        active: true
     },
 ]
 export const TESTMONIAL_DATA = [
@@ -94,68 +94,68 @@ export const TESTMONIAL_DATA = [
         work: "CEO"
     }
 ]
-    export const BESTSELLER_DATA = [
-        {
-            img: pcImg,
-            title: "Vortex Gaming PC",
-            description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
-            price: 52350,
-            svg: SmallRating,
-            Heart: HeartSvg,
-            shop: ShopSvg,
-            id:1
-        },
-        {
-            img: routerImg,
-            title: "D-Link ADSL Wireless Router DSL2790U",
-            description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
-            price: 1456,
-            svg: SmallRating,
-            Heart: HeartSvg,
-            shop: ShopSvg,
-            id:2
-        },
-        {
-            img: gamingCheirImg,
-            title: "Gaming Chair",
-            description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
-            price: 21456,
-            svg: SmallRating,
-            Heart: HeartSvg,
-            shop: ShopSvg,
-            id:3
-        },
-        {
-            img: pcImg,
-            title: "Vortex Gaming PC",
-            description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
-            price: 52350,
-            svg: SmallRating,
-            Heart: HeartSvg,
-            shop: ShopSvg,
-            id:4
-        },
-        {
-            img: routerImg,
-            title: "D-Link ADSL Wireless Router DSL2790U",
-            description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
-            price: 1456,
-            svg: SmallRating,
-            Heart: HeartSvg,
-            shop: ShopSvg,
-            id:5
-        },
-        {
-            img: gamingCheirImg,
-            title: "Gaming Chair",
-            description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
-            price: 21456,
-            svg: SmallRating,
-            Heart: HeartSvg,
-            shop: ShopSvg,
-            id:6
-        },
-    ];
+export const BESTSELLER_DATA = [
+    {
+        img: pcImg,
+        title: "Vortex Gaming PC",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: 52350,
+        svg: SmallRating,
+        Heart: HeartSvg,
+        shop: ShopSvg,
+        id: 1
+    },
+    {
+        img: routerImg,
+        title: "D-Link ADSL Wireless Router DSL2790U",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: 1456,
+        svg: SmallRating,
+        Heart: HeartSvg,
+        shop: ShopSvg,
+        id: 2
+    },
+    {
+        img: gamingCheirImg,
+        title: "Gaming Chair",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: 21456,
+        svg: SmallRating,
+        Heart: HeartSvg,
+        shop: ShopSvg,
+        id: 3
+    },
+    {
+        img: pcImg,
+        title: "Vortex Gaming PC",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: 52350,
+        svg: SmallRating,
+        Heart: HeartSvg,
+        shop: ShopSvg,
+        id: 4
+    },
+    {
+        img: routerImg,
+        title: "D-Link ADSL Wireless Router DSL2790U",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: 1456,
+        svg: SmallRating,
+        Heart: HeartSvg,
+        shop: ShopSvg,
+        id: 5
+    },
+    {
+        img: gamingCheirImg,
+        title: "Gaming Chair",
+        description: "Commodo egestas etiam arcu curabitur aliquam volutpat a gravida.",
+        price: 21456,
+        svg: SmallRating,
+        Heart: HeartSvg,
+        shop: ShopSvg,
+        id: 6
+    },
+];
 export const POPULAR_PRUDUCT_DATA = [
     {
         img: populerProductImg1,
