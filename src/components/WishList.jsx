@@ -18,9 +18,9 @@ const WishList = () => {
             <div className="max-w-[1140px] mx-auto px-6">
                 <div className="flex justify-between items-center">
                     <h2 className='md:text-[34px] sm:text-[28px] text-[18px] font-bold text-[#112D49] leading-[100%]'>Your WishList</h2>
-                    <a className="font-medium sm:text-md text-xs leading-[100%] underline text-[#112D49]" href="/">
+                    <NavLink className="font-medium sm:text-md text-xs leading-[100%] underline text-[#112D49]" to="/">
                         Continue Shopping
-                    </a>
+                    </NavLink>
                 </div>
 
                 {wishlistItems.length > 0 ? (
