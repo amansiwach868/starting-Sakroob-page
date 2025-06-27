@@ -17,12 +17,10 @@ const WishList = () => {
         <div className="mt-[94px] mb-[132px]">
             <div className="max-w-[1140px] mx-auto px-6">
                 <div className="flex justify-between items-center">
-                    <h2 className='text-[34px] font-bold text-[#112D49] leading-[100%]'>Your Wishlist</h2>
-                    <NavLink to="/">
-                        <span className="font-medium leading-[100%] underline text-[#112D49] cursor-pointer">
-                            Continue Shopping
-                        </span>
-                    </NavLink>
+                    <h2 className='md:text-[34px] sm:text-[28px] text-[18px] font-bold text-[#112D49] leading-[100%]'>Your WishList</h2>
+                    <a className="font-medium sm:text-md text-xs leading-[100%] underline text-[#112D49]" href="/">
+                        Continue Shopping
+                    </a>
                 </div>
 
                 {wishlistItems.length > 0 ? (
@@ -56,7 +54,7 @@ const WishList = () => {
                         ))}
                     </div>
                 ) : (
-                    <p className="mt-10 text-[#112D49] opacity-80 text-2xl text-center">
+                        <p className="mt-10 text-[#112D49] sm:text-xl text-md opacity-80 text-center">
                         Your wishlist is empty.
                     </p>
                 )}

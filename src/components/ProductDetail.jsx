@@ -71,34 +71,34 @@ const ProductDetail = () => {
         <div className="pt-[91px]">
             <div className="max-w-[1140px] mx-auto px-3">
                 <div className="flex flex-wrap flex-row -mx-3">
-                    <div className="w-full lg:w-6/12 px-3 mb-8 lg:mb-0">
+                    <div className="w-full max-sm:flex sm:w-6/12 gap-5 px-3 mb-8 lg:mb-0">
                         <div
-                            className="py-[44px] px-[42px] max-w-[517px] rounded-[8px] mx-auto"
+                            className=" sm:py-[44px] max-sm:max-w-[300px] sm:px-[42px] px-3 max-sm:flex justify-center items-center w-full rounded-[8px] mx-auto"
                             style={{ backgroundColor: selectedColor }}
                         >
                             <img
                                 src={img}
                                 alt={title}
-                                className="max-w-[432px] w-full min-h-[475px] mx-auto"
+                                className="max-w-[432px] w-full mx-auto"
                             />
                         </div>
-                        <div className="flex flex-wrap max-w-[517px] gap-[22px] mt-4 justify-center lg:justify-start mx-auto">
+                        <div className="flex max-sm:flex-col max-w-[517px] gap-[22px] sm:mt-4 justify-center lg:justify-start mx-auto">
                             {[1, 2, 3].map((_, index) => (
                                 <div
                                     key={index}
-                                    className="bg-[#EEF4FB] max-w-[156px] rounded-[4px] px-[30px] py-[9px]"
+                                    className="bg-[#EEF4FB] h-full flex justify-center items-center sm:max-w-[156px] max-w-[100px] rounded-[4px] sm:px-[30px] sm:py-[9px] px-2.5 py-2.5"
                                 >
                                     <img
                                         src={img}
                                         alt={`Thumbnail ${index + 1}`}
-                                        className="max-w-[96px] min-h-[107px]"
+                                        className="max-w-[96px] w-full"
                                     />
                                 </div>
                             ))}
                         </div>
                     </div>
 
-                    <div className="w-full lg:w-6/12 px-3">
+                    <div className="w-full sm:w-6/12 px-3">
                         <Heading
                             headingClass="!text-[34px] text-left !leading-[100%] max-w-[568px] mx-auto lg:mx-0"
                             headingText={title}
@@ -155,7 +155,7 @@ const ProductDetail = () => {
                                 >
                                     <MinusSvg />
                                 </button>
-                                <div className="w-[85px] h-[44px] border border-[#C2C2C2] text-[#586C80] justify-center flex items-center">
+                                <div className="w-[85px] h-[44px] border border-[#C2C2C2] text-[#586C80] text-[20px] justify-center flex items-center">
                                     {quantity.toString().padStart(2, "0")}
                                 </div>
                                 <button
@@ -173,7 +173,7 @@ const ProductDetail = () => {
                                     onClick={handleBuyNow}
                                 />
                                 <CustomButton
-                                    buttonClass="!w-full !py-[17px] mt-[20px] bg-white !text-[#112D49] hover:!bg-[#112D49] hover:!text-white border border-[#112D49]"
+                                    buttonClass="!w-full !py-[17px] mt-[20px] !bg-white !text-[#112D49] hover:!bg-[#112D49] hover:!text-white border !border-[#112D49]"
                                     buttonText="Add to Cart"
                                     onClick={handleAddToCart}
                                 />
@@ -184,6 +184,7 @@ const ProductDetail = () => {
                 <ProductDetailTabs />
 
                 <PopularProduct />
+                
             </div>
 
             <ToastContainer />

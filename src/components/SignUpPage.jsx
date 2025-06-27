@@ -51,7 +51,7 @@ const SignUpPage = () => {
                     <HeadingAndPara
                         heading={'Sign up'}
                         para={'Create your account to unlock access and stay updated with everything we offer.'}
-                        paraClass={'sm:text-[16px] text-[14px] font-normal max-w-[374px] mx-auto text-[#112D49] text-center mt-2 mb-6'}
+                        paraClass={'sm:text-md  text-[14px] font-normal max-w-[374px] mx-auto text-[#112D49] text-center mt-2 mb-6'}
                         headingClass={'sm:text-[32px] text-[24px] font-bold text-[#112D49] text-center leading-[120%]'}
                     />
 
@@ -116,8 +116,8 @@ const SignUpPage = () => {
                     <CustomButton buttonText={'Sign Up'} buttonClass={'w-full text-white mt-6'} type="submit" />
 
                     <div className="w-full flex sm:flex-row flex-col justify-center gap-1 mt-5 items-center">
-                        <p className='text-nowrap sm:text-[16px] text-[14px]'>Already a member?</p>
-                        <NavLink to={'/login'} className='sm:text-[16px] text-[14px] font-semibold underline text-[#112D49] underline-offset-2 text-nowrap'>Log in</NavLink>
+                        <p className='text-nowrap sm:text-md  text-[14px]'>Already a member?</p>
+                        <NavLink to={'/login'} className='sm:text-md  text-[14px] font-semibold underline text-[#112D49] underline-offset-2 text-nowrap'>Log in</NavLink>
                     </div>
                 </form>
             </div>

@@ -4,10 +4,10 @@ import { Express, Gift, Premium, Return, Support } from '../utils/icons'
 
 const Services = () => {
     return (
-        <div className="px-2 mt-[58px] max-w-[1384px] mx-auto">
-            <div className='flex justify-center items-center rounded-[8px] bg-[#73A4E01A] px-2 min-h-[147px]'>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 w-full max-w-[1241px]">
-                    <ServicesCard className={''} para={'Order Now'} heading={'EXPRESS Delivery'} children={<Express />} />
+        <div className="sm:px-7 px-6 mt-[58px] max-w-[1440px] mx-auto">
+            <div className='flex justify-center items-center rounded-[8px] px-2 bg-[#73A4E01A] min-h-[147px]'>
+                <div className="flex flex-wrap flex-row w-full max-w-[1241px]">
+                    <ServicesCard para={'Order Now'} heading={'EXPRESS Delivery'} children={<Express />} />
 
                     <ServicesCard para={'30 days return'} heading={'Easy Return '} children={<Return />} />
 

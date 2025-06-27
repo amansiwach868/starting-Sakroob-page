@@ -79,10 +79,10 @@ const BestSellers = () => {
                 </h2>
 
                 <div className="max-[1400px]:hidden flex min-[1400px]:absolute min-[1400px]:bottom-[250px] min-[1400px]:-left-11 min-[1400px]:-right-11 justify-between items-center px-4 z-10">
-                    <div className="swiper-arrow prev-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
+                    <div className="swiper-arrow prev-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:scale-105 transition-all duration-200 ease-linear">
                         <LeftArrow />
                     </div>
-                    <div className="swiper-arrow next-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
+                    <div className="swiper-arrow next-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:scale-105 transition-all duration-200 ease-linear">
                         <RightArrow />
                     </div>
                 </div>
@@ -99,16 +99,17 @@ const BestSellers = () => {
                     }}
                     breakpoints={{
                         320: { slidesPerView: 1.1, spaceBetween: 10 },
-                        640: { slidesPerView: 1.5, spaceBetween: 15 },
-                        768: { slidesPerView: 2.5, spaceBetween: 15 },
+                        555: { slidesPerView: 1.5, spaceBetween: 10 },
+                        700: { slidesPerView: 2, spaceBetween: 15 },
+                        875: { slidesPerView: 2.5, spaceBetween: 15 },
                         1024: { slidesPerView: 3, spaceBetween: 15 },
                     }}
                 >
                     {BESTSELLER_DATA.map((item, i) => (
-                        <SwiperSlide className="pt-[86px]" key={item.id}>
+                        <SwiperSlide className="sm:pt-[86px] pt-[50px]" key={item.id}>
                             <div
                                 
-                                className="cursor-pointer max-w-[364px] hover:shadow-[0px_0px_11.4px_0px_#73A4E033] border border-[#112D4914] hover:border-transparent duration-300 rounded-[8px] p-4 flex flex-col justify-between min-h-[536px]"
+                                className="max-w-[364px] hover:shadow-[0px_0px_11.4px_0px_#73A4E033] border border-[#112D4914] hover:border-transparent duration-300 rounded-[8px] p-4 flex flex-col justify-between !min-h-[536px]"
                             >
                                 <div>
                                     <div className="w-full h-[242px] bg-[#E5E4E2] flex items-center justify-center relative">
@@ -118,7 +119,7 @@ const BestSellers = () => {
                                             className={`absolute ${topPositionimg[i]} left-1/2 -translate-x-1/2`}
                                         />
                                         <div
-                                            className="absolute top-[10px] right-[10px] cursor-pointer text-xl w-8 h-8 flex justify-center items-center rounded-full bg-[#73A4E01F]"
+                                            className="absolute sm:top-2.5 sm:right-2.5 top-[5px] -right-2 cursor-pointer text-xl w-8 h-8 flex justify-center items-center rounded-full bg-[#73A4E01F]"
                                             onClick={(e) => {
                                                 e.stopPropagation();
                                                 handleFavoriteClick(item);
@@ -132,7 +133,7 @@ const BestSellers = () => {
                                 </div>
                                 <div>
                                     <div className="flex justify-between items-center mt-4">
-                                        <p className="font-semibold text-2xl text-[#112D49]">
+                                        <p className="font-semibold text-2xl text-[#112D49] text-nowrap">
                                             ₹ {Number(item.price).toFixed(2)}
                                         </p>
                                         <div className="-mt-3">{item.svg && <item.svg />}</div>
@@ -140,10 +141,10 @@ const BestSellers = () => {
                                     <div className="mt-5 flex justify-between items-center gap-6">
                                         <CustomButton
                                             buttonText="Shop Now"
-                                            buttonClass="bg-white !text-[#112D49] border border-[#112D49] hover:!bg-[#112D49] hover:!text-white w-full"
+                                            buttonClass="bg-white !text-[#112D49] !border !border-[#112D49] hover:!bg-[#112D49] hover:!text-white w-full"
                                             onClick={() => handleViewDetails(item)}
                                         />
-                                        <div onClick={(e) => {
+                                        <div className="cursor-pointer" onClick={(e) => {
                                             e.stopPropagation();
                                             handleShopNow(item);
                                         }}>
@@ -155,11 +156,11 @@ const BestSellers = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-                <div className="min-[1400px]:hidden flex justify-center gap-3 items-center px-4 z-10">
-                    <div className="swiper-arrow prev-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
+                <div className="mt-3 min-[1400px]:hidden flex justify-center gap-3 items-center px-4 z-10">
+                    <div className="swiper-arrow prev-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:scale-105 transition-all duration-200 ease-linear">
                         <LeftArrow />
                     </div>
-                    <div className="swiper-arrow next-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
+                    <div className="swiper-arrow next-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:scale-105 transition-all duration-200 ease-linear">
                         <RightArrow />
                     </div>
                 </div>

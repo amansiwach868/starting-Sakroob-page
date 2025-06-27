@@ -1,6 +1,8 @@
 import React, { useState, useRef, useLayoutEffect } from 'react';
 import { FiveStarRating, FiveStarRatingBig } from '../utils/icons';
 import reviewerImg from '../assets/img/png/reviewer-img.png'
+import CustomButton from './common/CustomButton';
+import { Link } from 'react-router-dom';
 
 const TABS = [
     { key: 'reviews', label: 'Reviews', align: 'text-left' },
@@ -34,20 +36,20 @@ const ProductDetailTabs = () => {
             case 'reviews':
                 return (
                     <div>
-                        <div className="flex flex-col lg:flex-row gap-8">
+                        <div className="flex flex-col md:flex-row justify-center items-center gap-8">
                             <div className="flex flex-col lg:min-w-[220px]">
                                 <div className="text-[20px] sm:text-[22px] font-semibold text-[#112D49] mb-1">Customer Reviews</div>
                                 <div className="mb-2">
                                     <FiveStarRating/>
                                     <p className="font-medium text-dark-blue mt-1">Based on 1 review</p>
                                 </div>
-                                <a href="#" className="text-[#112D49] mt-10 text-sm font-medium hover:underline flex items-center gap-1">
+                                <Link href="#" className="text-[#112D49] lg:mt-[147px] mt-3 text-sm font-medium hover:underline flex items-center gap-1">
                                     See all Customers Reviews
                                     <span className="ml-1">&gt;</span>
-                                </a>
+                                </Link>
                             </div>
 
-                            <div className="flex-1 max-w-full sm:max-w-[360px] pt-4">
+                            <div className="min-w-[150px] max-w-full sm:max-w-[360px] pt-4">
                                 <div className="space-y-2">
                                     {reviewsSummary.map((r) => (
                                         <div key={r.stars} className="flex items-center gap-2">
@@ -65,12 +67,13 @@ const ProductDetailTabs = () => {
                             </div>
 
                             <div className="flex-1 lg:min-w-[250px] flex flex-col items-start lg:items-end">
-                                <div className="rounded-xl p-5 sm:p-6 w-full max-w-xs bg-[#F9FAFB]">
-                                    <h4 className="text-lg font-semibold text-[#112D49] mb-1">Review this Product</h4>
-                                    <p className="text-xs text-gray-500 mb-4">Share your thought with other customers</p>
-                                    <button className="bg-[#112D49] text-white w-full py-3 rounded-full font-medium shadow hover:bg-[#18314F] transition whitespace-nowrap">
-                                        Write a Customer Review
-                                    </button>
+                                <div className="rounded-xl p-5 sm:p-6 w-full max-w-xs">
+                                    <h4 className="text-lg font-semibold text-[#112D49] mb-[6px]">Review this Product</h4>
+                                    <p className="text-xs text-[#112D49] mb-[25px]">Share your thought with other customers</p>
+                                    <CustomButton
+                                        buttonClass={'text-white'}
+                                        buttonText={' Write a Customer Review'}
+                                    />
                                 </div>
                             </div>
                         </div>

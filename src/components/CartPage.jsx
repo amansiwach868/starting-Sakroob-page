@@ -21,11 +21,11 @@ const CartPage = () => {
     );
 
     return (
-        <div className="mt-[94px] mb-[132px]">
+        <div className="md:mt-[94px] md:mb-[132px] sm:my-[90px] my-[60px]">
             <div className="max-w-[1140px] mx-auto px-6">
                 <div className="flex justify-between items-center">
-                    <h2 className='text-[34px] font-bold text-[#112D49] leading-[100%]'>Your cart</h2>
-                    <a className="font-medium leading-[100%] underline text-[#112D49]" href="/">
+                    <h2 className='md:text-[34px] sm:text-[28px] text-[24px] font-bold text-[#112D49] leading-[100%]'>Your cart</h2>
+                    <a className="font-medium sm:text-md text-xs leading-[100%] underline text-[#112D49]" href="/">
                         Continue Shopping
                     </a>
                 </div>
@@ -84,7 +84,7 @@ const CartPage = () => {
                                     </button>
                                 </div>
 
-                                <div className="w-full md:w-[30%] sm:text-[16px] text-[14px] font-normal opacity-80 text-[#112D49]">
+                                <div className="w-full md:w-[30%] sm:text-md  text-[14px] font-normal opacity-80 text-[#112D49]">
                                     ₹ {(item.price * item.quantity).toFixed(2)}
                                 </div>
                             </div>
@@ -99,7 +99,7 @@ const CartPage = () => {
                                         ₹ {totalAmount.toFixed(2)}
                                     </p>
                                 </div>
-                                <p className="sm:text-[16px] text-[14px] text-[#112D49] opacity-80 mb-6">
+                                <p className="sm:text-md  text-[14px] text-[#112D49] opacity-80 mb-6">
                                     Taxes, discounts and shipping calculated at checkout.
                                 </p>
                                 <NavLink to={'/checkout'}>

@@ -24,14 +24,14 @@ const CustomInput = forwardRef(
                     ref={ref}
                     type={type}
                     placeholder={placeholder}
-                    className={`w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 ${error
+                    className={`w-full px-7 py-3.5 rounded-[100px] focus:outline-none bg-[#F4F8F7] ${error
                             ? 'border-red-500 focus:ring-red-400'
                             : 'border-gray-300 focus:ring-blue-400'
                         }`}
                     {...rest}
                 />
                 {children && (
-                    <div className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer">
+                    <div className="absolute right-3 top-3.5 cursor-pointer">
                         {children}
                     </div>
                 )}

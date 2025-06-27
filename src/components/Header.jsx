@@ -25,7 +25,7 @@ const Header = () => {
 
     return (
         <div className="w-full relative">
-            <NavLink to="/" className="lg:flex hidden">
+            <NavLink to="/" className="min-[1100px]:flex hidden">
                 <img
                     src={headerLogo}
                     alt="Header Logo"
@@ -35,12 +35,12 @@ const Header = () => {
 
             <div className="w-full bg-[#112D49] md:py-5 sm:py-4 py-[13px]">
                 <div className="max-w-[976px] ml-auto xl:mr-[88px] mr-[12px] w-full px-3 flex justify-between xl:gap-10 gap-3 items-center">
-                    <NavLink to="/" className="lg:hidden">
+                    <NavLink to="/" className="min-[1100px]:hidden">
                         <img src={headerLogo2} alt="Logo" className="cursor-pointer max-w-[90px]" />
                     </NavLink>
                     <ul
                         className={`fixed top-0 right-0 w-full h-full z-40 bg-[#112D49] flex flex-col items-center justify-center gap-8 transform duration-300 ${header ? 'translate-x-0' : 'translate-x-full'
-                            } lg:static lg:translate-x-0 lg:flex-row lg:bg-transparent lg:w-auto lg:h-auto`}
+                            } min-[1100px]:static min-[1100px]:translate-x-0 min-[1100px]:flex-row min-[1100px]:bg-transparent min-[1100px]:w-auto min-[1100px]:h-auto`}
                     >
                         <li>
                             <NavLinks to="/categories" onClick={closeAll}>Categories</NavLinks>
@@ -48,7 +48,7 @@ const Header = () => {
                         <li className="relative">
                             <button
                                 onClick={() => setActiveDropdown(activeDropdown === 'pc' ? null : 'pc')}
-                                className="flex gap-2 items-center text-white sm:text-[16px] text-[14px] text-nowrap"
+                                className="flex gap-2 items-center text-white sm:text-md  text-[14px] text-nowrap"
                             >
                                 PC Products <DropDownSvg />
                             </button>
@@ -58,7 +58,7 @@ const Header = () => {
                                         <NavLinks
                                             to="/pc/laptops"
                                             onClick={closeAll}
-                                            className="sm:text-[16px] text-[14px] font-normal !text-[#112D49] text-nowrap"
+                                            className="sm:text-md  text-[14px] font-normal !text-[#112D49] text-nowrap"
                                         >
                                             Standard PC Components
                                         </NavLinks>
@@ -68,7 +68,7 @@ const Header = () => {
                                         <NavLinks
                                             to="/pc/desktops"
                                             onClick={closeAll}
-                                            className="sm:text-[16px] text-[14px] font-normal !text-[#112D49] text-nowrap"
+                                            className="sm:text-md  text-[14px] font-normal !text-[#112D49] text-nowrap"
                                         >
                                             Reference Earlier Examples
                                         </NavLinks>
@@ -80,7 +80,7 @@ const Header = () => {
                         <li className="relative">
                             <button
                                 onClick={() => setActiveDropdown(activeDropdown === 'services' ? null : 'services')}
-                                className="flex gap-2 items-center text-white sm:text-[16px] text-[14px]"
+                                className="flex gap-2 items-center text-white sm:text-md  text-[14px]"
                             >
                                 Services <DropDownSvg />
                             </button>
@@ -90,7 +90,7 @@ const Header = () => {
                                         <NavLinks
                                             to="/pc/laptops"
                                             onClick={closeAll}
-                                            className="sm:text-[16px] text-[14px] font-normal !text-[#112D49] text-nowrap"
+                                            className="sm:text-md  text-[14px] font-normal !text-[#112D49] text-nowrap"
                                         >
                                             Diy services
                                         </NavLinks>
@@ -102,7 +102,7 @@ const Header = () => {
                         <li className="relative">
                             <button
                                 onClick={() => setActiveDropdown(activeDropdown === 'support' ? null : 'support')}
-                                className="flex gap-2 items-center text-white sm:text-[16px] text-[14px]"
+                                className="flex gap-2 items-center text-white sm:text-md  text-[14px]"
                             >
                                 Support <DropDownSvg />
                             </button>
@@ -112,7 +112,7 @@ const Header = () => {
                                         <NavLinks
                                             to="/pc/laptops"
                                             onClick={closeAll}
-                                            className="sm:text-[16px] text-[14px] font-normal !text-[#112D49] text-nowrap w-full"
+                                            className="sm:text-md  text-[14px] font-normal !text-[#112D49] text-nowrap w-full"
                                         >
                                             FAQ’s
                                         </NavLinks>
@@ -122,7 +122,7 @@ const Header = () => {
                                         <NavLinks
                                             to="/pc/desktops"
                                             onClick={closeAll}
-                                            className="sm:text-[16px] text-[14px] font-normal !text-[#112D49] text-nowrap w-full"
+                                            className="sm:text-md  text-[14px] font-normal !text-[#112D49] text-nowrap w-full"
                                         >
                                             Returns
                                         </NavLinks>
@@ -132,7 +132,7 @@ const Header = () => {
                                         <NavLinks
                                             to="/pc/desktops"
                                             onClick={closeAll}
-                                            className="sm:text-[16px] text-[14px] font-normal !text-[#112D49] text-nowrap w-full"
+                                            className="sm:text-md  text-[14px] font-normal !text-[#112D49] text-nowrap w-full"
                                         >
                                             Contact
                                         </NavLinks>
@@ -197,24 +197,24 @@ const Header = () => {
                         >
                             <Profile />
                         </div>
-                        <div onClick={toggleHeader} className="z-50 md:w-10 md:h-10 sm:w-9 sm:h-9 h-[30px] w-[30px] flex flex-col justify-center items-center gap-1 lg:hidden">
-                            <span className={`w-6 h-[2px] bg-white rounded-full transition-transform ${header ? 'rotate-45 translate-y-1.5' : ''}`}></span>
-                            <span className={`w-6 h-[2px] bg-white rounded-full transition-opacity ${header ? 'opacity-0' : ''}`}></span>
-                            <span className={`w-6 h-[2px] bg-white rounded-full transition-transform ${header ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+                        <div onClick={toggleHeader} className="z-50 group h-[30px] w-[30px] flex flex-col justify-center items-center gap-1 min-[1100px]:hidden">
+                            <span className={`w-1/2 ml-auto h-[2px] group-hover:w-full bg-white rounded-full transition-transform ${header ? 'w-full max-w-none rotate-45 translate-y-1.5' : ''}`}></span>
+                            <span className={`h-[2px] w-full bg-white rounded-full transition-opacity ${header ? 'opacity-0' : ''}`}></span>
+                            <span className={`w-1/2 mr-auto h-[2px] group-hover:w-full bg-white rounded-full transition-transform ${header ? 'w-full max-w-none -rotate-45 -translate-y-1.5' : ''}`}></span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div className="py-[11px] px-4 w-full bg-[#F1F6FC]">
-                <div className="flex py-[6px] px-3 sm:py-3.5 sm:px-[25px] w-full max-w-[689px] mx-auto bg-white rounded-[50px] shadow-[0px_2px_20px_0px_#112D491A] border border-[#112D491A]">
-                    <input type="text" placeholder="Search..." className="w-full sm:text-[16px] text-[14px] leading-[120%] font-normal text-[#8392A0] outline-none" />
+                <div className="flex py-[6px] px-3 sm:py-3.5 sm:px-[25px] w-full sm:max-w-[689px] max-w-[263px] mx-auto bg-white rounded-[50px] shadow-[0px_2px_20px_0px_#112D491A] border border-[#112D491A]">
+                    <input type="text" placeholder="Search..." className="w-full sm:text-md  text-[14px] leading-[120%] font-normal text-[#8392A0] outline-none" />
                     <Search />
                 </div>
             </div>
 
             {header && (
-                <div className="fixed inset-0 bg-black/50 z-30 lg:hidden" onClick={toggleHeader}></div>
+                <div className="fixed inset-0 bg-black/50 z-30 min-[1100px]:hidden" onClick={toggleHeader}></div>
             )}
         </div>
     );

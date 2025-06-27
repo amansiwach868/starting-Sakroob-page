@@ -13,8 +13,8 @@ const FeaturedCategories = () => {
     ];
 
     const imageStyles = [
-        'sm:max-w-[372px] max-w-[246px] right-0 bottom-0 ml-auto w-full sm:min-h-[261px]',
-        'sm:max-w-[250px] max-w-[157px] right-1/2 translate-x-1/2 -bottom-6 w-full sm:min-h-[213px]',
+        'lg:max-w-[372px] max-w-[300px] right-0 bottom-0 ml-auto w-full lg:min-h-[261px] min-h-[200px]',
+        'sm:max-w-[250px] sm:max-w-[157px] max-w-[250px] right-1/2 translate-x-1/2 sm:-bottom-6 bottom-0 w-full sm:min-h-[213px] min-h-[170px]',
         'sm:max-w-[184px] max-w-[162px] right-1/2 translate-x-1/2 bottom-3 w-full sm:min-h-[208px]',
         'sm:max-w-[306px] max-w-[294px] sm:left-0 sm:bottom-0 w-full sm:min-h-[261px] max-sm:-rotate-90 -right-4 bottom-4',
         'sm:max-w-[266px] max-w-[198px] right-1/2 translate-x-1/2 bottom-[18px] w-full sm:min-h-[187px]',
@@ -22,36 +22,36 @@ const FeaturedCategories = () => {
     ];
 
     const headingStyles = [
-        'max-w-[172px] lg:top-1/2 lg:left-[62px] lg:-translate-y-1/2 left-6 top-6',
+        'max-w-[172px] xl:top-1/2 xl:left-[62px] xl:-translate-y-1/2 left-6 top-6',
         'max-w-[213px] left-1/2 -translate-x-1/2 top-8',
         'w-full text-center left-1/2 -translate-x-1/2 top-[46px]',
-        'max-w-[196px] sm:top-[26px] sm:right-4 top-4 left-4',
+        'max-w-[196px] sm:top-[26px] sm:right-4 top-4 max-sm:left-4',
         'w-full text-center left-1/2 -translate-x-1/2 top-[22px]',
         'text-center left-1/2 -translate-x-1/2 top-[59px]',
     ];
 
     return (
-        <div className="max-w-[1384px] px-6 mx-auto md:my-[132px] sm:my-[120px] my-[112px]">
+        <div className="max-w-[1384px] px-6 mx-auto md:my-[132px] sm:my-[100px] my-[7px]">
             <HeadingAndPara
                 heading="Featured Categories"
                 para="Shop Our Most Popular Products"
                 headingClass="sm:text-[20px] text-[18px] font-normal leading-[120%] italic text-[#112D49] text-center w-full mb-2 leading-[120%]"
-                paraClass="md:text-[48px] sm:text-[38px] text-[28px] leading-[120%] max-sm:max-w-[264px] font-bold text-[#112D49] text-center max-w-[602px] mx-auto w-full mb-[57px]"
+                paraClass="md:text-[48px] sm:text-[38px] text-[28px] leading-[120%] max-sm:max-w-[264px] font-bold text-[#112D49] text-center max-w-[602px] mx-auto w-full md:mb-[57px] sm:md-10 mb-7"
             />
 
             <div className="grid lg:grid-cols-4 lg:grid-rows-2 sm:grid-cols-2 sm:grid-rows-4 grid-cols-1 gap-6">
                 {FEATURED_CATEGORIES_PRODUCTS.map((item, index) => (
                     <div
                         key={index}
-                        className={`relative overflow-hidden rounded-[8px] cursor-pointer active:scale-95 duration-200 sm:min-h-[335px] min-h-[298px] flex flex-col-reverse lg:block items-center gap-4 ${gridStyles[index]}`}
+                        className={`relative overflow-hidden rounded-[8px] duration-200 sm:min-h-[335px] min-h-[298px] flex flex-col-reverse lg:block items-center gap-4 ${gridStyles[index]}`}
                     >
                         <img
                             src={item.categorieImg}
                             alt={item.categorieName || 'Category'}
-                            className={`object-cover w-full rounded-[10px] sm:rounded-[20px] md:rounded-[30px] absolute ${imageStyles[index]}`}
+                            className={`object-cover w-full rounded-[10px] pointer-events-none sm:rounded-[20px] md:rounded-[30px] absolute ${imageStyles[index]}`}
                         />
                         <h4
-                            className={`md:text-[32px] sm:text-[28px] text-[24px] font-bold text-[#112D49] absolute z-10 ${headingStyles[index]}`}
+                            className={`md:text-[32px] sm:text-[28px] text-[24px] font-bold leading-[120%] text-[#112D49] absolute z-10 ${headingStyles[index]}`}
                         >
                             {item.categorieName}
                         </h4>

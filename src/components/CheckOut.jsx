@@ -48,7 +48,7 @@ const CheckOut = () => {
     };
 
     return (
-        <div className="max-w-[1140px] mx-auto lg:mt-[120px] lg:mb-[108px] md:my-[100px] sm:my-[75px] my-[52px] px-3">
+        <div className="max-w-[1140px] mx-auto lg:mt-[120px] lg:mb-[108px] md:my-[100px] sm:my-[75px] my-[52px] px-4">
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="flex lg:flex-row flex-col gap-6">
                     <div className="lg:max-w-[740px] w-full">
@@ -270,7 +270,7 @@ const CheckOut = () => {
                                                 })}
                                                 className="py-[14px] pl-4 rounded-[12px] bg-[#F4F8F7] w-full pr-[75px]"
                                             />
-                                            <span className="absolute top-[45px] right-[38px]"><CVC /></span>
+                                            <span className="absolute top-1/2 translate-y-1/2 right-[38px]"><CVC /></span>
                                             {errors.cvc && <p className="text-red-500 text-sm mt-1">{errors.cvc.message}</p>}
                                         </div>
                                     </div>

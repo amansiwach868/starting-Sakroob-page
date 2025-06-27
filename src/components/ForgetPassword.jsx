@@ -42,7 +42,7 @@ const ForgetPassword = () => {
                         heading={'Forget Password'}
                         para={'Reset your password below to get back into your account and keep things running smoothly.'}
                         paraClass={
-                            'sm:text-[16px] text-[14px] font-normal max-w-[400px] mx-auto text-[#112D49] text-center mt-2 mb-6'
+                            'sm:text-md  text-[14px] font-normal max-w-[400px] mx-auto text-[#112D49] text-center mt-2 mb-6'
                         }
                         headingClass={
                             'sm:text-[32px] text-[24px] font-bold text-[#112D49] text-center leading-[120%]'
@@ -67,10 +67,10 @@ const ForgetPassword = () => {
                     <CustomButton buttonText={'Reset Password'} buttonClass={'w-full text-white mt-6'} type='submit' />
 
                     <div className='w-full flex sm:flex-row flex-col justify-center gap-1 mt-5 items-center'>
-                        <p className='text-nowrap sm:text-[16px] text-[14px]'>We're here for you. </p>
+                        <p className='text-nowrap sm:text-md  text-[14px]'>We're here for you. </p>
                         <NavLink
                             to={'/gethelp'}
-                            className='sm:text-[16px] text-[14px] font-semibold underline text-[#112D49] underline-offset-2 text-nowrap'
+                            className='sm:text-md  text-[14px] font-semibold underline text-[#112D49] underline-offset-2 text-nowrap'
                         >
                             Get Help
                         </NavLink>

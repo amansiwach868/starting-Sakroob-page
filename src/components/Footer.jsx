@@ -7,7 +7,7 @@ import {
   TwiterSvg,
   YoutubeSvg,
 } from "../utils/icons";
-import { useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Footer = () => {
   const location = useLocation();
@@ -16,73 +16,75 @@ const Footer = () => {
     <>
       <div className={`bg-[#112D49] ${isHomePage ? "pt-[215px]" : "pt-[70px]"}`}>
         <div className="max-w-[1440px] mx-auto px-3">
-          <div className="">
-            <img className="mx-auto flex" src={footerLogo} alt="footer-logo" />
+          <div>
+            <NavLink to={'/home'}>
+              <img className="mx-auto pointer-events-none" src={footerLogo} alt="footer-logo" />
+           </NavLink>
             <Para
               paraClass="max-w-[338px] !text-[#CFD5DB] text-center mx-auto pt-6 !leading-[150%]"
               paraText="Commodo egestas etiam arcu curabitur aliquam volutpat a gravida."
             />
-            <ul className="flex flex-wrap gap-2.5 justify-between max-w-[384px] mx-auto mt-[27px]">
-              <li>
-                <a className="text-white sm:text-[16px] text-[14px] font-medium" href="#">
+            <ul className="flex flex-wrap justify-center items-center max-w-[384px] gap-y-3.5 mx-auto mt-[27px]">
+              <li className="sm:w-1/5 w-1/3 flex justify-center">
+                <Link className="text-white sm:text-md text-[14px] font-medium" href="#">
                   Shipping
-                </a>
+                </Link>
               </li>
-              <li>
-                <a className="text-white sm:text-[16px] text-[14px] font-medium" href="#">
+              <li className="sm:w-1/5 w-1/3 flex justify-center">
+                <Link className="text-white sm:text-md text-[14px] font-medium" href="#">
                   Warranty
-                </a>
+                </Link>
               </li>
-              <li>
-                <a className="text-white sm:text-[16px] text-[14px] font-medium" href="#">
+              <li className="sm:w-1/5 w-1/3 flex justify-center">
+                <Link className="text-white sm:text-md text-[14px] font-medium" href="#">
                   FAQs
-                </a>
+                </Link>
               </li>
-              <li>
-                <a className="text-white sm:text-[16px] text-[14px] font-medium" href="#">
+              <li className="sm:w-1/5 w-1/3 flex justify-center">
+                <Link className="text-white sm:text-md text-[14px] font-medium" href="#">
                   Blog
-                </a>
+                </Link>
               </li>
-              <li>
-                <a className="text-white sm:text-[16px] text-[14px] font-medium" href="#">
+              <li className="sm:w-1/5 w-1/3 flex justify-center">
+                <Link className="text-white sm:text-md text-[14px] font-medium" href="#">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="flex flex-wrap gap-2.5 justify-center mt-[27px]">
-              <a
+              <Link
                 className="h-[32px] w-[32px] flex justify-center items-center border border-white rounded-full cursor-pointer transform hover:scale-125 hover:rotate-12 transition-transform duration-300 ease-in-out active:scale-90"
                 href="https://www.facebook.com/"
                 target="_blank"
               >
                 <FacebookSvg />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.instagram.com/"
                 className="h-[32px] w-[32px] flex justify-center items-center border border-white rounded-full cursor-pointer transform hover:scale-125 hover:-rotate-12 transition-transform duration-300 ease-in-out active:scale-90"
                 target="_blank"
               >
                 <InstagramSvg />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://x.com/"
                 className="h-[32px] w-[32px] flex justify-center items-center border border-white rounded-full cursor-pointer transform hover:scale-125 hover:rotate-12 transition-transform duration-300 ease-in-out active:scale-90"
                 target="_blank"
               >
                 <TwiterSvg />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.youtube.com/"
                 className="h-[32px] w-[32px] flex justify-center items-center border border-white rounded-full cursor-pointer transform hover:scale-125 hover:-rotate-12 transition-transform duration-300 ease-in-out active:scale-90"
                 target="_blank"
               >
                 <YoutubeSvg />
-              </a>
+              </Link>
             </div>
             <div className="max-w-[1140px] w-full mx-auto mt-[82px] relative z-0 pt-[1px] rounded-[12px] after:content-[''] after:absolute after:inset-0 after:rounded-[12px] after:bg-[linear-gradient(90deg,_#ffffff00_3.37%,_#ffffffcc_51.44%,_#ffffff00_100%)] after:-z-10">
               <div className="flex relative bg-[#112D49] rounded-[10px] flex-wrap justify-between items-center max-w-[1440px] mx-auto py-[30px] gap-4 sm:gap-0 sm:flex-nowrap sm:justify-between px-4">
                 <p className="text-sm text-white text-center sm:text-left w-full sm:w-auto leading-[100%]">
-                  term of service | Privacy Policy
+                  Term of Service | Privacy Policy
                 </p>
                 <p className="text-sm text-white text-center sm:text-right w-full sm:w-auto leading-[120%]">
                   © {new Date().getFullYear()} Skaroob. All Rights Reserved.
