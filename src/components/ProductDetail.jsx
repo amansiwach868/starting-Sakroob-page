@@ -46,7 +46,6 @@ const ProductDetail = () => {
     };
 
     const handleAddToCart = () => {
-
         const product = {
             id,
             title,
@@ -58,15 +57,20 @@ const ProductDetail = () => {
         };
 
         addToCart(product);
-        toast.success("✅ Product added to cart!", {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-        });
+
+        if (!toast.isActive("cart-add-success")) {
+            toast.success("✅ Product added to cart!", {
+                toastId: "cart-add-success",
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+            });
+        }
     };
+    
 
     return (
         <div className="md:pt-[91px] sm:pt-[80px] pt-[60px]">

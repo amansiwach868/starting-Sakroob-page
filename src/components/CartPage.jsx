@@ -10,10 +10,16 @@ const CartPage = () => {
     const { cartItems, increment, decrement, removeFromCart } = useCart();
 
     const handleDelete = (id) => {
-
         removeFromCart(id);
-        toast.error("Item removed from cart 🗑️");
+
+        if (!toast.isActive("cart-remove")) {
+            toast.error("Item removed from cart 🗑️", {
+                toastId: "cart-remove",
+                position: "top-right",
+            });
+        }
     };
+    
 
     const totalAmount = cartItems.reduce(
         (acc, item) => acc + item.price * item.quantity,

@@ -26,13 +26,24 @@ const SignUpPage = () => {
         const existingUser = JSON.parse(localStorage.getItem("sakroobUser"));
 
         if (existingUser && existingUser.email === formData.email) {
-            toast.error("Email already exists", { position: "top-right" });
+            if (!toast.isActive("signup-error")) {
+                toast.error("Email already exists", {
+                    position: "top-right",
+                    toastId: "signup-error",
+                });
+            }
             setIsSigningUp(false);
             return;
         }
 
         localStorage.setItem("sakroobUser", JSON.stringify(formData));
-        toast.success("Sign up successful!", { position: "top-right" });
+
+        if (!toast.isActive("signup-success")) {
+            toast.success("Sign up successful!", {
+                position: "top-right",
+                toastId: "signup-success",
+            });
+        }
 
         reset();
 
@@ -42,12 +53,16 @@ const SignUpPage = () => {
         }, 1500);
     };
 
-
-
     const onError = () => {
-        toast.error("Please fix the form errors", { position: "top-right" });
+        if (!toast.isActive("form-error")) {
+            toast.error("Please fix the form errors", {
+                position: "top-right",
+                toastId: "form-error",
+            });
+        }
         setIsSigningUp(false);
-    }
+    };
+
 
 
     return (

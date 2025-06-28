@@ -9,10 +9,16 @@ const WishList = () => {
     const { wishlistItems, removeFromWishlist } = useWishlist();
 
     const handleDelete = (id) => {
-
         removeFromWishlist(id);
-        toast.info("Item removed from wishlist 💔");
+
+        if (!toast.isActive("wishlist-remove")) {
+            toast.info("Item removed from wishlist 💔", {
+                toastId: "wishlist-remove",
+                position: "top-right",
+            });
+        }
     };
+    
 
     return (
         <div className="md:mt-[94px] md:mb-[132px] sm:my-[80px] my-[60px]">

@@ -10,16 +10,27 @@ const PopularProduct = () => {
     const [favoriteItems, setFavoriteItems] = useState([]);
 
     const handleFavoriteClick = (index) => {
-
-
         if (favoriteItems.includes(index)) {
             setFavoriteItems(favoriteItems.filter((item) => item !== index));
-            toast.error("Removed from Favorite 💔");
+
+            if (!toast.isActive("fav-remove")) {
+                toast.error("Removed from Favorite 💔", {
+                    toastId: "fav-remove",
+                    position: "top-right",
+                });
+            }
         } else {
             setFavoriteItems([...favoriteItems, index]);
-            toast.success("Added to Favorite ❤️");
+
+            if (!toast.isActive("fav-add")) {
+                toast.success("Added to Favorite ❤️", {
+                    toastId: "fav-add",
+                    position: "top-right",
+                });
+            }
         }
     };
+    
 
 
     const handleShopNow = (item) => {

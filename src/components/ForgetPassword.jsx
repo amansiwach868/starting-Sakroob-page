@@ -23,20 +23,35 @@ const ForgetPassword = () => {
         const storedUser = JSON.parse(localStorage.getItem('sakroobUser'));
 
         if (storedUser && storedUser.email === data.email) {
-            toast.success('Password reset link sent to your email!', { position: 'top-right' });
+            if (!toast.isActive("reset-success")) {
+                toast.success('Password reset link sent to your email!', {
+                    position: 'top-right',
+                    toastId: "reset-success",
+                });
+            }
         } else {
-            toast.error('Email not found in system!', { position: 'top-right' });
+            if (!toast.isActive("reset-error")) {
+                toast.error('Email not found in system!', {
+                    position: 'top-right',
+                    toastId: "reset-error",
+                });
+            }
         }
 
         reset();
         setTimeout(() => setIsResetting(false), 1500);
     };
 
-
     const onError = () => {
-        toast.error('Please enter a valid email', { position: 'top-right' });
+        if (!toast.isActive("reset-form-error")) {
+            toast.error('Please enter a valid email', {
+                position: 'top-right',
+                toastId: "reset-form-error",
+            });
+        }
         setIsResetting(false);
     };
+    
 
 
     return (

@@ -14,14 +14,24 @@ const JoinCircle = () => {
     } = useForm();
 
     const onSubmit = () => {
-
-        toast.success("✅ Successfully Joined the Sakroob Circle!");
+        if (!toast.isActive("join-success")) {
+            toast.success("✅ Successfully Joined the Sakroob Circle!", {
+                toastId: "join-success",
+                position: "top-right",
+            });
+        }
         reset();
     };
-    const onError = () => {
 
-        toast.error("❌ Please enter a valid email address.");
+    const onError = () => {
+        if (!toast.isActive("join-error")) {
+            toast.error("❌ Please enter a valid email address.", {
+                toastId: "join-error",
+                position: "top-right",
+            });
+        }
     };
+    
 
     return (
         <div className="sm:m-6 m-4 relative md:min-h-[321px] sm:min-h-[300px] min-h-[250px]">

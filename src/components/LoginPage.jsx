@@ -35,27 +35,41 @@ const LoginPage = () => {
             storedUser.email === data.email &&
             storedUser.password === data.password
         ) {
-            toast.success("Login successful!", { position: "top-right" });
+            if (!toast.isActive("login-success")) {
+                toast.success("Login successful!", {
+                    position: "top-right",
+                    toastId: "login-success",
+                });
+            }
 
             localStorage.setItem("isLoggedIn", "true");
             reset();
+
             setTimeout(() => {
                 navigate('/home');
                 window.location.reload();
             }, 1000);
         } else {
-            toast.error('Invalid email or password', { position: 'top-right' });
+            if (!toast.isActive("login-error")) {
+                toast.error("Invalid email or password", {
+                    position: "top-right",
+                    toastId: "login-error",
+                });
+            }
             setIsLoggingIn(false);
         }
     };
-    
 
     const onError = () => {
-        toast.error('Please fix the form errors', {
-            position: 'top-right',
-        });
+        if (!toast.isActive("login-form-error")) {
+            toast.error("Please fix the form errors", {
+                position: "top-right",
+                toastId: "login-form-error",
+            });
+        }
         setIsLoggingIn(false);
     };
+    
     
 
     return (

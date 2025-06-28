@@ -19,12 +19,16 @@ const BestSellers = () => {
     const navigate = useNavigate();
 
     const handleFavoriteClick = (item) => {
-
         const isFavorited = wishlistItems.some(w => w.id === item.id);
 
         if (isFavorited) {
             removeFromWishlist(item.id);
-            toast.error("Removed from Wishlist 💔");
+            if (!toast.isActive("wishlist-remove")) {
+                toast.error("Removed from Wishlist 💔", {
+                    toastId: "wishlist-remove",
+                    position: "top-right",
+                });
+            }
         } else {
             addToWishlist({
                 id: item.id,
@@ -32,12 +36,19 @@ const BestSellers = () => {
                 image: item.img,
                 price: Number(item.price) || 0,
             });
-            toast.success("Added to Wishlist ❤️");
+            if (!toast.isActive("wishlist-add")) {
+                toast.success("Added to Wishlist ❤️", {
+                    toastId: "wishlist-add",
+                    position: "top-right",
+                });
+            }
         }
     };
+    
+    
+
 
     const handleShopNow = (item) => {
-
         addToCart({
             id: item.id,
             name: item.title,
@@ -45,27 +56,17 @@ const BestSellers = () => {
             price: Number(item.price) || 0,
         });
 
-        toast.success(`${item.title} added to cart 🛍️`, {
-            position: "bottom-center",
-            autoClose: 2000,
-            theme: "colored",
-            closeOnClick: true,
-        });
+        if (!toast.isActive("cart-add")) {
+            toast.success(`${item.title} added to cart 🛍️`, {
+                toastId: "cart-add",
+                position: "bottom-center",
+                autoClose: 2000,
+                theme: "colored",
+                closeOnClick: true,
+            });
+        }
     };
-
-
-
-    const handleViewDetails = (item) => {
-        const cleanItem = {
-            id: item.id,
-            title: item.title,
-            description: item.description,
-            price: item.price,
-            img: item.img,
-        };
-        const slug = slugify(item.title, { lower: true });
-        navigate(`/productdetails/${slug}`, { state: cleanItem });
-    };
+    
 
 
     const topPositionimg = [
