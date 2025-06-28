@@ -28,7 +28,7 @@ const PopularProduct = () => {
 
     return (
         <div className="sm:py-[80px] py-10 overflow-x-hidden">
-            <div className="max-w-[1140px] px-4 sm:px-6 mx-auto flex justify-center items-center flex-col">
+            <div className="max-w-[1140px] px-4 sm:px-4 mx-auto flex justify-center items-center flex-col">
                 <Heading
                     headingClass="pb-[60px] text-center text-[32px] sm:text-[40px] md:text-[48px]"
                     headingText="Popular Products"

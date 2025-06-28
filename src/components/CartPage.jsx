@@ -22,7 +22,7 @@ const CartPage = () => {
 
     return (
         <div className="md:mt-[94px] md:mb-[132px] sm:my-[90px] my-[60px]">
-            <div className="max-w-[1140px] mx-auto px-6">
+            <div className="max-w-[1140px] mx-auto px-4">
                 <div className="flex justify-between items-center">
                     <h2 className='md:text-[34px] sm:text-[28px] text-[24px] font-bold text-[#112D49] leading-[100%]'>Your cart</h2>
                     <NavLink className="font-medium sm:text-md text-xs leading-[100%] underline text-[#112D49]" to="/">
