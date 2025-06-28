@@ -1,5 +1,5 @@
 import React from 'react'
-import Marqee from '../components/Marqee'
+import MarqeePage from '../components/MarqeePage'
 import Hero from '../components/Hero'
 import Services from '../components/Services'
 import FeaturedCategories from '../components/FeaturedCategories'
@@ -11,7 +11,7 @@ import JoinCircle from '../components/JoinCircle'
 const Home = () => {
     return (
         <div>
-            <Marqee />
+            <MarqeePage />
             <Hero />
             <Services />
             <FeaturedCategories />

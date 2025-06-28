@@ -207,7 +207,7 @@ export const Smartwatch = () => (
     </svg>
 );
 
-export const Moniters = () => (
+export const Monitors = () => (
     <svg
         width="59"
         height="59"
