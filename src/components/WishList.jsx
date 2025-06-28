@@ -1,6 +1,6 @@
 import React from 'react';
 import { DeleteIcon } from '../utils/icons';
-import { useWishlist } from '../context/WishlistContext';  // Assuming you have a Wishlist context
+import { useWishlist } from '../context/WishlistContext'; 
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { NavLink } from 'react-router-dom';
