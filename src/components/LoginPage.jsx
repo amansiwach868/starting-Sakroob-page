@@ -130,14 +130,17 @@ const LoginPage = () => {
             </div>
             <ToastContainer
                 position="bottom-center"
-                autoClose={2000}
-                hideProgressBar={false}
+                autoClose={2500}
+                hideProgressBar={true}
+                newestOnTop={true}
                 closeOnClick
-                pauseOnHover={false}
-                draggable
-                theme="light"
-                transition:Slide
+                pauseOnFocusLoss={false}
+                pauseOnHover={true}
+                draggable={false}
+                limit={1}
+                transition={Slide}
             />
+
         </div>
     );
 };

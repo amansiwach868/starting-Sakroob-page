@@ -4,7 +4,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { BESTSELLER_DATA } from "../utils/helper";
-import { toast, ToastContainer } from "react-toastify";
+import { Slide, toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CustomButton from "./common/CustomButton";
 import { useCart } from "../context/CartContext";
@@ -169,14 +169,17 @@ const BestSellers = () => {
             </div>
             <ToastContainer
                 position="bottom-center"
-                autoClose={2000}
-                hideProgressBar={false}
+                autoClose={2500}
+                hideProgressBar={true}
+                newestOnTop={true}
                 closeOnClick
-                pauseOnHover={false}
-                draggable
-                theme="light"
-                transition:Slide
+                pauseOnFocusLoss={false}
+                pauseOnHover={true}
+                draggable={false}
+                limit={1}
+                transition={Slide}
             />
+
         </div>
     );
 };

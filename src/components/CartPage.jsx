@@ -2,7 +2,7 @@ import React from 'react';
 import { DeleteIcon, IncreaseIcon, ReduceIcon } from '../utils/icons';
 import CustomButton from '../components/common/CustomButton';
 import { useCart } from '../context/CartContext';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast, ToastContainer, Slide } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { NavLink } from 'react-router-dom';
 
@@ -119,14 +119,17 @@ const CartPage = () => {
             </div>
             <ToastContainer
                 position="bottom-center"
-                autoClose={2000}
-                hideProgressBar={false}
+                autoClose={2500}
+                hideProgressBar={true}
+                newestOnTop={true}
                 closeOnClick
-                pauseOnHover={false}
-                draggable
-                theme="light"
-                transition:Slide
+                pauseOnFocusLoss={false}
+                pauseOnHover={true}
+                draggable={false}
+                limit={1}
+                transition={Slide}
             />
+
         </div>
     );
 };
