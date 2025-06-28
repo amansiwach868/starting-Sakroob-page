@@ -38,7 +38,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (lenisRef.current) {
+    if (location.pathname.startsWith("/productdetails/") && lenisRef.current) {
       lenisRef.current.scrollTo(0);
     }
   }, [location.pathname]);

@@ -16,11 +16,25 @@ const Header = () => {
 
     useEffect(() => {
         if (header) {
-            document.getElementById('root').classList.add('overflow-hidden')
+            const scrollY = window.scrollY;
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollY}px`;
+            document.body.style.left = '0';
+            document.body.style.right = '0';
+            document.body.style.overflowY = 'hidden';
+            document.body.dataset.scrollY = scrollY;
         } else {
-            document.getElementById('root').classList.remove('overflow-none')
+            const scrollY = document.body.dataset.scrollY || '0';
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.left = '';
+            document.body.style.right = '';
+            document.body.style.overflowY = '';
+            window.scrollTo(0, parseInt(scrollY));
         }
     }, [header]);
+      
+      
 
     const closeAll = () => {
         setHeader(false);
@@ -47,7 +61,7 @@ const Header = () => {
                             } min-[1100px]:static min-[1100px]:translate-x-0 min-[1100px]:flex-row min-[1100px]:bg-transparent min-[1100px]:w-auto min-[1100px]:h-auto`}
                     >
                         <li>
-                            <NavLinks to="/categories" onClick={closeAll}>Categories</NavLinks>
+                            <a className='sm:text-md  text-[14px] font-normal text-white text-nowrap ' href="#bestseller" onClick={closeAll}>Categories</a>
                         </li>
                         <li className="relative">
                             <button
@@ -145,9 +159,9 @@ const Header = () => {
                             )}
                         </li>
 
-                        <li><NavLinks to="/about" onClick={closeAll}>About</NavLinks></li>
-                        <li><NavLinks to="/blog" onClick={closeAll}>Blog</NavLinks></li>
-                        <li><NavLinks to="/contact" onClick={closeAll}>Contact</NavLinks></li>
+                        <li><a className='sm:text-md  text-[14px] font-normal text-white text-nowrap' href="#footer" onClick={closeAll}>About</a></li>
+                        <li><a className='sm:text-md  text-[14px] font-normal text-white text-nowrap' href="#blog" onClick={closeAll}>Blog</a></li>
+                        <li><a className='sm:text-md  text-[14px] font-normal text-white text-nowrap' href="#testimonials" onClick={closeAll}>Contact</a></li>
 
                         <li className="sm:hidden flex gap-4">
                             <div className="flex gap-3.5 items-center sm:hidden">

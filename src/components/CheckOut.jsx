@@ -271,7 +271,7 @@ const CheckOut = () => {
                                                 })}
                                                 className="py-[14px] pl-4 rounded-[12px] bg-[#F4F8F7] w-full pr-[75px]"
                                             />
-                                            <span className="absolute top-1/2 translate-y-1/2 right-[38px]"><Cvc /></span>
+                                            <span className="absolute top-[58px] right-[38px]"><Cvc /></span>
                                             {errors.cvc && <p className="text-red-500 text-sm mt-1">{errors.cvc.message}</p>}
                                         </div>
                                     </div>
