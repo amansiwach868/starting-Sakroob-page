@@ -8,17 +8,18 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CustomButton from "./common/CustomButton";
 import { useCart } from "../context/CartContext";
-import { useWishlist } from "../context/WishlistContext"; 
+import { useWishlist } from "../context/WishlistContext";
 import { FilledHeartSvg, HeartSvg, LeftArrow, RightArrow } from "../utils/icons";
 import { useNavigate } from "react-router-dom";
 import slugify from "slugify";
 
 const BestSellers = () => {
     const { addToCart } = useCart();
-    const { wishlistItems, addToWishlist, removeFromWishlist } = useWishlist(); 
+    const { wishlistItems, addToWishlist, removeFromWishlist } = useWishlist();
     const navigate = useNavigate();
 
     const handleFavoriteClick = (item) => {
+        toast.dismiss();
         const isFavorited = wishlistItems.some(w => w.id === item.id);
 
         if (isFavorited) {
@@ -36,6 +37,7 @@ const BestSellers = () => {
     };
 
     const handleShopNow = (item) => {
+        toast.dismiss();
         addToCart({
             id: item.id,
             name: item.title,
@@ -51,7 +53,7 @@ const BestSellers = () => {
         });
     };
 
-    
+
 
     const handleViewDetails = (item) => {
         const cleanItem = {
@@ -108,7 +110,7 @@ const BestSellers = () => {
                     {BESTSELLER_DATA.map((item, i) => (
                         <SwiperSlide className="sm:pt-[86px] pt-[50px]" key={item.id}>
                             <div
-                                
+
                                 className="max-w-[364px] hover:shadow-[0px_0px_11.4px_0px_#73A4E033] border border-[#112D4914] hover:border-transparent duration-300 rounded-[8px] p-4 flex flex-col justify-between !min-h-[536px]"
                             >
                                 <div>
@@ -165,7 +167,16 @@ const BestSellers = () => {
                     </div>
                 </div>
             </div>
-            <ToastContainer />
+            <ToastContainer
+                position="bottom-center"
+                autoClose={2000}
+                hideProgressBar={false}
+                closeOnClick
+                pauseOnHover={false}
+                draggable
+                theme="light"
+                transition:Slide
+            />
         </div>
     );
 };

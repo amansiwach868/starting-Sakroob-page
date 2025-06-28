@@ -14,10 +14,12 @@ const JoinCircleSection = () => {
     } = useForm();
 
     const onSubmit = () => {
+        toast.dismiss();
         toast.success("✅ Successfully Joined the Sakroob Circle!");
         reset();
     };
     const onError = () => {
+        toast.dismiss();
         toast.error("❌ Please enter a valid email address.");
     };
 

@@ -24,6 +24,7 @@ const LoginPage = () => {
     };
 
     const onSubmit = (data) => {
+        toast.dismiss();
         const storedUser = JSON.parse(localStorage.getItem('sakroobUser'));
 
         if (
@@ -45,6 +46,7 @@ const LoginPage = () => {
     };
 
     const onError = () => {
+        toast.dismiss();
         toast.error('Please fix the form errors', {
             position: 'top-right',
         });
@@ -126,7 +128,16 @@ const LoginPage = () => {
                     </div>
                 </form>
             </div>
-            <ToastContainer />
+            <ToastContainer
+                position="bottom-center"
+                autoClose={2000}
+                hideProgressBar={false}
+                closeOnClick
+                pauseOnHover={false}
+                draggable
+                theme="light"
+                transition:Slide
+            />
         </div>
     );
 };

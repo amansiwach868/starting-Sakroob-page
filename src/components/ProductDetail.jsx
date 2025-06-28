@@ -46,6 +46,7 @@ const ProductDetail = () => {
     };
 
     const handleAddToCart = () => {
+        toast.dismiss();
         const product = {
             id,
             title,
@@ -187,7 +188,16 @@ const ProductDetail = () => {
 
             </div>
 
-            <ToastContainer />
+            <ToastContainer
+                position="bottom-center"
+                autoClose={2000}
+                hideProgressBar={false}
+                closeOnClick
+                pauseOnHover={false}
+                draggable
+                theme="light"
+                transition:Slide
+            />
         </div>
     );
 };

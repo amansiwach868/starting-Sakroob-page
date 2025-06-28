@@ -10,6 +10,7 @@ const CartPage = () => {
     const { cartItems, increment, decrement, removeFromCart } = useCart();
 
     const handleDelete = (id) => {
+        toast.dismiss();
         removeFromCart(id);
         toast.error("Item removed from cart 🗑️");
     };
@@ -116,7 +117,16 @@ const CartPage = () => {
                     </p>
                 )}
             </div>
-            <ToastContainer />
+            <ToastContainer
+                position="bottom-center"
+                autoClose={2000}
+                hideProgressBar={false}
+                closeOnClick
+                pauseOnHover={false}
+                draggable
+                theme="light"
+                transition:Slide
+            />
         </div>
     );
 };

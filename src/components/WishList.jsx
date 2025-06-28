@@ -1,6 +1,6 @@
 import React from 'react';
 import { DeleteIcon } from '../utils/icons';
-import { useWishlist } from '../context/WishlistContext'; 
+import { useWishlist } from '../context/WishlistContext';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { NavLink } from 'react-router-dom';
@@ -9,6 +9,7 @@ const WishList = () => {
     const { wishlistItems, removeFromWishlist } = useWishlist();
 
     const handleDelete = (id) => {
+        toast.dismiss();
         removeFromWishlist(id);
         toast.info("Item removed from wishlist 💔");
     };
@@ -54,12 +55,21 @@ const WishList = () => {
                         ))}
                     </div>
                 ) : (
-                        <p className="mt-10 text-[#112D49] sm:text-xl text-md opacity-80 text-center">
+                    <p className="mt-10 text-[#112D49] sm:text-xl text-md opacity-80 text-center">
                         Your wishlist is empty.
                     </p>
                 )}
             </div>
-            <ToastContainer />
+            <ToastContainer
+                position="bottom-center"
+                autoClose={2000}
+                hideProgressBar={false}
+                closeOnClick
+                pauseOnHover={false}
+                draggable
+                theme="light"
+                transition:Slide
+            />
         </div>
     );
 };

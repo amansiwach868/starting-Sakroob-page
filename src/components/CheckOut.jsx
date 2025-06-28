@@ -41,6 +41,7 @@ const CheckOut = () => {
     }, [items, reset]);
 
     const onSubmit = (data) => {
+        toast.dismiss();
         toast.success("Order placed successfully 🎉");
         reset();
         setSelected("");
@@ -342,7 +343,16 @@ const CheckOut = () => {
                     </div>
                 </div>
             </form>
-            <ToastContainer />
+            <ToastContainer
+                position="bottom-center"
+                autoClose={2000}
+                hideProgressBar={false}
+                closeOnClick
+                pauseOnHover={false}
+                draggable
+                theme="light"
+                transition:Slide
+            />
         </div>
     );
 };
