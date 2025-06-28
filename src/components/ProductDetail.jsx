@@ -6,7 +6,7 @@ import { Rating, MinusSvg, PlusSvg } from "../utils/icons";
 import CustomButton from "./common/CustomButton";
 import PopularProduct from "./PopularProduct";
 import { useCart } from "../context/CartContext";
-import { toast, ToastContainer } from "react-toastify";
+import { Slide, toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ProductDetailTabs from "./ProductDetailTabs";
 

@@ -11,7 +11,7 @@ import PayPal from "../assets/img/svg/paypal.svg";
 import visa from "../assets/img/svg/visa.svg";
 import master from "../assets/img/svg/master.svg";
 import american from "../assets/img/svg/american.svg";
-import { toast, ToastContainer } from "react-toastify";
+import { Slide,toast, ToastContainer } from "react-toastify";
 import CheckOutInput from "./common/CheckOutInput";
 
 const CheckOut = () => {

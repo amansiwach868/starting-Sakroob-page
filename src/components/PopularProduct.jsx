@@ -3,7 +3,7 @@ import Heading from "./common/Heading";
 import { POPULAR_PRUDUCT_DATA } from "../utils/helper";
 import CustomButton from "./common/CustomButton";
 import { FilledHeartSvg, HeartSvg } from "../utils/icons";
-import { toast, ToastContainer } from "react-toastify";
+import { Slide, toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const PopularProduct = () => {
