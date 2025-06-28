@@ -105,7 +105,7 @@ const ProductDetail = () => {
 
                     <div className="w-full sm:w-6/12 px-3">
                         <Heading
-                            headingClass="!text-[34px] text-left !leading-[100%] max-w-[568px] mx-auto lg:mx-0"
+                            headingClass="md:!text-[34px] sm:text-[28px] text-[24px] text-left !leading-[100%] max-w-[568px] mx-auto lg:mx-0"
                             headingText={title}
                         />
                         <Para
@@ -113,7 +113,7 @@ const ProductDetail = () => {
                             paraText={description}
                         />
                         <Heading
-                            headingClass="!text-[34px] text-left pt-4 max-w-[568px] mx-auto lg:mx-0"
+                            headingClass="md:!text-[34px] sm:text-[28px] text-[24px] text-left pt-4 max-w-[568px] mx-auto lg:mx-0"
                             headingText={`₹ ${Number(price).toFixed(2)}`}
                         />
                         <div className="pt-4 max-w-[568px] mx-auto lg:mx-0">
