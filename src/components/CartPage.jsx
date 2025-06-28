@@ -66,7 +66,7 @@ const CartPage = () => {
                                         >
                                             <ReduceIcon />
                                         </button>
-                                        <div className="w-[60px] h-[40px] border-y text-xl text-[#112D49] flex items-center justify-center">
+                                        <div className="w-[60px] h-[40px] border-y border-[#C2C2C2] text-xl text-[#112D49] flex items-center justify-center">
                                             {item.quantity > 9 ? '' : '0'}{item.quantity}
                                         </div>
                                         <button
