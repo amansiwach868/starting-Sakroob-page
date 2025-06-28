@@ -15,7 +15,11 @@ const Header = () => {
     const toggleHeader = () => setHeader(!header);
 
     useEffect(() => {
-        document.body.style.overflow = header ? 'hidden' : '';
+        if (header) {
+            document.body.style.overflow = '';
+        } else {
+            document.body.style.overflow = '';
+        }
     }, [header]);
 
     const closeAll = () => {
