@@ -68,7 +68,7 @@ const ProductDetail = () => {
     };
 
     return (
-        <div className="pt-[91px]">
+        <div className="md:pt-[91px] sm:pt-[80px] pt-[60px]">
             <div className="max-w-[1140px] mx-auto px-3">
                 <div className="flex flex-wrap flex-row -mx-3">
                     <div className="w-full max-sm:flex sm:w-6/12 gap-5 px-3 mb-8 lg:mb-0">
@@ -166,7 +166,7 @@ const ProductDetail = () => {
                                 </button>
                             </div>
 
-                            <div className="pt-[78px] w-full">
+                            <div className="sm:pt-[63px] pt-10 w-full">
                                 <CustomButton
                                     buttonClass="!w-full !py-[17px] text-white"
                                     buttonText="Buy Now"
@@ -184,7 +184,7 @@ const ProductDetail = () => {
                 <ProductDetailTabs />
 
                 <PopularProduct />
-                
+
             </div>
 
             <ToastContainer />

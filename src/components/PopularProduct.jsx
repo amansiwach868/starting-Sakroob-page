@@ -27,7 +27,7 @@ const PopularProduct = () => {
     };
 
     return (
-        <div className="py-[80px] overflow-x-hidden">
+        <div className="sm:py-[80px] py-10 overflow-x-hidden">
             <div className="max-w-[1140px] px-4 sm:px-6 mx-auto flex justify-center items-center flex-col">
                 <Heading
                     headingClass="pb-[60px] text-center text-[32px] sm:text-[40px] md:text-[48px]"
@@ -58,7 +58,7 @@ const PopularProduct = () => {
                                 </div>
                                 <div className="mt-4">
                                     <div className="flex justify-between items-center">
-                                        <p className="font-semibold text-lg sm:text-xl text-[#112D49]">
+                                        <p className="font-semibold text-md sm:text-xl text-nowrap text-[#112D49]">
                                             ₹ {Number(item.price).toFixed(2)}
                                         </p>
                                         <div className="-mt-2">{item.svg && <item.svg />}</div>
@@ -78,7 +78,7 @@ const PopularProduct = () => {
                 </div>
 
                 <CustomButton
-                    buttonClass="!mx-auto text-white mt-[58px]"
+                    buttonClass="!mx-auto text-white sm:mt-[58px] mt-10"
                     buttonText="Explore all products"
                 />
             </div>

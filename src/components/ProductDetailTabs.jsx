@@ -127,7 +127,7 @@ const ProductDetailTabs = () => {
     };
 
     return (
-        <div className="mt-16 max-w-6xl mx-auto px-2 sm:px-6">
+        <div className="md:mt-16 sm:mt-10 mt-8 max-w-6xl mx-auto px-2 sm:px-6">
             <div className="relative flex border-none bg-transparent" style={{ minHeight: 48 }}>
                 {TABS.map(({ key, label, align }, i) => (
                     <button
@@ -141,7 +141,7 @@ const ProductDetailTabs = () => {
                 ))}
                 <span
                     ref={indicatorRef}
-                    className="absolute bottom-0 h-[4px] bg-[#112D49] rounded transition-all duration-300 z-10"
+                    className="absolute bottom-0 h-[4px] max-sm:w-[100px] bg-[#112D49] rounded transition-all duration-300 z-10"
                     style={{ left: 0, width: 0 }}
                 />
             </div>

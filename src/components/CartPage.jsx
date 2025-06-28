@@ -1,5 +1,4 @@
 import React from 'react';
-import Heading from './common/Heading';
 import { DeleteIcon, IncreaseIcon, ReduceIcon } from '../utils/icons';
 import CustomButton from '../components/common/CustomButton';
 import { useCart } from '../context/CartContext';
