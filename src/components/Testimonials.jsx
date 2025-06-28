@@ -7,7 +7,7 @@ import { LeftArrow, LeftQuotationIcon, Rating, RightArrow, RightQuotationIcon } 
 
 const Testimonials = () => {
     return (
-        <div className="px-4 md:px-4 lg:px-8 mt-20">
+        <div className="md:px-7 sm:px-6 px-4 mt-20">
             <div className="max-w-[1140px] mx-auto">
                 <p className="text-center italic text-lg md:text-xl text-[#112D49] mb-2">
                     Testimonials
@@ -15,11 +15,11 @@ const Testimonials = () => {
                 <h2 className='leading-[120%] text-center md:text-[48px] sm:text-[38px] text-[28px] font-bold text-[#112D49]'>What our client’s says </h2>
                 <div className="mt-10 relative">
                     <div className="max-xl:hidden flex xl:absolute top-[178px] xl:-left-14 xl:-right-14 2xl:-left-20 2xl:-right-20 justify-between items-center px-4 z-10">
-                        <div className="swiper-arrow prev-button cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
+                        <div className="swiper-arrow prev-button cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:scale-105 transition-all duration-200 ease-linear">
                             <LeftArrow />
                         </div>
 
-                        <div className="swiper-arrow next-button cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
+                        <div className="swiper-arrow next-button cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:scale-105 transition-all duration-200 ease-linear">
                             <RightArrow />
                         </div>
                     </div>
@@ -70,11 +70,11 @@ const Testimonials = () => {
                         ))}
                     </Swiper>
                     <div className="xl:hidden flex justify-center gap-3 items-center px-4 z-10">
-                        <div className="swiper-arrow prev-button cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
+                        <div className="swiper-arrow prev-button cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:scale-105 transition-all duration-200 ease-linear">
                             <LeftArrow />
                         </div>
 
-                        <div className="swiper-arrow next-button cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:bg-[#112D49] transition-all duration-200 ease-linear">
+                        <div className="swiper-arrow next-button cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:scale-105 transition-all duration-200 ease-linear">
                             <RightArrow />
                         </div>
                     </div>

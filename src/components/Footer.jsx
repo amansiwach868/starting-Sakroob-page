@@ -14,7 +14,7 @@ const Footer = () => {
   const isHomePage = location.pathname === "/" || location.pathname === "/home";
   return (
     <>
-      <div className={`bg-[#112D49] ${isHomePage ? "md:pt-[215px] pt-[150px]" : "md:pt-[70px] sm:pt-[55px] pt-10"}`}>
+      <div className={`bg-[#112D49] ${isHomePage ? "md:pt-[215px] pt-[175px]" : "md:pt-[70px] sm:pt-[55px] pt-10"}`}>
         <div className="max-w-[1440px] mx-auto px-3">
           <div>
             <NavLink to={'/home'}>

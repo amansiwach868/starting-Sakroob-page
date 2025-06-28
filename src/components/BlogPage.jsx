@@ -42,7 +42,7 @@ const BlogPage = () => {
     ];
 
     return (
-        <div className=' max-w-[1440px] w-full mx-auto px-4 md:my-[132px] sm:my-[100px] my-[75px] flex flex-col justify-center items-center gap-[64px]'>
+        <div className=' max-w-[1440px] w-full mx-auto md:px-7 sm:px-6 px-4 md:my-[132px] sm:my-[100px] my-[75px] flex flex-col justify-center items-center gap-[64px]'>
             <h3 className='md:text-[48px] sm:text-[38px] text-[28px] font-bold text-[#112D49] leading-[120%] max-w-[618px] mx-auto text-center'>Blog, Guides, Build Logs & More</h3>
             <div className="grid sm:grid-cols-2 grid-cols-1 gap-x-[26px] gap-y-6 w-full lg:!grid-rows-[335px_388px] sm:grid-rows-[400px_527px] grid-rows-[364px_364px_527px]">
                 {BLOG_PAGE_DATA.map((item, i) => (

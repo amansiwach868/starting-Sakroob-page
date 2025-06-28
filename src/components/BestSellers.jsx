@@ -75,7 +75,7 @@ const BestSellers = () => {
 
     return (
         <div>
-            <div className="max-w-[1272px] mx-auto px-3 relative">
+            <div className="max-w-[1272px] mx-auto md:px-7 sm:px-6 px-4 relative">
                 <h2 className="md:text-[48px] sm:text-[36px] text-[28px] font-bold text-[#112D49] text-center mb-4">
                     Bestsellers
                 </h2>
