@@ -16,9 +16,6 @@ import Lenis from 'lenis'
 const lenis = new Lenis({
   autoRaf: true,
 });
-lenis.on('scroll', (e) => {
-  console.log(e);
-});
 
 function App() {
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
