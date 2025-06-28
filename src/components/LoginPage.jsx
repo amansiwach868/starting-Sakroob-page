@@ -10,6 +10,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const LoginPage = () => {
     const [togglePassword, setTogglePassword] = useState(false);
+    const [isLoggingIn, setIsLoggingIn] = useState(false);
+
     const navigate = useNavigate();
 
     const {
@@ -24,6 +26,7 @@ const LoginPage = () => {
     };
 
     const onSubmit = (data) => {
+        setIsLoggingIn(true);
 
         const storedUser = JSON.parse(localStorage.getItem('sakroobUser'));
 
@@ -36,21 +39,24 @@ const LoginPage = () => {
 
             localStorage.setItem("isLoggedIn", "true");
             reset();
-            navigate('/home')
             setTimeout(() => {
+                navigate('/home');
                 window.location.reload();
             }, 1000);
         } else {
             toast.error('Invalid email or password', { position: 'top-right' });
+            setIsLoggingIn(false);
         }
     };
+    
 
     const onError = () => {
-
         toast.error('Please fix the form errors', {
             position: 'top-right',
         });
+        setIsLoggingIn(false);
     };
+    
 
     return (
         <div className='w-full min-h-screen bg-[url(./assets/img/png/login-bg-img.png)] bg-no-repeat bg-cover bg-center flex justify-center items-center'>
@@ -112,9 +118,10 @@ const LoginPage = () => {
                     </div>
 
                     <CustomButton
-                        buttonText={'Log in'}
-                        buttonClass={'w-full text-white mt-6'}
+                        buttonText={isLoggingIn ? 'Logging in...' : 'Log in'}
+                        buttonClass={`w-full text-white mt-6 ${isLoggingIn ? 'opacity-50 cursor-not-allowed' : ''}`}
                         type='submit'
+                        disabled={isLoggingIn}
                     />
 
                     <div className='w-full flex sm:flex-row flex-col justify-center gap-1 mt-5 items-center'>

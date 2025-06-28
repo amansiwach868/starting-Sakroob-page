@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { NavLink } from 'react-router-dom';
 import CustomButton from './common/CustomButton';
 import CustomInput from './common/CustomInput';
 import HeadingAndPara from './common/HeadingAndPara';
-import { Slide,ToastContainer, toast } from 'react-toastify';
+import { Slide, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const ForgetPassword = () => {
+
+    const [isResetting, setIsResetting] = useState(false);
+
     const {
         register,
         handleSubmit,
@@ -16,7 +19,7 @@ const ForgetPassword = () => {
     } = useForm();
 
     const onSubmit = (data) => {
-
+        setIsResetting(true);
         const storedUser = JSON.parse(localStorage.getItem('sakroobUser'));
 
         if (storedUser && storedUser.email === data.email) {
@@ -26,12 +29,15 @@ const ForgetPassword = () => {
         }
 
         reset();
+        setTimeout(() => setIsResetting(false), 1500);
     };
+
 
     const onError = () => {
-
         toast.error('Please enter a valid email', { position: 'top-right' });
+        setIsResetting(false);
     };
+
 
     return (
         <div className='w-full min-h-screen bg-[url(./assets/img/png/login-bg-img.png)] bg-no-repeat bg-cover bg-center flex justify-center items-center'>
@@ -66,7 +72,13 @@ const ForgetPassword = () => {
                         <p className='text-red-500 text-sm mt-1'>{errors.email.message}</p>
                     )}
 
-                    <CustomButton buttonText={'Reset Password'} buttonClass={'w-full text-white mt-6'} type='submit' />
+                    <CustomButton
+                        buttonText={isResetting ? 'Resetting...' : 'Reset Password'}
+                        buttonClass={`w-full text-white mt-6 ${isResetting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                        type='submit'
+                        disabled={isResetting}
+                    />
+
 
                     <div className='w-full flex sm:flex-row flex-col justify-center gap-1 mt-5 items-center'>
                         <p className='text-nowrap sm:text-md  text-[14px]'>We're here for you. </p>

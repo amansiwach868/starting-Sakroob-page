@@ -5,11 +5,13 @@ import CustomInput from './common/CustomInput'
 import { NavLink, useNavigate } from 'react-router-dom'
 import CustomButton from './common/CustomButton'
 import { Eye } from '../utils/icons'
-import { Slide,ToastContainer, toast } from 'react-toastify'
+import { Slide, ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 const SignUpPage = () => {
     const [togglePassword, setTogglePassword] = useState(false)
+    const [isSigningUp, setIsSigningUp] = useState(false);
+
     const navigate = useNavigate();
 
     const { register, handleSubmit, formState: { errors }, reset } = useForm()
@@ -19,11 +21,13 @@ const SignUpPage = () => {
     }
 
     const onSubmit = (formData) => {
+        setIsSigningUp(true);
 
         const existingUser = JSON.parse(localStorage.getItem("sakroobUser"));
 
         if (existingUser && existingUser.email === formData.email) {
             toast.error("Email already exists", { position: "top-right" });
+            setIsSigningUp(false);
             return;
         }
 
@@ -34,14 +38,17 @@ const SignUpPage = () => {
 
         setTimeout(() => {
             navigate("/login");
+            setIsSigningUp(false);
         }, 1500);
     };
 
 
-    const onError = () => {
 
+    const onError = () => {
         toast.error("Please fix the form errors", { position: "top-right" });
+        setIsSigningUp(false);
     }
+
 
     return (
         <div className='w-full min-h-screen bg-[url(./assets/img/png/login-bg-img.png)] bg-no-repeat bg-cover bg-center flex justify-center items-center'>
@@ -115,7 +122,11 @@ const SignUpPage = () => {
                         </CustomInput>
                     </div>
 
-                    <CustomButton buttonText={'Sign Up'} buttonClass={'w-full text-white mt-6'} type="submit" />
+                    <CustomButton
+                        buttonText={isSigningUp ? 'Signing up...' : 'Sign Up'}
+                        buttonClass={`w-full text-white mt-6 ${isSigningUp ? 'opacity-50 cursor-not-allowed' : ''}`}
+                        type="submit"
+                        disabled={isSigningUp} />
 
                     <div className="w-full flex sm:flex-row flex-col justify-center gap-1 mt-5 items-center">
                         <p className='text-nowrap sm:text-md  text-[14px]'>Already a member?</p>
