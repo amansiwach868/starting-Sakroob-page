@@ -16,9 +16,9 @@ const Header = () => {
 
     useEffect(() => {
         if (header) {
-            document.body.style.overflow = '';
+            document.getElementById('root').classList.add('overflow-hidden')
         } else {
-            document.body.style.overflow = '';
+            document.getElementById('root').classList.remove('overflow-none')
         }
     }, [header]);
 

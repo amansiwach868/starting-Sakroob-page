@@ -5,7 +5,7 @@ import CustomInput from './common/CustomInput';
 import { CloseEye, Eye } from '../utils/icons';
 import { NavLink, useNavigate } from 'react-router-dom';
 import CustomButton from './common/CustomButton';
-import { ToastContainer, toast } from 'react-toastify';
+import { Slide,ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const LoginPage = () => {

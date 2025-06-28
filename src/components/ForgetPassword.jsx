@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import CustomButton from './common/CustomButton';
 import CustomInput from './common/CustomInput';
 import HeadingAndPara from './common/HeadingAndPara';
-import { ToastContainer, toast } from 'react-toastify';
+import { Slide,ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const ForgetPassword = () => {

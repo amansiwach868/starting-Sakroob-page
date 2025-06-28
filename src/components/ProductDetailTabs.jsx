@@ -43,7 +43,7 @@ const ProductDetailTabs = () => {
                                     <FiveStarRating/>
                                     <p className="font-medium text-dark-blue mt-1">Based on 1 review</p>
                                 </div>
-                                <Link href="#" className="text-[#112D49] lg:mt-[147px] mt-3 text-sm font-medium hover:underline flex items-center gap-1">
+                                <Link href="#" className="text-[#112D49] md:mt-[147px] text-nowrap mt-3 text-sm  font-medium hover:underline flex items-center gap-1">
                                     See all Customers Reviews
                                     <span className="ml-1">&gt;</span>
                                 </Link>

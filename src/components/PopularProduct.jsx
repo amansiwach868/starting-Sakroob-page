@@ -94,8 +94,6 @@ const PopularProduct = () => {
                 limit={1}
                 transition={Slide}
             />
-
-
         </div>
     );
 };
