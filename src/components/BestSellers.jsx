@@ -96,8 +96,9 @@ const BestSellers = () => {
                             prevEl: '.prev-buttonBestSellers',
                         }}
                         breakpoints={{
-                            320: { slidesPerView: 1.1, spaceBetween: 10 },
-                            555: { slidesPerView: 1.5, spaceBetween: 10 },
+                            320: { slidesPerView: 1, spaceBetween: 10 },
+                            400: { slidesPerView: 1.25, spaceBetween: 10 },
+                            500: { slidesPerView: 1.5, spaceBetween: 10 },
                             700: { slidesPerView: 2, spaceBetween: 15 },
                             875: { slidesPerView: 2.5, spaceBetween: 15 },
                             1024: { slidesPerView: 3, spaceBetween: 15 },
