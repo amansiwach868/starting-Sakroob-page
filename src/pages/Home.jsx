@@ -6,7 +6,7 @@ import FeaturedCategories from '../components/FeaturedCategories'
 import BlogPage from '../components/BlogPage'
 import Testimonials from '../components/Testimonials'
 import BestSellers from '../components/BestSellers'
-import JoinCircleSection from '../components/JoinCircleSection'
+import JoinCircle from '../components/JoinCircle'
 
 const Home = () => {
     return (
@@ -15,10 +15,10 @@ const Home = () => {
             <Hero />
             <Services />
             <FeaturedCategories />
-            <BestSellers/>
+            <BestSellers />
             <BlogPage />
-            <Testimonials/>
-            <JoinCircleSection/>
+            <Testimonials />
+            <JoinCircle />
         </div>
     )
 }

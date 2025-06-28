@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import CustomButton from "./common/CustomButton";
 import HeadingAndPara from "./common/HeadingAndPara";
 
-const JoinCircleSection = () => {
+const JoinCircle = () => {
     const {
         register,
         handleSubmit,
@@ -64,4 +64,4 @@ const JoinCircleSection = () => {
     );
 };
 
-export default JoinCircleSection;
+export default JoinCircle;

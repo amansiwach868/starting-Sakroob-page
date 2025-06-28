@@ -5,7 +5,6 @@ import { useCart } from "../context/CartContext";
 import { useForm } from "react-hook-form";
 import Heading from "./common/Heading";
 import Subheading from "./common/Subheading";
-import Input from "./common/Input";
 import CustomButton from "./common/CustomButton";
 import { CVC, INFO } from "../utils/icons";
 import PayPal from "../assets/img/svg/paypal.svg";
@@ -13,6 +12,7 @@ import visa from "../assets/img/svg/visa.svg";
 import master from "../assets/img/svg/master.svg";
 import american from "../assets/img/svg/american.svg";
 import { toast, ToastContainer } from "react-toastify";
+import CheckOutInput from "./common/CheckOutInput";
 
 const CheckOut = () => {
     const { cartItems, clearCart } = useCart();
@@ -64,7 +64,7 @@ const CheckOut = () => {
                         </div>
 
                         <div className="mb-[35px]">
-                            <Input
+                            <CheckOutInput
                                 htmlFor="email"
                                 labelText="Email or mobile phone number"
                                 register={register("email", {
@@ -80,7 +80,7 @@ const CheckOut = () => {
 
                         <Heading headingText="Delivery" />
                         <div className="mt-5 mb-[26px]">
-                            <Input
+                            <CheckOutInput
                                 htmlFor="country"
                                 labelText="Country/ Region"
                                 register={register("country", {
@@ -93,7 +93,7 @@ const CheckOut = () => {
                         </div>
 
                         <div className="flex max-md:flex-col max-md:gap-[26px] justify-between gap-3 mb-[26px]">
-                            <Input
+                            <CheckOutInput
                                 htmlFor="first-name"
                                 labelText="First name (Optional)"
                                 register={register("firstName", {
@@ -102,7 +102,7 @@ const CheckOut = () => {
                                 })}
                                 error={errors.firstName}
                             />
-                            <Input
+                            <CheckOutInput
                                 htmlFor="last-name"
                                 labelText="Last name"
                                 register={register("lastName", {
@@ -114,7 +114,7 @@ const CheckOut = () => {
                         </div>
 
                         <div className="mb-4">
-                            <Input
+                            <CheckOutInput
                                 htmlFor="address"
                                 labelText="Address"
                                 register={register("address", {
@@ -130,14 +130,14 @@ const CheckOut = () => {
                             <Subheading text="Add a house number if you have one" />
                         </div>
 
-                        <Input
+                        <CheckOutInput
                             htmlFor="apartment"
                             labelText="Apartment, Suit, etc. (optional)"
                             register={register("apartment")}
                         />
 
                         <div className="mb-4 mt-[26px] flex max-md:flex-col max-md:gap-[26px] gap-3 justify-between">
-                            <Input
+                            <CheckOutInput
                                 htmlFor="city"
                                 labelText="City"
                                 register={register("city", {
@@ -146,7 +146,7 @@ const CheckOut = () => {
                                 })}
                                 error={errors.city}
                             />
-                            <Input
+                            <CheckOutInput
                                 htmlFor="emirate"
                                 labelText="Emirate"
                                 register={register("emirate", {
