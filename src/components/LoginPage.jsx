@@ -83,7 +83,7 @@ const LoginPage = () => {
                         heading={'Welcome back!'}
                         para={'Log in below to access your account and keep things running smoothly.'}
                         paraClass={
-                            'sm:text-md  text-[14px] font-normal max-w-[326px] mx-auto text-[#112D49] text-center mt-2 mb-6'
+                            'sm:text-md  text-[14px] font-normal max-w-[310px] mx-auto text-[#112D49] text-center mt-2 mb-6'
                         }
                         headingClass={
                             'sm:text-[32px] text-[24px] font-bold text-[#112D49] text-center leading-[120%]'
