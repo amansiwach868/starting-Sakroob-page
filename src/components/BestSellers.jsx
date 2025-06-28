@@ -19,7 +19,7 @@ const BestSellers = () => {
     const navigate = useNavigate();
 
     const handleFavoriteClick = (item) => {
-        toast.dismiss();
+
         const isFavorited = wishlistItems.some(w => w.id === item.id);
 
         if (isFavorited) {
@@ -37,7 +37,7 @@ const BestSellers = () => {
     };
 
     const handleShopNow = (item) => {
-        toast.dismiss();
+
         addToCart({
             id: item.id,
             name: item.title,

@@ -16,7 +16,7 @@ const ForgetPassword = () => {
     } = useForm();
 
     const onSubmit = (data) => {
-        toast.dismiss();
+
         const storedUser = JSON.parse(localStorage.getItem('sakroobUser'));
 
         if (storedUser && storedUser.email === data.email) {
@@ -29,7 +29,7 @@ const ForgetPassword = () => {
     };
 
     const onError = () => {
-        toast.dismiss();
+
         toast.error('Please enter a valid email', { position: 'top-right' });
     };
 

@@ -46,7 +46,7 @@ const ProductDetail = () => {
     };
 
     const handleAddToCart = () => {
-        toast.dismiss();
+
         const product = {
             id,
             title,

@@ -10,7 +10,7 @@ const PopularProduct = () => {
     const [favoriteItems, setFavoriteItems] = useState([]);
 
     const handleFavoriteClick = (index) => {
-        toast.dismiss();
+
 
         if (favoriteItems.includes(index)) {
             setFavoriteItems(favoriteItems.filter((item) => item !== index));

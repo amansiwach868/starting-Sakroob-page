@@ -10,7 +10,7 @@ const CartPage = () => {
     const { cartItems, increment, decrement, removeFromCart } = useCart();
 
     const handleDelete = (id) => {
-        toast.dismiss();
+
         removeFromCart(id);
         toast.error("Item removed from cart 🗑️");
     };

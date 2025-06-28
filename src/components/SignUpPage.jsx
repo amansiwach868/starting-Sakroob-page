@@ -19,7 +19,7 @@ const SignUpPage = () => {
     }
 
     const onSubmit = (formData) => {
-        toast.dismiss();
+
         const existingUser = JSON.parse(localStorage.getItem("sakroobUser"));
 
         if (existingUser && existingUser.email === formData.email) {
@@ -39,7 +39,7 @@ const SignUpPage = () => {
 
 
     const onError = () => {
-        toast.dismiss();
+
         toast.error("Please fix the form errors", { position: "top-right" });
     }
 

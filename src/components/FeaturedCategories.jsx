@@ -46,14 +46,14 @@ const FeaturedCategories = () => {
                         className={`relative overflow-hidden rounded-[8px] duration-200 sm:min-h-[335px] min-h-[298px] flex flex-col-reverse lg:block items-center gap-4 ${gridStyles[index]}`}
                     >
                         <img
-                            src={item.categorieImg}
-                            alt={item.categorieName || 'Category'}
+                            src={item.categoryImg}
+                            alt={item.categoryName || 'Category'}
                             className={`object-cover w-full rounded-[10px] pointer-events-none sm:rounded-[20px] md:rounded-[30px] absolute ${imageStyles[index]}`}
                         />
                         <h4
                             className={`md:text-[32px] sm:text-[28px] text-[24px] font-bold leading-[120%] text-[#112D49] absolute z-10 ${headingStyles[index]}`}
                         >
-                            {item.categorieName}
+                            {item.categoryName}
                         </h4>
                     </div>
                 ))}

@@ -1,10 +1,10 @@
-import { Rating,SmallRating, HeartSvg, ShopSvg } from "./icons";
-import categorieImg1 from '../assets/img/png/categorieImg-1.png'
-import categorieImg2 from '../assets/img/png/categorieImg-2.png'
-import categorieImg3 from '../assets/img/png/categorieImg-3.png'
-import categorieImg4 from '../assets/img/png/categorieImg-4.png'
-import categorieImg5 from '../assets/img/png/categorieImg-5.png'
-import categorieImg6 from '../assets/img/png/categorieImg-6.png'
+import { Rating, SmallRating, HeartSvg, ShopSvg } from "./icons";
+import categoryImg1 from '../assets/img/png/categoryImg-1.png'
+import categoryImg2 from '../assets/img/png/categoryImg-2.png'
+import categoryImg3 from '../assets/img/png/categoryImg-3.png'
+import categoryImg4 from '../assets/img/png/categoryImg-4.png'
+import categoryImg5 from '../assets/img/png/categoryImg-5.png'
+import categoryImg6 from '../assets/img/png/categoryImg-6.png'
 import blogPageImg1 from '../assets/img/png/blog-page-img-1.png'
 import blogPageImg2 from '../assets/img/png/blog-page-img-2.png'
 import blogPageImg3 from '../assets/img/png/blog-page-img-3.png'
@@ -19,28 +19,28 @@ import populerProductImg2 from '../assets/img/png/populer-product-img-2.png'
 import populerProductImg3 from '../assets/img/png/populer-product-img-3.png'
 export const FEATURED_CATEGORIES_PRODUCTS = [
     {
-        categorieName: 'Sensors & Modules',
-        categorieImg: categorieImg1,
+        categoryName: 'Sensors & Modules',
+        categoryImg: categoryImg1,
     },
     {
-        categorieName: 'Custom PC Parts',
-        categorieImg: categorieImg2
+        categoryName: 'Custom PC Parts',
+        categoryImg: categoryImg2
     },
     {
-        categorieName: 'DIY Tools',
-        categorieImg: categorieImg3
+        categoryName: 'DIY Tools',
+        categoryImg: categoryImg3
     },
     {
-        categorieName: 'Cables & Connectors',
-        categorieImg: categorieImg4
+        categoryName: 'Cables & Connectors',
+        categoryImg: categoryImg4
     },
     {
-        categorieName: 'Gaming Peripherals',
-        categorieImg: categorieImg5
+        categoryName: 'Gaming Peripherals',
+        categoryImg: categoryImg5
     },
     {
-        categorieName: 'Raspberry Pi Kits',
-        categorieImg: categorieImg6
+        categoryName: 'Raspberry Pi Kits',
+        categoryImg: categoryImg6
     },
 ]
 export const BLOG_PAGE_DATA = [

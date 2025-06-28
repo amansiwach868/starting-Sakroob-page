@@ -9,7 +9,7 @@ const WishList = () => {
     const { wishlistItems, removeFromWishlist } = useWishlist();
 
     const handleDelete = (id) => {
-        toast.dismiss();
+
         removeFromWishlist(id);
         toast.info("Item removed from wishlist 💔");
     };

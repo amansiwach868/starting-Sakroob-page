@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import Heading from "./common/Heading";
 import Subheading from "./common/Subheading";
 import CustomButton from "./common/CustomButton";
-import { CVC, INFO } from "../utils/icons";
+import { Cvc, Info } from "../utils/icons";
 import PayPal from "../assets/img/svg/paypal.svg";
 import visa from "../assets/img/svg/visa.svg";
 import master from "../assets/img/svg/master.svg";
@@ -41,7 +41,7 @@ const CheckOut = () => {
     }, [items, reset]);
 
     const onSubmit = (data) => {
-        toast.dismiss();
+
         toast.success("Order placed successfully 🎉");
         reset();
         setSelected("");
@@ -126,7 +126,7 @@ const CheckOut = () => {
                         </div>
 
                         <div className="mb-[45px] flex gap-2 items-center">
-                            <INFO />
+                            <Info />
                             <Subheading text="Add a house number if you have one" />
                         </div>
 
@@ -271,7 +271,7 @@ const CheckOut = () => {
                                                 })}
                                                 className="py-[14px] pl-4 rounded-[12px] bg-[#F4F8F7] w-full pr-[75px]"
                                             />
-                                            <span className="absolute top-1/2 translate-y-1/2 right-[38px]"><CVC /></span>
+                                            <span className="absolute top-1/2 translate-y-1/2 right-[38px]"><Cvc /></span>
                                             {errors.cvc && <p className="text-red-500 text-sm mt-1">{errors.cvc.message}</p>}
                                         </div>
                                     </div>
