@@ -66,7 +66,7 @@ const Header = () => {
                         <li className="relative">
                             <button
                                 onClick={() => setActiveDropdown(activeDropdown === 'pc' ? null : 'pc')}
-                                className="flex gap-2 items-center text-white text-base text-nowrap"
+                                className="flex gap-2 items-center text-white text-base text-nowrap cursor-pointer"
                             >
                                 PC Products <DropDownSvg />
                             </button>
@@ -98,7 +98,7 @@ const Header = () => {
                         <li className="relative">
                             <button
                                 onClick={() => setActiveDropdown(activeDropdown === 'services' ? null : 'services')}
-                                className="flex gap-2 items-center text-white text-base"
+                                className="flex gap-2 items-center text-white text-base cursor-pointer"
                             >
                                 Services <DropDownSvg />
                             </button>
@@ -120,7 +120,7 @@ const Header = () => {
                         <li className="relative">
                             <button
                                 onClick={() => setActiveDropdown(activeDropdown === 'support' ? null : 'support')}
-                                className="flex gap-2 items-center text-white text-base"
+                                className="flex gap-2 items-center text-white text-base cursor-pointer"
                             >
                                 Support <DropDownSvg />
                             </button>
