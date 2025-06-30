@@ -56,7 +56,7 @@ const Testimonials = () => {
                                         <p className="flex-1 ">
                                             But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth,
                                         </p>
-                                        <div className="absolute bottom-0 right-0">
+                                        <div className="absolute -bottom-2 min-[1200px]:right-12 right-0">
                                             <RightQuotationIcon />
                                         </div>
                                     </div>
