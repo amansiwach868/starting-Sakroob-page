@@ -42,7 +42,7 @@ const Header = () => {
     };
 
     return (
-        <div className="w-full relative">
+        <div className="relative max-w-[1920px] w-full mx-auto">
             <NavLink to="/" className="min-[1100px]:flex hidden">
                 <img
                     src={headerLogo}
