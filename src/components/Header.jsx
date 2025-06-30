@@ -53,7 +53,7 @@ const Header = () => {
 
             <div className="w-full bg-[#112D49] md:py-5 sm:py-4 py-[13px]">
                 <div className="max-w-[1000px] ml-auto xl:mr-[88px] mr-[12px] w-full px-3 flex justify-between xl:gap-[56px] gap-3 items-center">
-                    <NavLink to="/" className="min-[1100px]:hidden">
+                    <NavLink to="/" className="min-[1100px]:hidden ">
                         <img src={headerLogo2} alt="Logo" className="cursor-pointer max-w-[90px]" />
                     </NavLink>
                     <ul
@@ -61,12 +61,12 @@ const Header = () => {
                             } min-[1100px]:static min-[1100px]:translate-x-0 min-[1100px]:flex-row min-[1100px]:bg-transparent min-[1100px]:w-auto min-[1100px]:h-auto`}
                     >
                         <li>
-                            <a className='text-base font-normal text-white text-nowrap ' href="#bestseller" onClick={closeAll}>Categories</a>
+                            <a className='text-base font-normal relative text-white text-nowrap after:content-[""] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full' href="#bestseller" onClick={closeAll}>Categories</a>
                         </li>
                         <li className="relative">
                             <button
                                 onClick={() => setActiveDropdown(activeDropdown === 'pc' ? null : 'pc')}
-                                className="flex gap-2 items-center text-white text-base text-nowrap cursor-pointer"
+                                className="flex gap-2 items-center text-white text-base text-nowrap cursor-pointer relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
                             >
                                 PC Products <DropDownSvg />
                             </button>
@@ -98,7 +98,7 @@ const Header = () => {
                         <li className="relative">
                             <button
                                 onClick={() => setActiveDropdown(activeDropdown === 'services' ? null : 'services')}
-                                className="flex gap-2 items-center text-white text-base cursor-pointer"
+                                className="flex gap-2 items-center text-white text-base cursor-pointer relative text-nowrap after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
                             >
                                 Services <DropDownSvg />
                             </button>
@@ -120,7 +120,7 @@ const Header = () => {
                         <li className="relative">
                             <button
                                 onClick={() => setActiveDropdown(activeDropdown === 'support' ? null : 'support')}
-                                className="flex gap-2 items-center text-white text-base cursor-pointer"
+                                className="flex gap-2 items-center text-white text-base cursor-pointer relative text-nowrap after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
                             >
                                 Support <DropDownSvg />
                             </button>
@@ -159,9 +159,9 @@ const Header = () => {
                             )}
                         </li>
 
-                        <li><a className='text-base font-normal text-white text-nowrap' href="#footer" onClick={closeAll}>About</a></li>
-                        <li><a className='text-base font-normal text-white text-nowrap' href="#blog" onClick={closeAll}>Blog</a></li>
-                        <li><a className='text-base font-normal text-white text-nowrap' href="#testimonials" onClick={closeAll}>Contact</a></li>
+                        <li><a className='text-base font-normal text-white text-nowrap relative after:content-[""] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full' href="#footer" onClick={closeAll}>About</a></li>
+                        <li><a className='text-base font-normal text-white text-nowrap relative after:content-[""] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full' href="#blog" onClick={closeAll}>Blog</a></li>
+                        <li><a className='text-base font-normal text-white text-nowrap relative after:content-[""] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full' href="#testimonials" onClick={closeAll}>Contact</a></li>
 
                         <li className="sm:hidden flex gap-4">
                             <div className="flex gap-3.5 items-center sm:hidden">

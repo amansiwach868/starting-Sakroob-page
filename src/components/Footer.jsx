@@ -26,27 +26,27 @@ const Footer = () => {
             />
             <ul className="flex max-sm:flex-wrap sm:justify-between justify-center items-center max-w-[384px] gap-y-3.5 mx-auto mt-[27px]">
               <li className="max-sm:w-1/3 flex justify-center">
-                <a className="text-white sm:text-md text-[14px] font-medium" href="#bestseller">
+                <a className="text-white sm:text-md text-[14px] font-medium relative text-nowrap after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full" href="#bestseller">
                   Shipping
                 </a>
               </li>
               <li className="max-sm:w-1/3 flex justify-center">
-                <a className="text-white sm:text-md text-[14px] font-medium" href="#">
+                <a className="text-white sm:text-md text-[14px] font-medium relative text-nowrap after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full" href="#">
                   Warranty
                 </a>
               </li>
               <li className="max-sm:w-1/3 flex justify-center">
-                <a className="text-white sm:text-md text-[14px] font-medium" href="#">
+                <a className="text-white sm:text-md text-[14px] font-medium relative text-nowrap after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full" href="#">
                   FAQs
                 </a>
               </li>
               <li className="max-sm:w-1/3 flex justify-center">
-                <a className="text-white sm:text-md text-[14px] font-medium" href="#">
+                <a className="text-white sm:text-md text-[14px] font-medium relative text-nowrap after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full" href="#">
                   Blog
                 </a>
               </li>
               <li className="max-sm:w-1/3 flex justify-center">
-                <a className="text-white sm:text-md text-[14px] font-medium" href="#">
+                <a className="text-white sm:text-md text-[14px] font-medium relative text-nowrap after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full" href="#">
                   Contact
                 </a>
               </li>
@@ -83,7 +83,7 @@ const Footer = () => {
             </div>
             <div className="max-w-[1140px] w-full mx-auto md:mt-[82px] sm:mt-[62px] mt-10 relative z-0 pt-[1px] rounded-[12px] after:content-[''] after:absolute after:inset-0 after:rounded-[12px] after:bg-[linear-gradient(90deg,_#ffffff00_3.37%,_#ffffffcc_51.44%,_#ffffff00_100%)] after:-z-10">
               <div className="flex relative bg-[#112D49] rounded-[10px] flex-wrap justify-between items-center max-w-[1440px] mx-auto py-[30px] gap-4 sm:gap-0 sm:flex-nowrap sm:justify-between px-4">
-                <a className="text-sm text-white text-center sm:text-left w-full sm:w-auto leading-[100%]">
+                <a href="#" className="text-sm text-white text-center sm:text-left w-full sm:w-auto leading-[100%]">
                   Term of Service | Privacy Policy
                 </a>
                 <p className="text-sm text-white text-center sm:text-right w-full sm:w-auto leading-[120%]">
