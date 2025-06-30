@@ -519,13 +519,13 @@ export const YoutubeSvg = () => (
 
 export const LeftArrow = () => (
     <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7.64648 13L1.64648 7L7.44258 1" stroke="#112D49" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path className="group-hover:stroke-white" d="M7.64648 13L1.64648 7L7.44258 1" stroke="#112D49" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
 );
 
 export const RightArrow = () => (
     <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1.64648 13L7.64648 7L1.85039 1" stroke="#112D49" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path className="group-hover:stroke-white" d="M1.64648 13L7.64648 7L1.85039 1" stroke="#112D49" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
 
 );

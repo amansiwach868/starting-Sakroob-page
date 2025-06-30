@@ -15,11 +15,11 @@ const Testimonials = () => {
                 <h2 className='leading-[120%] text-center md:text-[48px] sm:text-[38px] text-[28px] font-bold text-[#112D49]'>What our client’s says </h2>
                 <div className="mt-10 relative ">
                     <div className="max-xl:hidden  flex xl:absolute top-[178px] xl:-left-14 xl:-right-14 2xl:-left-20 2xl:-right-20 justify-between items-center z-10">
-                        <div className="mr-2.5 swiper-arrow prev-button cursor-pointer size-[38px] border border-[#112D49] rounded-full flex items-center justify-center  hover:scale-105 transition-all duration-200 ease-linear">
+                        <div className="group hover:bg-[#112D49] mr-2.5 swiper-arrow prev-button cursor-pointer size-[38px] border border-[#112D49] rounded-full flex items-center justify-center  hover:scale-105 transition-all duration-200 ease-linear">
                             <LeftArrow />
                         </div>
 
-                        <div className="ml-2.5 swiper-arrow next-button cursor-pointer size-[38px] border border-[#112D49] rounded-full flex items-center justify-center hover:scale-105 transition-all duration-200 ease-linear">
+                        <div className="group hover:bg-[#112D49] ml-2.5 swiper-arrow next-button cursor-pointer size-[38px] border border-[#112D49] rounded-full flex items-center justify-center hover:scale-105 transition-all duration-200 ease-linear">
                             <RightArrow />
                         </div>
                     </div>
@@ -42,8 +42,8 @@ const Testimonials = () => {
                         }}
                     >
                         {TESTMONIAL_DATA.map((data, i) => (
-                            <SwiperSlide key={i} className="flex justify-center p-2">
-                                <div className="w-full max-w-[558px] px-4 py-6 rounded-md mx-auto text-center duration-300 hover:shadow-[0px_2px_20px_0px_#112D491A]">
+                            <SwiperSlide key={i} className="flex justify-center p-4">
+                                <div className="w-full max-w-[558px] px-4 py-4 rounded-md mx-auto text-center duration-300 hover:shadow-[0px_2px_20px_0px_#112D491A]">
                                     <img
                                         className="mx-auto min-w-[93px] h-[93px] object-cover rounded-full"
                                         src={data.image}
@@ -72,11 +72,11 @@ const Testimonials = () => {
                         ))}
                     </Swiper>
                     <div className="xl:hidden flex justify-center gap-3 items-center px-4 z-10">
-                        <div className="swiper-arrow prev-button cursor-pointer size-[38px] md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:scale-105 transition-all duration-200 ease-linear">
+                        <div className="group hover:bg-[#112D49] swiper-arrow prev-button cursor-pointer size-[38px] md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:scale-105 transition-all duration-200 ease-linear">
                             <LeftArrow />
                         </div>
 
-                        <div className="swiper-arrow next-button cursor-pointer size-[38px] md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:scale-105 transition-all duration-200 ease-linear">
+                        <div className="group hover:bg-[#112D49] swiper-arrow next-button cursor-pointer size-[38px] md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:scale-105 transition-all duration-200 ease-linear">
                             <RightArrow />
                         </div>
                     </div>

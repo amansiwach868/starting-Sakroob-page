@@ -77,10 +77,10 @@ const BestSellers = () => {
                     </h2>
 
                     <div className="max-[1400px]:hidden flex min-[1400px]:absolute min-[1400px]:bottom-[250px] min-[1400px]:-left-11 min-[1400px]:-right-11 justify-between items-center px-4 z-10">
-                        <div className="swiper-arrow prev-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:scale-105 transition-all duration-200 ease-linear">
+                        <div className="group hover:bg-[#112D49] swiper-arrow prev-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:scale-105 transition-all duration-200 ease-linear">
                             <LeftArrow />
                         </div>
-                        <div className="swiper-arrow next-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:scale-105 transition-all duration-200 ease-linear">
+                        <div className="group hover:bg-[#112D49] swiper-arrow next-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:scale-105 transition-all duration-200 ease-linear">
                             <RightArrow />
                         </div>
                     </div>
@@ -154,10 +154,10 @@ const BestSellers = () => {
                     </Swiper>
 
                     <div className="min-[1400px]:hidden flex justify-center gap-3 items-center px-4 z-10">
-                        <div className="swiper-arrow prev-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:scale-105 transition-all duration-200 ease-linear">
+                        <div className="group hover:bg-[#112D49] swiper-arrow prev-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:scale-105 transition-all duration-200 ease-linear">
                             <LeftArrow />
                         </div>
-                        <div className="swiper-arrow next-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:scale-105 transition-all duration-200 ease-linear">
+                        <div className="group hover:bg-[#112D49] swiper-arrow next-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:scale-105 transition-all duration-200 ease-linear">
                             <RightArrow />
                         </div>
                     </div>
