@@ -61,12 +61,12 @@ const Header = () => {
                             } min-[1100px]:static min-[1100px]:translate-x-0 min-[1100px]:flex-row min-[1100px]:bg-transparent min-[1100px]:w-auto min-[1100px]:h-auto`}
                     >
                         <li>
-                            <a className='sm:text-md  text-[14px] font-normal text-white text-nowrap ' href="#bestseller" onClick={closeAll}>Categories</a>
+                            <a className='text-base font-normal text-white text-nowrap ' href="#bestseller" onClick={closeAll}>Categories</a>
                         </li>
                         <li className="relative">
                             <button
                                 onClick={() => setActiveDropdown(activeDropdown === 'pc' ? null : 'pc')}
-                                className="flex gap-2 items-center text-white sm:text-md  text-[14px] text-nowrap"
+                                className="flex gap-2 items-center text-white text-base text-nowrap"
                             >
                                 PC Products <DropDownSvg />
                             </button>
@@ -76,7 +76,7 @@ const Header = () => {
                                         <NavLinks
                                             to="/pc/laptops"
                                             onClick={closeAll}
-                                            className="sm:text-md  text-[14px] font-normal !text-[#112D49] text-nowrap"
+                                            className="text-base font-normal !text-[#112D49] text-nowrap"
                                         >
                                             Standard PC Components
                                         </NavLinks>
@@ -86,7 +86,7 @@ const Header = () => {
                                         <NavLinks
                                             to="/pc/desktops"
                                             onClick={closeAll}
-                                            className="sm:text-md  text-[14px] font-normal !text-[#112D49] text-nowrap"
+                                            className="text-base font-normal !text-[#112D49] text-nowrap"
                                         >
                                             Reference Earlier Examples
                                         </NavLinks>
@@ -98,7 +98,7 @@ const Header = () => {
                         <li className="relative">
                             <button
                                 onClick={() => setActiveDropdown(activeDropdown === 'services' ? null : 'services')}
-                                className="flex gap-2 items-center text-white sm:text-md  text-[14px]"
+                                className="flex gap-2 items-center text-white text-base"
                             >
                                 Services <DropDownSvg />
                             </button>
@@ -108,7 +108,7 @@ const Header = () => {
                                         <NavLinks
                                             to="/pc/laptops"
                                             onClick={closeAll}
-                                            className="sm:text-md  text-[14px] font-normal !text-[#112D49] text-nowrap"
+                                            className="text-base font-normal !text-[#112D49] text-nowrap"
                                         >
                                             Diy services
                                         </NavLinks>
@@ -120,7 +120,7 @@ const Header = () => {
                         <li className="relative">
                             <button
                                 onClick={() => setActiveDropdown(activeDropdown === 'support' ? null : 'support')}
-                                className="flex gap-2 items-center text-white sm:text-md  text-[14px]"
+                                className="flex gap-2 items-center text-white text-base"
                             >
                                 Support <DropDownSvg />
                             </button>
@@ -130,7 +130,7 @@ const Header = () => {
                                         <NavLinks
                                             to="/pc/laptops"
                                             onClick={closeAll}
-                                            className="sm:text-md  text-[14px] font-normal !text-[#112D49] text-nowrap w-full"
+                                            className="text-base font-normal !text-[#112D49] text-nowrap w-full"
                                         >
                                             FAQ’s
                                         </NavLinks>
@@ -140,7 +140,7 @@ const Header = () => {
                                         <NavLinks
                                             to="/pc/desktops"
                                             onClick={closeAll}
-                                            className="sm:text-md  text-[14px] font-normal !text-[#112D49] text-nowrap w-full"
+                                            className="text-base font-normal !text-[#112D49] text-nowrap w-full"
                                         >
                                             Returns
                                         </NavLinks>
@@ -150,7 +150,7 @@ const Header = () => {
                                         <NavLinks
                                             to="/pc/desktops"
                                             onClick={closeAll}
-                                            className="sm:text-md  text-[14px] font-normal !text-[#112D49] text-nowrap w-full"
+                                            className="text-base font-normal !text-[#112D49] text-nowrap w-full"
                                         >
                                             Contact
                                         </NavLinks>
@@ -159,9 +159,9 @@ const Header = () => {
                             )}
                         </li>
 
-                        <li><a className='sm:text-md  text-[14px] font-normal text-white text-nowrap' href="#footer" onClick={closeAll}>About</a></li>
-                        <li><a className='sm:text-md  text-[14px] font-normal text-white text-nowrap' href="#blog" onClick={closeAll}>Blog</a></li>
-                        <li><a className='sm:text-md  text-[14px] font-normal text-white text-nowrap' href="#testimonials" onClick={closeAll}>Contact</a></li>
+                        <li><a className='text-base font-normal text-white text-nowrap' href="#footer" onClick={closeAll}>About</a></li>
+                        <li><a className='text-base font-normal text-white text-nowrap' href="#blog" onClick={closeAll}>Blog</a></li>
+                        <li><a className='text-base font-normal text-white text-nowrap' href="#testimonials" onClick={closeAll}>Contact</a></li>
 
                         <li className="sm:hidden flex gap-4">
                             <div className="flex gap-3.5 items-center sm:hidden">
@@ -226,7 +226,7 @@ const Header = () => {
 
             <div className="py-[11px] px-4 w-full bg-[#F1F6FC]">
                 <div className="flex py-[6px] px-3 sm:py-3.5 sm:px-[25px] w-full sm:max-w-[689px] max-w-[263px] mx-auto bg-white rounded-[50px] shadow-[0px_2px_20px_0px_#112D491A] border border-[#112D491A]">
-                    <input type="text" placeholder="Search..." className="w-full sm:text-md  text-[14px] leading-[120%] font-normal text-[#8392A0] outline-none" />
+                    <input type="text" placeholder="Search..." className="w-full text-base leading-[120%] font-normal text-[#8392A0] outline-none" />
                     <Search />
                 </div>
             </div>
