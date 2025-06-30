@@ -7,7 +7,7 @@ import {
   TwiterSvg,
   YoutubeSvg,
 } from "../utils/icons";
-import { Link, useLocation } from "react-router-dom";
+import { Link,  useLocation } from "react-router-dom";
 
 const Footer = () => {
   const location = useLocation();
@@ -19,34 +19,34 @@ const Footer = () => {
           <div>
             <a href='#'>
               <img className="mx-auto pointer-events-none" src={footerLogo} alt="footer-logo" />
-            </a>
+           </a>
             <Para
               paraClass="max-w-[338px] !text-[#CFD5DB] text-center mx-auto pt-6 !leading-[150%]"
               paraText="Commodo egestas etiam arcu curabitur aliquam volutpat a gravida."
             />
-            <ul className="flex flex-wrap justify-center items-center max-w-[384px] gap-y-3.5 mx-auto mt-[27px]">
-              <li className="sm:w-1/5 w-1/3 flex justify-center">
-                <a className="text-white sm:text-base text-[14px] font-medium" href="#bestseller">
+            <ul className="flex max-sm:flex-wrap sm:justify-between justify-center items-center max-w-[384px] gap-y-3.5 mx-auto mt-[27px]">
+              <li className="max-sm:w-1/3 flex justify-center">
+                <a className="text-white sm:text-md text-[14px] font-medium" href="#bestseller">
                   Shipping
                 </a>
               </li>
-              <li className="sm:w-1/5 w-1/3 flex justify-center">
-                <a className="text-white sm:text-base text-[14px] font-medium" href="#">
+              <li className="max-sm:w-1/3 flex justify-center">
+                <a className="text-white sm:text-md text-[14px] font-medium" href="#">
                   Warranty
                 </a>
               </li>
-              <li className="sm:w-1/5 w-1/3 flex justify-center">
-                <a className="text-white sm:text-base text-[14px] font-medium" href="#">
+              <li className="max-sm:w-1/3 flex justify-center">
+                <a className="text-white sm:text-md text-[14px] font-medium" href="#">
                   FAQs
                 </a>
               </li>
-              <li className="sm:w-1/5 w-1/3 flex justify-center">
-                <a className="text-white sm:text-base text-[14px] font-medium" href="#">
+              <li className="max-sm:w-1/3 flex justify-center">
+                <a className="text-white sm:text-md text-[14px] font-medium" href="#">
                   Blog
                 </a>
               </li>
-              <li className="sm:w-1/5 w-1/3 flex justify-center">
-                <a className="text-white sm:text-base text-[14px] font-medium" href="#">
+              <li className="max-sm:w-1/3 flex justify-center">
+                <a className="text-white sm:text-md text-[14px] font-medium" href="#">
                   Contact
                 </a>
               </li>
