@@ -6,9 +6,9 @@ import CustomButton from './common/CustomButton';
 
 const BlogPage = () => {
     const styles = [
-        'sm:row-start-1 sm:row-end-2 sm:col-start-1 sm:col-end-2 bg-[#E5E4E2] px-4',
-        'sm:row-start-1 sm:row-end-2 sm:col-start-2 sm:col-end-3 bg-[#EEF4FB] ',
-        'sm:row-start-2 sm:row-end-3 sm:col-start-1 sm:col-end-3 bg-[#D5E8FF]  flex justify-center items-center px-4'
+        'sm:row-start-1 sm:row-end-2 sm:col-start-1 sm:col-end-2 bg-[#E5E4E2] p-8',
+        'sm:row-start-1 sm:row-end-2 sm:col-start-2 sm:col-end-3 bg-[#EEF4FB] p-8',
+        'sm:row-start-2 sm:row-end-3 sm:col-start-1 sm:col-end-3 bg-[#D5E8FF]  flex justify-center items-center p-8'
     ];
 
     const imgStyles = [
@@ -24,7 +24,7 @@ const BlogPage = () => {
     ];
 
     const paraStyles = [
-        'sm:max-w-[270px] max-w-[250px]',
+        'sm:max-w-[470px] max-w-[250px]',
         'md:max-w-[360px] max-w-[250px]',
         'text-center'
     ];
@@ -60,7 +60,7 @@ const BlogPage = () => {
                             src={item.blogPgaeImg_1}
                             alt={item.heading || 'Blog image'}
                         />
-                        <div className={`flex flex-col gap-7 lg:max-w-[410px] max-w-[350px] w-full lg:ml-8 md:ml-4 md:mt-4 relative lg:mt-8 md:p-3.5 z-10 max-lg:absolute ${wrapperStyles[i]}`}>
+                        <div className={`flex flex-col gap-7 lg:max-w-[450px] max-w-[350px] w-full relative z-10 max-lg:absolute ${wrapperStyles[i]}`}>
                             <HeadingAndPara
                                 heading={item.heading}
                                 para={item.para}
