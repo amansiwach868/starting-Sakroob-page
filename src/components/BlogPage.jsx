@@ -78,7 +78,7 @@ const BlogPage = () => {
                     </div>
                 ))}
             </div>
-            <CustomButton buttonText={'View All Blog Posts'} buttonClass={'text-white mb-2'} />
+            <CustomButton buttonText={'View All Blog Posts'} buttonClass={'text-white'} />
         </div>
     );
 };

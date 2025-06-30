@@ -7,7 +7,7 @@ import { LeftArrow, LeftQuotationIcon, Rating, RightArrow, RightQuotationIcon } 
 
 const Testimonials = () => {
     return (
-        <div id='testimonials' className="md:px-7 sm:px-6 px-4 mt-20">
+        <div id='testimonials' className="md:px-7 sm:px-6 px-4 mt-20 mb-2">
             <div className="max-w-[1140px] mx-auto">
                 <p className="text-center italic text-lg md:text-xl text-[#112D49] mb-2">
                     Testimonials
@@ -60,7 +60,7 @@ const Testimonials = () => {
                                             <RightQuotationIcon />
                                         </div>
                                     </div>
-                                    <div className='max-w-[200px] mt-3 w-full mx-auto'>
+                                    <div className='max-w-[200px] mt-5 w-full mx-auto'>
                                         <Rating />
                                     </div>
                                     <p className="font-semibold text-xl md:text-2xl text-[#112D49] mt-2 md:mt-3">

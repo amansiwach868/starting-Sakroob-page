@@ -14,7 +14,7 @@ const Footer = () => {
   const isHomePage = location.pathname === "/" || location.pathname === "/home";
   return (
     <>
-      <div id="footer" className={`bg-[#112D49] ${isHomePage ? "md:pt-[215px] pt-[175px]" : "md:pt-[70px] sm:pt-[55px] pt-10"}`}>
+      <div id="footer" className={`bg-[#112D49] ${isHomePage ? "md:pt-[223px] pt-[175px]" : "md:pt-[70px] sm:pt-[55px] pt-10"}`}>
         <div className="max-w-[1440px] mx-auto px-3">
           <div>
             <a href='#'>
