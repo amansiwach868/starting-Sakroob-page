@@ -19,7 +19,7 @@ const BlogPage = () => {
 
     const headingStyles = [
         'min-[700px]:!max-w-[700px] !max-w-[250px]',
-        'md:max-w-[360px] !max-w-[275px]',
+        'md:!max-w-[400px] !max-w-[275px]',
         'text-center'
     ];
 
@@ -68,7 +68,7 @@ const BlogPage = () => {
                                 paraClass={`sm:text-base  text-[14px] font-normal text-[#112D49] ${paraStyles[i]}`}
                             />
                             <div className={`w-full flex ${buttonContainerStyles[i]}`}>
-                                <button className="flex gap-2 items-center cursor-pointer text-[#112D49] group">
+                                <button className="flex gap-2 items-center cursor-pointer text-[#112D49] font-medium group">
                                     {item.button} <div className="group-hover:translate-x-[5px] duration-300">
                                         <Arrow />
                                     </div>
