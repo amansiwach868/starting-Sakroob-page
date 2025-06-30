@@ -105,7 +105,7 @@ const BestSellers = () => {
                         }}
                     >
                         {BESTSELLER_DATA.map((item, i) => (
-                            <SwiperSlide className="sm:pt-[86px] pt-[50px]" key={item.id}>
+                            <SwiperSlide className="sm:pt-[86px] pt-[50px] pb-3" key={item.id}>
                                 <div className="max-w-[364px] hover:shadow-[0px_0px_11.4px_0px_#73A4E033] border border-[#112D4914] hover:border-transparent duration-300 rounded-[8px] p-4 flex flex-col justify-between !min-h-[536px]">
                                     <div>
                                         <div className="w-full h-[242px] bg-[#E5E4E2] flex items-center justify-center relative">
@@ -153,7 +153,7 @@ const BestSellers = () => {
                         ))}
                     </Swiper>
 
-                    <div className="mt-3 min-[1400px]:hidden flex justify-center gap-3 items-center px-4 z-10">
+                    <div className="min-[1400px]:hidden flex justify-center gap-3 items-center px-4 z-10">
                         <div className="swiper-arrow prev-buttonBestSellers cursor-pointer size-8 md:size-10 border border-[#112D49] rounded-full flex items-center justify-center hover:scale-105 transition-all duration-200 ease-linear">
                             <LeftArrow />
                         </div>
