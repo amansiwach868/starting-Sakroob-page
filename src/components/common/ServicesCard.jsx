@@ -17,8 +17,8 @@ const ServicesCard = ({ children, heading, para, className, line, line2 }) => {
                 headingClass="text-base font-bold text-black text-nowrap"
                 paraClass="!text-[14px] sm:text-base text-black mt-1 sm:mt-0 text-nowrap"
             />
-            <div className={`sm:hidden absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[80%] h-[2px] bg-gradient-to-r from-transparent via-[#112D49] to-transparent ${line2}`} />
-            <div className={`flex max-sm:hidden absolute right-0 top-1/2 -translate-y-1/2 w-[2px] h-[80%] bg-gradient-to-b from-transparent via-[#112D49] to-transparent ${line}`} />
+            <div className={`sm:hidden absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[80%] h-[1px] bg-gradient-to-r from-transparent via-[#112D49] to-transparent ${line2}`} />
+            <div className={`flex max-sm:hidden absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-[80%] bg-gradient-to-b from-transparent via-[#112D49] to-transparent ${line}`} />
         </div>
 
     );
