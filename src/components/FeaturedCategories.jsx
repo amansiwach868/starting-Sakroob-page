@@ -43,7 +43,7 @@ const FeaturedCategories = () => {
                 {FEATURED_CATEGORIES_PRODUCTS.map((item, index) => (
                     <div
                         key={index}
-                        className={`relative overflow-hidden rounded-[8px] duration-200 sm:min-h-[335px] min-h-[298px] flex flex-col-reverse lg:block items-center gap-4 ${gridStyles[index]}`}
+                        className={`relative hover:shadow-[0px_2px_20px_0px_#112D491A] overflow-hidden rounded-[8px] duration-200 sm:min-h-[335px] min-h-[298px] flex flex-col-reverse lg:block items-center gap-4 ${gridStyles[index]}`}
                     >
                         <img
                             src={item.categoryImg}

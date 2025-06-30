@@ -48,7 +48,7 @@ const BlogPage = () => {
                 {BLOG_PAGE_DATA.map((item, i) => (
                     <div
                         key={i}
-                        className={`relative overflow-hidden rounded-[8px] duration-200 min-h-[335px] ${styles[i]}`}
+                        className={`relative hover:shadow-[0px_2px_20px_0px_#112D491A] overflow-hidden rounded-[8px] duration-200 min-h-[335px] ${styles[i]}`}
                     >
                         <img
                             className={`object-cover w-full md:rounded-[30px] sm:rounded-[20px] rounded-[10px] absolute pointer-events-none ${imgStyles[i]}`}
