@@ -61,7 +61,7 @@ export const BLOG_PAGE_DATA = [
     {
         heading: ' Inside a Raspberry Pi Retro Console',
         para: 'Step-by-step log of building a retro game machine.',
-        button: 'Read Guide',
+        button: 'View Build Log',
         blogPgaeImg: blogPageImg3,
         blogPgaeImg_1: blogPageImg4,
         active: true
