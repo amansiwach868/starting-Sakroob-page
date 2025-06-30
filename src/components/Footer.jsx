@@ -83,9 +83,9 @@ const Footer = () => {
             </div>
             <div className="max-w-[1140px] w-full mx-auto md:mt-[82px] sm:mt-[62px] mt-10 relative z-0 pt-[1px] rounded-[12px] after:content-[''] after:absolute after:inset-0 after:rounded-[12px] after:bg-[linear-gradient(90deg,_#ffffff00_3.37%,_#ffffffcc_51.44%,_#ffffff00_100%)] after:-z-10">
               <div className="flex relative bg-[#112D49] rounded-[10px] flex-wrap justify-between items-center max-w-[1440px] mx-auto py-[30px] gap-4 sm:gap-0 sm:flex-nowrap sm:justify-between px-4">
-                <p className="text-sm text-white text-center sm:text-left w-full sm:w-auto leading-[100%]">
+                <a className="text-sm text-white text-center sm:text-left w-full sm:w-auto leading-[100%]">
                   Term of Service | Privacy Policy
-                </p>
+                </a>
                 <p className="text-sm text-white text-center sm:text-right w-full sm:w-auto leading-[120%]">
                   © {new Date().getFullYear()} Skaroob. All Rights Reserved.
                 </p>
