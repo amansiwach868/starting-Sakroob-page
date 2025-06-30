@@ -30,7 +30,7 @@ const PopularProduct = () => {
             }
         }
     };
-    
+
 
 
     const handleShopNow = (item) => {
@@ -69,7 +69,7 @@ const PopularProduct = () => {
                                 </div>
                                 <div className="mt-4">
                                     <div className="flex justify-between items-center">
-                                        <p className="font-semibold text-md sm:text-xl text-nowrap text-[#112D49]">
+                                        <p className="font-semibold text-base sm:text-xl text-nowrap text-[#112D49]">
                                             ₹ {Number(item.price).toFixed(2)}
                                         </p>
                                         <div className="-mt-2">{item.svg && <item.svg />}</div>

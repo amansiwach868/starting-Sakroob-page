@@ -19,7 +19,7 @@ const CartPage = () => {
             });
         }
     };
-    
+
 
     const totalAmount = cartItems.reduce(
         (acc, item) => acc + item.price * item.quantity,
@@ -31,7 +31,7 @@ const CartPage = () => {
             <div className="max-w-[1140px] mx-auto px-4">
                 <div className="flex justify-between items-center">
                     <h2 className='md:text-[34px] sm:text-[28px] text-[24px] font-bold text-[#112D49] leading-[100%]'>Your cart</h2>
-                    <NavLink className="font-medium sm:text-md text-xs leading-[100%] underline text-[#112D49]" to="/">
+                    <NavLink className="font-medium sm:text-base text-xs leading-[100%] underline text-[#112D49]" to="/">
                         Continue Shopping
                     </NavLink>
                 </div>
@@ -90,7 +90,7 @@ const CartPage = () => {
                                     </button>
                                 </div>
 
-                                <div className="w-full md:w-[30%] sm:text-md  text-[14px] font-normal opacity-80 text-[#112D49]">
+                                <div className="w-full md:w-[30%] sm:text-base  text-[14px] font-normal opacity-80 text-[#112D49]">
                                     ₹ {(item.price * item.quantity).toFixed(2)}
                                 </div>
                             </div>
@@ -105,7 +105,7 @@ const CartPage = () => {
                                         ₹ {totalAmount.toFixed(2)}
                                     </p>
                                 </div>
-                                <p className="sm:text-md  text-[14px] text-[#112D49] opacity-80 mb-6">
+                                <p className="sm:text-base  text-[14px] text-[#112D49] opacity-80 mb-6">
                                     Taxes, discounts and shipping calculated at checkout.
                                 </p>
                                 <NavLink to={'/checkout'}>

@@ -129,7 +129,7 @@ const BestSellers = () => {
                                     </div>
                                     <div>
                                         <div className="flex justify-between items-center mt-4">
-                                            <p className="font-semibold sm:text-2xl text-md text-[#112D49] text-nowrap">
+                                            <p className="font-semibold sm:text-2xl text-base text-[#112D49] text-nowrap">
                                                 ₹ {Number(item.price).toFixed(2)}
                                             </p>
                                             <div className="-mt-3">{item.svg && <item.svg />}</div>

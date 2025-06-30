@@ -40,7 +40,7 @@ const ProductDetailTabs = () => {
                             <div className="flex flex-col lg:min-w-[220px]">
                                 <div className="text-[20px] sm:text-[22px] font-semibold text-[#112D49] mb-1">Customer Reviews</div>
                                 <div className="mb-2">
-                                    <FiveStarRating/>
+                                    <FiveStarRating />
                                     <p className="font-medium text-dark-blue mt-1">Based on 1 review</p>
                                 </div>
                                 <Link href="#" className="text-[#112D49] md:mt-[147px] text-nowrap mt-3 text-sm  font-medium hover:underline flex items-center gap-1">
@@ -88,7 +88,7 @@ const ProductDetailTabs = () => {
                             />
                             <div>
                                 <div className="flex items-center gap-2 flex-wrap">
-                                    <FiveStarRatingBig/>
+                                    <FiveStarRatingBig />
                                     <span className="text-gray-400 text-xs">23/05/2025</span>
                                 </div>
                                 <div className="font-semibold text-[#112D49] text-base">Kathryn Murphy</div>
@@ -134,7 +134,7 @@ const ProductDetailTabs = () => {
                         key={key}
                         ref={el => tabRefs.current[i] = el}
                         onClick={() => setActiveTab(key)}
-                        className={`flex-1 py-2 px-3 text-base sm:text-md font-semibold bg-transparent focus:outline-none transition-colors duration-200 ${align} ${activeTab === key ? 'text-[#112D49]' : 'text-gray-500 hover:text-[#112D49]'}`}
+                        className={`flex-1 py-2 px-3 text-base sm:text-base font-semibold bg-transparent focus:outline-none transition-colors duration-200 ${align} ${activeTab === key ? 'text-[#112D49]' : 'text-gray-500 hover:text-[#112D49]'}`}
                     >
                         {label}
                     </button>

@@ -5,7 +5,7 @@ import CustomInput from './common/CustomInput';
 import { CloseEye, Eye } from '../utils/icons';
 import { NavLink, useNavigate } from 'react-router-dom';
 import CustomButton from './common/CustomButton';
-import { Slide,ToastContainer, toast } from 'react-toastify';
+import { Slide, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const LoginPage = () => {
@@ -69,8 +69,8 @@ const LoginPage = () => {
         }
         setIsLoggingIn(false);
     };
-    
-    
+
+
 
     return (
         <div className='w-full min-h-screen bg-[url(./assets/img/png/login-bg-img.png)] bg-no-repeat bg-cover bg-center flex justify-center items-center'>
@@ -83,7 +83,7 @@ const LoginPage = () => {
                         heading={'Welcome back!'}
                         para={'Log in below to access your account and keep things running smoothly.'}
                         paraClass={
-                            'sm:text-md  text-[14px] font-normal max-w-[310px] mx-auto text-[#112D49] text-center mt-2 mb-6'
+                            'sm:text-base  text-[14px] font-normal max-w-[310px] mx-auto text-[#112D49] text-center mt-2 mb-6'
                         }
                         headingClass={
                             'sm:text-[32px] text-[24px] font-bold text-[#112D49] text-center leading-[120%]'
@@ -125,7 +125,7 @@ const LoginPage = () => {
                     <div className='w-full flex justify-end items-center'>
                         <NavLink
                             to={'/forgetpassword'}
-                            className='mt-3 sm:text-md  text-[14px] font-semibold underline text-[#112D49] underline-offset-2'
+                            className='mt-3 sm:text-base  text-[14px] font-semibold underline text-[#112D49] underline-offset-2'
                         >
                             Forgot password?
                         </NavLink>
@@ -139,10 +139,10 @@ const LoginPage = () => {
                     />
 
                     <div className='w-full flex sm:flex-row flex-col justify-center gap-1 mt-5 items-center'>
-                        <p className='text-nowrap sm:text-md  text-[14px] text-[#41576D]'>Don’t have an account?</p>
+                        <p className='text-nowrap sm:text-base  text-[14px] text-[#41576D]'>Don’t have an account?</p>
                         <NavLink
                             to={'/signup'}
-                            className='sm:text-md  text-[14px] font-semibold underline text-[#112D49] underline-offset-2 text-nowrap'
+                            className='sm:text-base  text-[14px] font-semibold underline text-[#112D49] underline-offset-2 text-nowrap'
                         >
                             Create account
                         </NavLink>

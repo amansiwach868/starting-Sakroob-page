@@ -65,7 +65,7 @@ const BlogPage = () => {
                                 heading={item.heading}
                                 para={item.para}
                                 headingClass={`lg:text-[32px] sm:text-[28px] text-[24px] font-bold text-[#112D49] leading-[120%] mb-3 ${headingStyles[i]}`}
-                                paraClass={`sm:text-md  text-[14px] font-normal text-[#112D49] ${paraStyles[i]}`}
+                                paraClass={`sm:text-base  text-[14px] font-normal text-[#112D49] ${paraStyles[i]}`}
                             />
                             <div className={`w-full flex ${buttonContainerStyles[i]}`}>
                                 <button className="flex gap-2 items-center cursor-pointer text-[#112D49] group">
