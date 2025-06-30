@@ -23,7 +23,7 @@ const FeaturedCategories = () => {
 
     const headingStyles = [
         'max-w-[172px] xl:top-1/2 xl:left-[62px] xl:-translate-y-1/2 left-6 top-6',
-        'max-w-[213px] left-1/2 -translate-x-1/2 top-8',
+        'max-w-[213px] w-full text-center left-1/2 -translate-x-1/2 top-8',
         'w-full text-center left-1/2 -translate-x-1/2 top-[46px]',
         'max-w-[196px] sm:top-[26px] sm:right-4 top-4 max-sm:left-4',
         'w-full text-center left-1/2 -translate-x-1/2 top-[22px]',
