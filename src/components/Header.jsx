@@ -52,7 +52,7 @@ const Header = () => {
             </NavLink>
 
             <div className="w-full bg-[#112D49] md:py-5 sm:py-4 py-[13px]">
-                <div className="max-w-[976px] ml-auto xl:mr-[88px] mr-[12px] w-full px-3 flex justify-between xl:gap-10 gap-3 items-center">
+                <div className="max-w-[1000px] ml-auto xl:mr-[88px] mr-[12px] w-full px-3 flex justify-between xl:gap-[56px] gap-3 items-center">
                     <NavLink to="/" className="min-[1100px]:hidden">
                         <img src={headerLogo2} alt="Logo" className="cursor-pointer max-w-[90px]" />
                     </NavLink>
