@@ -68,7 +68,7 @@ const CartPage = () => {
                                     <div className="flex">
                                         <button
                                             onClick={() => decrement(item.id)}
-                                            className="w-[44px] h-[40px] bg-[#73A4E0] hover:bg-[#73A4E0]/70 text-white rounded-l flex items-center justify-center"
+                                            className="w-[44px] h-[40px] cursor-pointer bg-[#73A4E0] hover:bg-[#73A4E0]/70 text-white rounded-l flex items-center justify-center"
                                         >
                                             <ReduceIcon />
                                         </button>
@@ -77,7 +77,7 @@ const CartPage = () => {
                                         </div>
                                         <button
                                             onClick={() => increment(item.id)}
-                                            className="w-[44px] h-[40px] bg-[#112D49] hover:bg-[#112D49]/70 text-white rounded-r flex items-center justify-center"
+                                            className="w-[44px] h-[40px] bg-[#112D49] cursor-pointer hover:bg-[#112D49]/70 text-white rounded-r flex items-center justify-center"
                                         >
                                             <IncreaseIcon />
                                         </button>

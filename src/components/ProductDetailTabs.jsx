@@ -134,7 +134,7 @@ const ProductDetailTabs = () => {
                         key={key}
                         ref={el => tabRefs.current[i] = el}
                         onClick={() => setActiveTab(key)}
-                        className={`flex-1 py-2 px-3 text-base sm:text-base font-semibold bg-transparent focus:outline-none transition-colors duration-200 ${align} ${activeTab === key ? 'text-[#112D49]' : 'text-gray-500 hover:text-[#112D49]'}`}
+                        className={`cursor-pointer flex-1 py-2 px-3 text-base sm:text-base font-semibold bg-transparent focus:outline-none transition-colors duration-200 ${align} ${activeTab === key ? 'text-[#112D49]' : 'text-gray-500 hover:text-[#112D49]'}`}
                     >
                         {label}
                     </button>

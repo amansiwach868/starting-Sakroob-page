@@ -294,7 +294,7 @@ const CheckOut = () => {
                         </div>
                     </div>
 
-                    <div className="lg:max-w-[352px] w-full py-[14.5px] px-[14px] shadow-1 rounded-lg bg-white shadow-[0px_0px_11.4px_0px_#73A4E033]">
+                    <div className="lg:max-w-[352px] h-full w-full py-[14.5px] px-[14px] shadow-1 rounded-lg bg-white shadow-[0px_0px_11.4px_0px_#73A4E033]">
                         {items.map((item) => (
                             <div key={item.id} className="flex items-center justify-between mb-[26px]">
                                 <div className="flex items-center gap-[9px]">

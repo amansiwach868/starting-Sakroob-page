@@ -156,7 +156,7 @@ const ProductDetail = () => {
                             <div className="flex items-center">
                                 <button
                                     onClick={decreaseQuantity}
-                                    className="w-[48px] h-[44px] bg-[#73A4E0] text-white text-xl flex items-center justify-center rounded-l-[8px]"
+                                    className="w-[48px] h-[44px] cursor-pointer bg-[#73A4E0] text-white text-xl flex items-center justify-center rounded-l-[8px]"
                                 >
                                     <MinusSvg />
                                 </button>
@@ -165,7 +165,7 @@ const ProductDetail = () => {
                                 </div>
                                 <button
                                     onClick={increaseQuantity}
-                                    className="w-[48px] h-[44px] bg-[#112D49] text-white text-xl flex items-center justify-center rounded-r-[8px]"
+                                    className="w-[48px] h-[44px] cursor-pointer bg-[#112D49] text-white text-xl flex items-center justify-center rounded-r-[8px]"
                                 >
                                     <PlusSvg />
                                 </button>
